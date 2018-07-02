@@ -35,37 +35,23 @@ Is an all-in-one Utility that brings everything that is Age of empires 2 related
 
 **Browse Folder** Open Age of empires 2 Installation Directory.
 
-## Performance Tab:
+## Management Tab:
 
-### Boost Windows : Disables/Enables 5 Services
+### Offline Mods (Explained Below)
 
-* **Superfetch** (Usually causes high load on cpu)
-* **Mapbroker** (Useless service for application access to downloaded maps)
-* **Themes** (Disables windows for slightly better mouse movement on some computers)
-* **DoSvc* (Bandwidth eating service definitely not good for people that use mobile data internet as this may deplete their internet quickly)
-* **Windows Search** (Not the actual windows search files, this service provides file indexing which when you search for files and at some point your computer may end up with 100% disk usage or high cpu load)
+### Hotkeys (Explained Below)
 
-### Boost AoE2HD
+### Replays Packer (Explained Below)
 
-Disables/Enables :
+### Gamer Mover (Explained Below)
 
-* **Render 3D Water**
-* **Render Vsync**
-* **Render ShadowAA**
-* **And Sets Max FPS to 150 instead of 30**
+### Wiki Links
 
-### Normal Mouse Cursor
+Browser websites and important web resources such as downloading maps, ai files; websites to age of empires 2 communities; platforms and other.
 
-Enable/Disables Regular Mouse Cursor
-![Normal Mouse](https://freesoft-100.com/img/no-mouse-cursor.png)
+### Version Switcher
 
-### OneClick CleanUp
-
-Cleans your Temporary Folder and also removes game desyncs and old restore games (Not recorded games)
-
-### Performance Tips
-
-Displays Youtube Links To How You Could Fix Common lag issues such as programs that may use 100% disk on your computer and therefore slow your gaming experience.
+Switch Your Game Version to (1.0 C, 1.4 RC, 1.5 RC or WK). Useful If You Decide To Play On LAN With Friends or GameRanger or other LAN Platforms.
 
 ## Tools & Shortcuts Menu
 
