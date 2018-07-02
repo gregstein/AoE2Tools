@@ -7,6 +7,9 @@ Is an all-in-one Utility that brings everything that is Age of empires 2 related
 * **Voobly:** Fully Automated Voobly Installer (In case Voobly is not installed). Also Dedicated Section where To Fully Manage Voobly Mods (Visual/Data/Patches).
 * **WololoKingdoms:** Auto Download/Update To The Latest Wololokingdoms Version.
 * **UserPatch:** Auto Download/Update To The Latest UserPatch Version.
+## Download Latest Version
+
+To Download The Latest Version, Visit The Releases Page: [Download Latest AoE2Tools](https://github.com/gregstein/AoE2Tools/releases)
 
 # Documentation
 ![AoE2Tools](https://s33.postimg.cc/43s4mu5b3/aoe2tools.jpg)
