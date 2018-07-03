@@ -13,7 +13,7 @@ To Download The Latest Version, Visit The Releases Page: [Download Latest AoE2To
 
 # Simple Guide To Convert Age Of Empires 2 HD
 
-[Download Latest AoE2Tools](https://www.reddit.com/r/aoe2/comments/8uy9lm/aoe2tools_public_release_mega_dedicated_utility/)
+[How To Convert Age Of Empires 2 HD](https://www.reddit.com/r/aoe2/comments/8uy9lm/aoe2tools_public_release_mega_dedicated_utility/)
 
 
 # Documentation
