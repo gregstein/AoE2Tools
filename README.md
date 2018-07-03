@@ -115,7 +115,7 @@ Run all versions of age of empires 2 (1.0c, 1.4, 1.5, WK)
 
 ![Run Versions](https://image.prntscr.com/image/mYt8yo95QB6RFQEXVTJbFA.png)
 
-Get Support and Technical Assistance By joining Discord channel. You can also support me if you wish you.
+Get Support and Technical Assistance By joining Discord channel. You can also support me if you wish.
 
 ### Options 
 
