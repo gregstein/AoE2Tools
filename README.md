@@ -11,6 +11,11 @@ Is an all-in-one Utility that brings everything that is Age of empires 2 related
 
 To Download The Latest Version, Visit The Releases Page: [Download Latest AoE2Tools](https://github.com/gregstein/AoE2Tools/releases)
 
+# Simple Guide To Convert Age Of Empires 2 HD
+
+[Download Latest AoE2Tools](https://www.reddit.com/r/aoe2/comments/8uy9lm/aoe2tools_public_release_mega_dedicated_utility/)
+
+
 # Documentation
 ![AoE2Tools](https://s33.postimg.cc/43s4mu5b3/aoe2tools.jpg)
 
