@@ -1,9 +1,9 @@
 # Introduction
 Is an all-in-one Utility that brings everything that is Age of empires 2 related into a fully automated system.
-
+[linkname](https://youtubevideourl)
 ## AoE2Tools includes Support To These Main AoE2 Tools:
 
-* **HD To AoC:** Formally "HD-To-TC". A migration Tool To Voobly. However, It is now Legal! It builds Age of Empires 2: The Conquerors (Most Stable Base Version) Using Age of Empires 2 HD assets from steam.
+* **HD To AoC:** Formerly "HD-To-TC". A migration Tool To Voobly. However, it is now Legal! It builds Age of Empires 2: The Conquerors (Most Stable Base Version) Using Age of Empires 2 HD assets from steam.
 * **Voobly:** Fully Automated Voobly Installer (In case Voobly is not installed). Also Dedicated Section where To Fully Manage Voobly Mods (Visual/Data/Patches).
 * **WololoKingdoms:** Auto Download/Update To The Latest Wololokingdoms Version.
 * **UserPatch:** Auto Download/Update To The Latest UserPatch Version.
@@ -13,6 +13,12 @@ To Download The Latest Version, Visit The Releases Page: [Download Latest AoE2To
 
 # Simple Guide To Convert Age Of Empires 2 HD
 
+## Youtube How To Guide
+[![Easy ALL-IN-ONE Voobly Set up! | AoE2 Tools](https://img.youtube.com/vi/LTgb8NII0UM/0.jpg)](https://www.youtube.com/watch?v=LTgb8NII0UM)
+
+Many Thanks To [JRed](https://www.youtube.com/channel/UCyV2l3AVh8tj7IXX6QSeOmQ) For Making This Quick and intuitive Guide <3
+
+## Article How To Guide
 [How To Convert Age Of Empires 2 HD](https://www.reddit.com/r/aoe2/comments/8uy9lm/aoe2tools_public_release_mega_dedicated_utility/)
 
 
