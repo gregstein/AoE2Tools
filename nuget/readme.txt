@@ -1,1 +1,1 @@
-rename this folder to ".nuget" insteas of "nuget"
+rename this folder to ".nuget" instead of "nuget"
