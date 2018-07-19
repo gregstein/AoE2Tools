@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Tungsten.Firewall</name>
+    </assembly>
+    <members>
+        <member name="T:W.Firewall.Rules">
+            <summary>
+            Provides static methods to add, remove and check the existance of, Windows firewall rules
+            </summary>
+        </member>
+        <member name="T:W.Firewall.Rules.EFirewallRuleAction">
+            <summary>
+            Firewall rule actions
+            </summary>
+        </member>
+        <member name="F:W.Firewall.Rules.EFirewallRuleAction.Allowed">
+            <summary>
+            Allow communications
+            </summary>
+        </member>
+        <member name="F:W.Firewall.Rules.EFirewallRuleAction.Block">
+            <summary>
+            Block communications
+            </summary>
+        </member>
+        <member name="T:W.Firewall.Rules.EFirewallProfiles">
+            <summary>
+            The firewall profile type
+            </summary>
+        </member>
+        <member name="F:W.Firewall.Rules.EFirewallProfiles.Public">
+            <summary>
+            Public
+            </summary>
+        </member>
+        <member name="F:W.Firewall.Rules.EFirewallProfiles.Private">
+            <summary>
+            Private
+            </summary>
+        </member>
+        <member name="F:W.Firewall.Rules.EFirewallProfiles.Domain">
+            <summary>
+            Domain
+            </summary>
+        </member>
+        <member name="F:W.Firewall.Rules.EFirewallProfiles.All">
+            <summary>
+            All
+            </summary>
+        </member>
+        <member name="M:W.Firewall.Rules.Add(System.String,System.String,System.Int32,System.String,W.Firewall.Rules.EFirewallRuleAction,W.Firewall.Rules.EFirewallProfiles)">
+            <summary>
+            Adds a rule to the firewall
+            </summary>
+            <param name="ruleName">The name of the rule to add</param>
+            <param name="ruleGroup">The group under which the rule is added</param>
+            <param name="protocol">The desired rule protocol</param>
+            <param name="localPorts">The desired rule port</param>
+            <param name="action">The desired rule action, to allow or block communications</param>
+            <param name="profiles">The desired rule profile</param>
+        </member>
+        <member name="M:W.Firewall.Rules.Exists(System.String)">
+            <summary>
+            Checks if a particular rule exists
+            </summary>
+            <param name="ruleName">The name of the rule to check</param>
+            <returns>True if the rule exists, otherwise false</returns>
+        </member>
+        <member name="M:W.Firewall.Rules.Remove(System.String)">
+            <summary>
+            Removes a firewall rule
+            </summary>
+            <param name="ruleName">The name of the rule to remove</param>
+        </member>
+    </members>
+</doc>

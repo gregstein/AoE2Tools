@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>KryptonToolkitSuite441</id>
+    <version>4.4.1</version>
+    <title>Krypton Suite of .NET WinForms Controls</title>
+    <authors>Peter William Wagner</authors>
+    <owners>Peter William Wagner</owners>
+    <licenseUrl>https://github.com/ComponentFactory/Krypton/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/ComponentFactory/Krypton</projectUrl>
+    <iconUrl>https://github.com/ComponentFactory/Krypton/blob/master/Source/Krypton%20Components/ComponentFactory.Krypton.Toolkit/Krypton.ico</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>See: https://github.com/ComponentFactory/Krypton for more details.</description>
+    <summary>See: https://github.com/ComponentFactory/Krypton for more details.</summary>
+    <copyright>Component Factory, Ltd.</copyright>
+    <language>en-US</language>
+  </metadata>
+</package>
