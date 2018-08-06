@@ -137,6 +137,31 @@ Get Support and Technical Assistance By joining Discord channel. You can also su
 * Set AoE2Tools To Windows Startup
 * Disable Launcher
 
+# Twitch Live Streams & Alerts
+
+- Watch Your Favorite Streams Directly through **VLC** or **Web Browser** with one click. 
+- Add Your Favorite Streamer To Your FAV List To Get Instantly Notified Once They go Live. (Fancy Alert to the bottom right of your screen)
+- Customize your Twitch Alerts (Add, Edit, Delete FAV Stream List)
+- Two Buttons Added: "Live Streams" button to Browse Live streams.  "Options" button to manage Twitch Streams/Alerts.
+
+## Demos
+
+### Watch Currently Live Streams through VLC, WEB or add them to your stream list.
+![Watch Currently Live Streams](https://s22.postimg.cc/hq80ughzl/live_streams.jpg)
+
+### Add any streamer manually or automatically from a list of currently live streams.
+![Add Streams](https://s22.postimg.cc/l75hjvmkx/add_streams.jpg)
+
+### Stream list (any streamer you add here, you will be notified once he is Live)
+![Stream list](https://s22.postimg.cc/bb4ekhwb5/stream_list_manage.jpg)
+
+### Receive an Alert when your favorite streamer is live.
+![Receive an Alert when your favorite streamer is live](https://s22.postimg.cc/9i1hw8o01/twitch_alert.png)
+
+### Twitch Options to increase/decreate twitch interval, disable sounds and alerts.
+![Twitch Options](https://s22.postimg.cc/4ytuo4nox/twitch_options.jpg)
+
+
 # Disclaimer
 
 AoE2Tools respects all copyrights of Microsoft and it does not distribute age of empires 2 in any manner. AoE2Tool completely relies on your age of empires 2 HD assets and game license to legally convert AoE2HD to Age of Empires 2 The Conquerors.
