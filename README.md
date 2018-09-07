@@ -167,26 +167,26 @@ Get Support and Technical Assistance By joining Discord channel. You can also su
 
 # Manager Utility
 ### Quick Stats
-        Get a quick overview of how many recorded games you have and how much space they are taking. You also can clean the the temporary files and old restore games from the same window to improve game performance slightly/significantly.
+Get a quick overview of how many recorded games you have and how much space they are taking. You also can clean the the temporary files and old restore games from the same window to improve game performance slightly/significantly.
 
 ![Quick Stats](https://i.redd.it/p45x64vtbhj11.png)
 
 
 ### Backup
-        You can make a custom backup of your game files as you can see bellow. (I highly recommend using this feature to backup/restore your hotkeys, savegames especially at the public release of WK 5.7.4 or later. Be warned that Wk Installer removes savegames / hotkeys.)
+You can make a custom backup of your game files as you can see bellow. (I highly recommend using this feature to backup/restore your hotkeys, savegames especially at the public release of WK 5.7.4 or later. Be warned that Wk Installer removes savegames / hotkeys.)
 You can also make a full backup of the entire installation game folder.
 
 ![Backup](https://i.redd.it/mucq0uexchj11.jpg)
 
 
 ### Restore
-        Simply Browse your backup and restore it back.
+Simply Browse your backup and restore it back.
 
 ![Restore](https://i.redd.it/xprqrikfehj11.jpg)
 
 
 - Bulk Replays Renamer
-        Select any folder containing recorded games (1.5 RC, WK) and they will be all renamed automatically.
+Select any folder containing recorded games (1.5 RC, WK) and they will be all renamed automatically.
 
 ![Bulk Replays Renamer](https://i.redd.it/l24v0kbkfhj11.jpg)
 
@@ -197,14 +197,8 @@ You can also make a full backup of the entire installation game folder.
 ![Multilingual Support](https://i.redd.it/j1qbycoxghj11.jpg)
 
 
-### (+) Watch Wololokingdoms replays "WK 5.7.2 & WK 5.7.4" supported ahead of the release time (requested by Firearrow5235)
 
-
-![Watch Wololokingdoms replays](https://i.redd.it/5ui4mv68hhj11.jpg)
-
-
-
-### (+) Manually Change Age of Empires 2 Installation folder through Settings button (requested by theandychung).
+### Manually Change Age of Empires 2 Installation folder through Settings button
 
 
 ![Change Age of Empires 2 Installation folder](https://i.redd.it/0oirz5oghhj11.jpg)
