@@ -26,7 +26,7 @@ Many Thanks To [JRed](https://www.youtube.com/channel/UCyV2l3AVh8tj7IXX6QSeOmQ) 
 
 ## Article How To Setup
 
-[![Look up](https://media.giphy.com/media/3FlH1ezrQTOGZZ844L/giphy.gif)
+![Look up](https://media.giphy.com/media/3FlH1ezrQTOGZZ844L/giphy.gif)
 
 [How To Convert Age Of Empires 2 HD And Play On Voobly](https://steamcommunity.com/sharedfiles/filedetails/?id=1459865719)
 
