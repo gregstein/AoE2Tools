@@ -19,12 +19,12 @@ To Download The Latest Version, Visit The Releases Page: [Download Latest AoE2To
 
 # Simple Guide To Convert Age Of Empires 2 HD
 
-## Youtube How To Guide
+## Youtube How To Setup
 [![Easy ALL-IN-ONE Voobly Set up! | AoE2 Tools](https://img.youtube.com/vi/LTgb8NII0UM/0.jpg)](https://www.youtube.com/watch?v=LTgb8NII0UM)
 
 Many Thanks To [JRed](https://www.youtube.com/channel/UCyV2l3AVh8tj7IXX6QSeOmQ) For Making This Quick and intuitive Guide <3
 
-## Article How To Guide
+## Article How To Setup
 [How To Convert Age Of Empires 2 HD And Play On Voobly](https://steamcommunity.com/sharedfiles/filedetails/?id=1459865719)
 
 Please Follow the guide above for the best result and full functionality of AoE2Tools.
