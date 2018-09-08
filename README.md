@@ -27,9 +27,8 @@ Many Thanks To [JRed](https://www.youtube.com/channel/UCyV2l3AVh8tj7IXX6QSeOmQ) 
 ## Article How To Setup
 [How To Convert Age Of Empires 2 HD And Play On Voobly](https://steamcommunity.com/sharedfiles/filedetails/?id=1459865719)
 
-^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^
+[Look up](https://media.giphy.com/media/3FlH1ezrQTOGZZ844L/giphy.gif)
 
-|| || || || || || || || || ||
 
 Please Follow the guide above for the best result and full functionality of AoE2Tools.
 
