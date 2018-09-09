@@ -7,7 +7,7 @@ Is an all-in-one windows Utility that brings everything that is Age of empires 2
 
 ## AoE2Tools includes Support To These Main AoE2 Tools:
 
-* **HD To AoC:** Formerly "HD-To-TC". A migration Tool To Voobly. However, it is now Legal! It builds Age of Empires 2: The Conquerors (Most Stable Base Version) using Age of Empires 2 HD assets from steam.
+* **HD To AoC:** Formerly "HD-To-TC". A migration Tool To Voobly.It builds Age of Empires 2: The Conquerors (Most Stable Base Version) using Age of Empires 2 HD assets from steam.
 * **Voobly:** Fully Automated Voobly Installer (In case Voobly is not installed). Also Dedicated Section to Fully Manage Voobly Mods (Visual/Data/Patches).
 * **WololoKingdoms:** Auto Download/Update To The Latest Wololokingdoms Version.
 * **UserPatch:** Auto Download/Update To The Latest UserPatch Version.
