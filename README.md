@@ -76,7 +76,7 @@ Browser websites and important web resources such as downloading maps, ai files;
 
 ### Version Switcher
 
-Switch Your Game Version to (1.0 C, 1.4 RC, 1.5 RC or WK). Useful If You Decide To Play On LAN With Friends or GameRanger or other LAN Platforms.
+Switch Your Game Version to (1.0 C, 1.4 RC, 1.5 RC or WK). Useful If You Decide To Play On LAN With Friends or GameRanger or other LAN Platforms. Or Double click your recorded games to watch them after you switch to the proper game version.
 
 ## Tools & Shortcuts Menu
 
