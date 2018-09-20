@@ -12,19 +12,17 @@ Is an all-in-one windows Utility that brings everything that is Age of empires 2
 * **WololoKingdoms:** Auto Download/Update To The Latest Wololokingdoms Version.
 * **UserPatch:** Auto Download/Update To The Latest UserPatch Version.
 
+## Requirements
+
+- **Minimum Windows System:** Windows 7/8/8.1/10 or later. (Windows 10 is recommended)
+
+- **Minimum .NET Framework:** [.NET Framework 4.5](https://www.microsoft.com/fr-fr/download/details.aspx?id=30653) or later. https://www.microsoft.com/fr-fr/download/details.aspx?id=30653
+
 # How To Download AoE2Tools?
 
 To Download The Latest Version, Visit The Releases Page: [Download Latest AoE2Tools](https://github.com/gregstein/AoE2Tools/releases)
 
-
-# Simple Guide To Convert Age Of Empires 2 HD
-
-## Youtube How To Setup
-[![Easy ALL-IN-ONE Voobly Set up! | AoE2 Tools](https://img.youtube.com/vi/LTgb8NII0UM/0.jpg)](https://www.youtube.com/watch?v=LTgb8NII0UM)
-
-Many Thanks To [JRed](https://www.youtube.com/channel/UCyV2l3AVh8tj7IXX6QSeOmQ) For Making This Quick and intuitive Guide <3
-
-## Article How To Setup AoE2Tools
+# How To Setup AoE2Tools
 
 ![Look up](https://media.giphy.com/media/3FlH1ezrQTOGZZ844L/giphy.gif)
 
