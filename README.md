@@ -14,9 +14,9 @@ Is an all-in-one windows Utility that brings everything that is Age of empires 2
 
 ## Requirements
 
-- **Minimum Windows System:** Windows 7/8/8.1/10 or later. (Windows 10 is recommended)
+* **Minimum Windows System:** Windows 7/8/8.1/10 or later. (Windows 10 is recommended)
 
-- **Minimum .NET Framework:** [.NET Framework 4.5](https://www.microsoft.com/fr-fr/download/details.aspx?id=30653) or later. https://www.microsoft.com/fr-fr/download/details.aspx?id=30653
+* **Minimum .NET Framework:** [.NET Framework 4.5](https://www.microsoft.com/fr-fr/download/details.aspx?id=30653) or later.
 
 # How To Download AoE2Tools?
 
