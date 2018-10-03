@@ -217,3 +217,11 @@ AoE2Tools respects all copyrights of Microsoft and it does not distribute age of
 AoE2Tools is able to detect existing installations of The conquerors version and hence no conversion is need.
 
 I DO NOT take any responsibility for misuse or illegal exploitation of this tool.
+
+# References
+
+Libraries and projects used within AoE2Tools
+
+- 7zip: https://www.7-zip.org/
+- UserPatch: http://userpatch.aiscripters.net/
+- Voobly Slp Decoder: https://github.com/skeletonmage/vooblyslpdecode
