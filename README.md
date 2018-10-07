@@ -38,7 +38,6 @@ Now download "AoE2Tools X.X.X.X.exe" as demonstrated in the image below:
 Please Follow the guide above for the best result and full functionality of AoE2Tools.
 
 # Documentation
-![AoE2Tools](https://s33.postimg.cc/43s4mu5b3/aoe2tools.jpg)
 
 ## Recorded Games Tab
 
