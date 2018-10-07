@@ -227,3 +227,4 @@ Libraries and projects used within AoE2Tools
 - 7zip: https://www.7-zip.org/
 - UserPatch: http://userpatch.aiscripters.net/
 - Voobly Slp Decoder: https://github.com/skeletonmage/vooblyslpdecode
+- WololoKingdoms: https://github.com/AoE2CommunityGitHub/WololoKingdoms
