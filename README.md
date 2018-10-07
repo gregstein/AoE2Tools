@@ -20,7 +20,9 @@ Is an all-in-one windows Utility that brings everything that is Age of empires 2
 
 # How To Download AoE2Tools?
 
-To Download The Latest Version, Visit The Releases Page: [Download Latest AoE2Tools](https://github.com/gregstein/AoE2Tools/releases) 
+To Download The Latest Version, Visit The Releases Page: 
+
+[![Download Latest AoE2Tools](https://i.postimg.cc/6qcGxqVF/download.png)](https://github.com/gregstein/AoE2Tools/releases)
 
 Now download "AoE2Tools X.X.X.X.exe" as demonstrated in the image below:
 
