@@ -1,7 +1,7 @@
 # Demo
-[![AoE2Tools Teaser](https://i.postimg.cc/ncvnzg6c/aoe2tools_7.9.jpg)](https://www.youtube.com/watch?v=FXOAxbckKVQ)
+[![AoE2Tools Teaser](https://i.postimg.cc/ncvnzg6c/aoe2tools_7.9.jpg)](https://www.youtube.com/watch?v=0uCuQ_smLZ0)
 
-(Click image above for a video teaser)
+(Click image above for a Video Features Guide)
 
 Is an all-in-one windows Utility that brings everything that is Age of empires 2 related into a fully automated system.
 
