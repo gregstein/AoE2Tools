@@ -32,10 +32,11 @@ Now download "AoE2Tools X.X.X.X.exe" as demonstrated in the image below:
 
 ![Look up](https://media.giphy.com/media/3FlH1ezrQTOGZZ844L/giphy.gif)
 
-[How To Setup AoE2Tools With Age Of Empires 2 HD And Play On Voobly](https://steamcommunity.com/sharedfiles/filedetails/?id=1459865719)
+[How To Setup AoE2Tools (Article Guide)](https://steamcommunity.com/sharedfiles/filedetails/?id=1459865719)
 
+[![How To Setup AoE2Tools (Video Guide)](https://i9.ytimg.com/vi/Srhi14fjTkM/mqdefault.jpg?sqp=CPybnN4F&rs=AOn4CLBT8eSQB0LrlCYYzk_bi7y5JhEE9Q&time=1539772150242)](https://www.youtube.com/watch?v=Srhi14fjTkM)
 
-Please Follow the guide above for the best result and full functionality of AoE2Tools.
+Please Follow any of the guides above for best result and full functionality of AoE2Tools.
 
 # Documentation
 
