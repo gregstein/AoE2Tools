@@ -41,7 +41,7 @@ Please Follow any of the guides above for best result and full functionality of 
 # Documentation
 
 [![How To Use AoE2Tools](https://i9.ytimg.com/vi/0uCuQ_smLZ0/mqdefault.jpg?sqp=CPybnN4F&rs=AOn4CLAS47Gl1c7XHZ2uO0L-W3hIYE_uEg&time=1539772149781)](https://www.youtube.com/watch?v=0uCuQ_smLZ0)
-
+(Click This Image For a Video Tutorial)
 
 ## Recorded Games Tab
 
