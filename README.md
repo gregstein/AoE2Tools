@@ -34,11 +34,14 @@ Now download "AoE2Tools X.X.X.X.exe" as demonstrated in the image below:
 
 [How To Setup AoE2Tools (Article Guide)](https://steamcommunity.com/sharedfiles/filedetails/?id=1459865719)
 
-[![How To Setup AoE2Tools (Video Guide)](https://i9.ytimg.com/vi/Srhi14fjTkM/mqdefault.jpg?sqp=CPybnN4F&rs=AOn4CLBT8eSQB0LrlCYYzk_bi7y5JhEE9Q&time=1539772150242)](https://www.youtube.com/watch?v=Srhi14fjTkM)
+[How To Setup AoE2Tools (Video Guide)](https://www.youtube.com/watch?v=Srhi14fjTkM)
 
 Please Follow any of the guides above for best result and full functionality of AoE2Tools.
 
 # Documentation
+
+[![How To Use AoE2Tools](https://i9.ytimg.com/vi/0uCuQ_smLZ0/mqdefault.jpg?sqp=CPybnN4F&rs=AOn4CLAS47Gl1c7XHZ2uO0L-W3hIYE_uEg&time=1539772149781)](https://www.youtube.com/watch?v=0uCuQ_smLZ0)
+
 
 ## Recorded Games Tab
 
