@@ -200,28 +200,6 @@ wk.Headers.Add("user-agent", "tesft");
 
         private void Completed2(object sender, AsyncCompletedEventArgs e)
         {
-
-            //progressBar1.Value = 0;
-            //Decompress
-            //if (!Directory.Exists(mskdwk.Text))
-            //{
-            //    Directory.CreateDirectory(mskdwk.Text);
-            //}
-            //string rplepath = mskdwk.Text;
-            //Ionic.Zip.ZipFile zip = Ionic.Zip.ZipFile.Read(System.IO.Path.GetTempPath() + @"\hdtotc-tmp\wk.zip");
-            //int zm = 0;
-            //long lengthf = new System.IO.FileInfo(System.IO.Path.GetTempPath() + @"\hdtotc-tmp\wk.zip").Length;
-            ////int totalf = ZipFileCount(System.IO.Path.GetTempPath() + @"\hdtotc-tmp\wk.zip");
-            //foreach (ZipEntry es in zip)
-            //{
-                
-
-            //    zip.ExtractProgress += ExtractProgress;
-            //    es.Extract(rplepath, ExtractExistingFileAction.OverwriteSilently);
-
-            //    //backgroundWorker2.ReportProgress(zm / totalf);
-
-            //}
             label5.Text = "Extracting";
             progressBar1.Value = 0;
             backgroundWorker3.RunWorkerAsync();
