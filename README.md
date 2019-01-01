@@ -26,7 +26,7 @@ To Download The Latest Version, Visit The Releases Page:
 
 Now download "AoE2Tools X.X.X.X.exe" as demonstrated in the image below:
 
-![AoE2Tools exe](https://image.prntscr.com/image/1rCGNqM1QEmruqsT_7CIzQ.png)
+![AoE2Tools exe](https://image.prntscr.com/image/PbKUGB3SQOqCa-Qkte08fA.png)
 
 # How To Setup AoE2Tools
 
