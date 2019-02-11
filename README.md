@@ -3,7 +3,7 @@
 [![Github All Releases](https://img.shields.io/github/downloads/gregstein/AoE2Tools/total.svg)](https://github.com/gregstein/AoE2Tools/releases)
 [![GitHub release](https://img.shields.io/github/release/gregstein/AoE2Tools/all.svg)](https://github.com/gregstein/AoE2Tools/releases)
 [![GitHub Release Date](https://img.shields.io/github/release-date-pre/gregstein/AoE2Tools.svg)](https://github.com/gregstein/AoE2Tools/releases)
-[![GitHub license](https://img.shields.io/github/license/gregstein/AoE2Tools.svg)](https://github.com/gregstein/AoE2Tools/blob/master/LICENSE)
+[![paypal](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://streamlabs.com/gregstein_)
 [![GitHub stars](https://img.shields.io/github/stars/gregstein/AoE2Tools.svg)](https://github.com/gregstein/AoE2Tools/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/gregstein/AoE2Tools.svg)](https://github.com/gregstein/AoE2Tools/network)
 
@@ -29,6 +29,7 @@ You can also watch 🎦 [How To Use AoE2Tools (By GregStein)](https://www.youtub
 ## Features
 * HDToAoC to convert AoEII HD To AoC Version.
 * HDToAoC automatically does port forwarding for Voobly, adds firewall rules.
+* Automatic Configuration for Voobly Multiplayer.
 * AoC Version is compatible with all windows systems (Win7/8/10 and later). No color issues/bugs.
 * WololoKingdoms Installer Integrated.
 * WK Cloud Installer (An alternative to WK Installer).
