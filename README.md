@@ -49,6 +49,7 @@ You can also watch 🎦 [How To Use AoE2Tools (By GregStein)](https://www.youtub
 * Manager To view stats of your game and backup/restore your game files
 * Voobly Medkit to Fix a variety of issues with the game or Voobly.
 * An integrated Updater for AoE2Tools.
+* And Much More...
 
 
 ## Requirements
@@ -68,7 +69,9 @@ Download "AoE2Tools X.X.X.X.exe" e.g.
 ## Tutorials
 
 🎦 [Steam To Voobly Easy Setup Guide.. AoE2Tools (By GregStein)](https://www.youtube.com/watch?v=Srhi14fjTkM) 'Hotkeys are Auto-Imported!'
+
 🎦 [Easy ALL-IN-ONE Voobly Set up! | AoE2 Tools | 2018 UPDATED (By Jred)](https://www.youtube.com/watch?v=LTgb8NII0UM)
+
 
 📜 [How To Setup AoE2Tools (By GregStein)](https://steamcommunity.com/sharedfiles/filedetails/?id=1459865719)
 
@@ -77,27 +80,28 @@ Download "AoE2Tools X.X.X.X.exe" e.g.
 
 <details><summary>### Recorded Games Tab (View)</summary>
 <p>
-![Recorded Games Tab Explained](https://i.imgur.com/JDQP5I9.png)
+     <img src="https://i.imgur.com/JDQP5I9.png" width="619" >
 </p>
 </details>
 
 <details><summary>### Game Settings Tab (View)</summary>
 <p>
-![Game Settings Tab Explained](https://i.imgur.com/sRFbKHA.png)
+  <img src="https://i.imgur.com/sRFbKHA.png" width="619" >
 </p>
 </details>
 
 <details><summary>### Management Tab (View)</summary>
 <p>
-![Game Settings Tab Explained](https://i.imgur.com/0LkhWaZ.png)
+   <img src="https://i.imgur.com/0LkhWaZ.png" width="619" >
 </p>
 </details>
 
 <details><summary>### More Features (View)</summary>
 <p>
-![More Features Explained](https://i.imgur.com/PPX9L06.png)
+  <img src="https://i.imgur.com/PPX9L06.png" width="619" >
 </p>
 </details>
+
 
 For a Live Demo 🎦 [How To Use AoE2Tools (By GregStein)](https://www.youtube.com/watch?v=0uCuQ_smLZ0)
 
@@ -107,7 +111,7 @@ For a Live Demo 🎦 [How To Use AoE2Tools (By GregStein)](https://www.youtube.c
 ## Contacts
 * Join Discord Channel for free support/assistance: https://discordapp.com/invite/jdCgCyx
 * [Voobly](https://www.voobly.com/profile/view/123615731)
-* [twitter](https://twitter.com/gregaoc2)
+* [Twitter](https://twitter.com/gregaoc2)
 
 ## References
 Libraries and projects used within AoE2Tools
