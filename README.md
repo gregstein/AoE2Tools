@@ -27,7 +27,8 @@ You can also watch 🎦 [How To Use AoE2Tools (By GregStein)](https://www.youtub
 * [Disclaimer](#disclaimer)
 
 ## Features
-* HDToAoC to convert AoEII HD To AoC Version.
+* Play Age of Empires II Multiplayer Both On Steam & Voobly Without Issues.
+* HDToAoC to convert AoEII HD To AoC Version (as a new installation).
 * HDToAoC automatically does port forwarding for Voobly, adds firewall rules.
 * Automatic Configuration for Voobly Multiplayer.
 * AoC Version is compatible with all windows systems (Win7/8/10 and later). No color issues/bugs.
