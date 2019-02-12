@@ -24,7 +24,7 @@ You can also watch 🎦 [How To Use AoE2Tools (By GregStein)](https://www.youtub
 * [Donations](#donations)
 * [Contacts](#contacts)
 * [References](#references)
-* [References](#disclaimer)
+* [Disclaimer](#disclaimer)
 
 ## Features
 * HDToAoC to convert AoEII HD To AoC Version.
