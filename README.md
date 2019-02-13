@@ -124,9 +124,9 @@ For a Live Demo 🎦 [How To Use AoE2Tools (By GregStein)](https://www.youtube.c
 6. Anonymous $5
 
 ## Contacts
-* Discord Channel For Free Support/Assistance: https://discordapp.com/invite/jdCgCyx
-* Voobly Profile [Voobly](https://www.voobly.com/profile/view/123615731)
-* Twitter Profile [Twitter](https://twitter.com/gregaoc2)
+* [Discord Channel For Free Support/Assistance](https://discordapp.com/invite/jdCgCyx)
+* [Voobly Profile](https://www.voobly.com/profile/view/123615731)
+* [Twitter Profile](https://twitter.com/gregaoc2)
 
 ## References
 Libraries and projects used within AoE2Tools
