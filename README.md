@@ -23,6 +23,7 @@ You can also watch 🎦 [How To Use AoE2Tools (By GregStein)](https://www.youtub
 * [Tutorials](#tutorials)
 * [Screenshots](#screenshots)
 * [Donations](#donations)
+* [Top Donations](#topdonations)
 * [Contacts](#contacts)
 * [References](#references)
 * [Disclaimer](#disclaimer)
@@ -109,12 +110,23 @@ Download "AoE2Tools X.X.X.X.exe" e.g.
 For a Live Demo 🎦 [How To Use AoE2Tools (By GregStein)](https://www.youtube.com/watch?v=0uCuQ_smLZ0)
 
 ## Donations
-* Paypal: [https://streamlabs.com/gregstein_](https://streamlabs.com/gregstein_)
+* Press This Button to Donate [![paypal](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://streamlabs.com/gregstein_)
+
+💞**Thanks You Very Much For Showing So Much Love For This Project**💞
+
+## Top Donations
+
+1. Foobar $70
+2. Diseax $53
+3. Raughnbo $25
+4. Anonymous $10
+5. buzz_twink $5
+6. Anonymous $5
 
 ## Contacts
-* Join Discord Channel for free support/assistance: https://discordapp.com/invite/jdCgCyx
-* [Voobly](https://www.voobly.com/profile/view/123615731)
-* [Twitter](https://twitter.com/gregaoc2)
+* Discord Channel For Free Support/Assistance: https://discordapp.com/invite/jdCgCyx
+* Voobly Profile [Voobly](https://www.voobly.com/profile/view/123615731)
+* Twitter Profile [Twitter](https://twitter.com/gregaoc2)
 
 ## References
 Libraries and projects used within AoE2Tools
