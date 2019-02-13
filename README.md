@@ -23,7 +23,7 @@ You can also watch 🎦 [How To Use AoE2Tools (By GregStein)](https://www.youtub
 * [Tutorials](#tutorials)
 * [Screenshots](#screenshots)
 * [Donations](#donations)
-* [Top Donations](#topdonations)
+* [Top Donations](#top donations)
 * [Contacts](#contacts)
 * [References](#references)
 * [Disclaimer](#disclaimer)
