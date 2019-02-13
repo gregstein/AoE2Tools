@@ -46,7 +46,7 @@ You can also watch 🎦 [How To Use AoE2Tools (By GregStein)](https://www.youtub
 * Game Mover.
 * Version Switcher.
 * Change Your Game Language (Arabic included).
-* Multilingual Support
+* Multilingual Support for AoE2Tools UI
 * Game Tweaker to boost FPS and Performance.
 * Manager To view stats of your game and backup/restore your game files
 * Voobly Medkit to Fix a variety of issues with the game or Voobly.
