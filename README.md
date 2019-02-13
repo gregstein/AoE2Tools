@@ -4,6 +4,7 @@
 [![GitHub release](https://img.shields.io/github/release/gregstein/AoE2Tools/all.svg)](https://github.com/gregstein/AoE2Tools/releases)
 [![GitHub Release Date](https://img.shields.io/github/release-date-pre/gregstein/AoE2Tools.svg)](https://github.com/gregstein/AoE2Tools/releases)
 [![paypal](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://streamlabs.com/gregstein_)
+[<img src="https://discordapp.com/api/guilds/452492146100928515/widget.png?style=shield">](https://discordapp.com/invite/jdCgCyx)
 [![GitHub stars](https://img.shields.io/github/stars/gregstein/AoE2Tools.svg)](https://github.com/gregstein/AoE2Tools/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/gregstein/AoE2Tools.svg)](https://github.com/gregstein/AoE2Tools/network)
 
