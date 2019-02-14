@@ -14,7 +14,7 @@ This is a demo of **AoE2Tools** UI
 
 <img src="https://i.imgur.com/WbPpmU1.png" width="619" >
 
-You can also watch 🎦 [How To Use AoE2Tools (By GregStein)](https://www.youtube.com/watch?v=0uCuQ_smLZ0)
+You can also watch 🎦 [How To Use AoE2Tools](https://www.youtube.com/watch?v=0uCuQ_smLZ0)
 
 #### Table of contents
 * [Features](#features)
