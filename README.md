@@ -72,12 +72,15 @@ Download "AoE2Tools X.X.X.X.exe" e.g.
 
 ## Tutorials
 
+🎦 [AoE2Tools Cloud: Setting up Voobly in 1 Click (By GregStein)](https://www.youtube.com/watch?v=x2YembRq4U0)
+
 🎦 [Steam To Voobly Easy Setup Guide.. AoE2Tools (By GregStein)](https://www.youtube.com/watch?v=Srhi14fjTkM) 'Hotkeys are Auto-Imported!'
 
 🎦 [Easy ALL-IN-ONE Voobly Set up! | AoE2 Tools | 2018 UPDATED (By Jred)](https://www.youtube.com/watch?v=LTgb8NII0UM)
 
-
 📜 [How To Setup AoE2Tools (By GregStein)](https://steamcommunity.com/sharedfiles/filedetails/?id=1459865719)
+
+📜 [Setting up AoE2Tools for Wine Linux)](https://ageofnotes.com/tutorials/setting-age-empires-2-multiplayer-wine-linux-2019/)
 
 
 ## Screenshots
