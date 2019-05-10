@@ -11,6 +11,8 @@ using ComponentFactory.Krypton.Toolkit;
 using System.IO;
 using Microsoft.Win32;
 using System.Diagnostics;
+using System.Resources;
+using System.Globalization;
 namespace WindowsFormsApplication3
 {
     public partial class ModsOffline : KryptonForm
@@ -21,12 +23,67 @@ namespace WindowsFormsApplication3
             this.TopMost = true;
             backgroundWorker1.RunWorkerAsync();
         }
-
-        private void ModsOffline_Load(object sender, EventArgs e)
+        ResourceManager res_man;    // declare Resource manager to access to specific cultureinfo
+        CultureInfo cul;            // declare culture info
+        private async void ModsOffline_Load(object sender, EventArgs e)
         {
-
+            res_man = new ResourceManager("WindowsFormsApplication3.langs.Res", typeof(Options).Assembly);
+            await Task.Run(() => switchlang());
         }
+        public void switchlang()
+        {
+            using (RegistryKey rk = Registry.CurrentUser.OpenSubKey("Software\\AoE2Tools", true))
+            {
+                if (Registry.GetValue(@"HKEY_CURRENT_USER\Software\AoE2Tools", "Transl", null) != null)
+                {
+                    string translatestr = rk.GetValue("Transl").ToString();
+                    if (translatestr == "en")
+                    {
+                        cul = CultureInfo.CreateSpecificCulture("en");
+                    }
+                    else if (translatestr == "fr")
+                    {
+                        cul = CultureInfo.CreateSpecificCulture("fr");
+                    }
+                    else if (translatestr == "es")
+                    {
+                        cul = CultureInfo.CreateSpecificCulture("es");
+                    }
+                    else if (translatestr == "zh-cn")
+                    {
+                        cul = CultureInfo.CreateSpecificCulture("zh-cn");
+                    }
 
+                }
+                else
+                {
+                    cul = CultureInfo.CreateSpecificCulture("en");
+                }
+            }
+            BeginInvoke((MethodInvoker)delegate
+            {
+
+                ModsOffline.ActiveForm.Text = res_man.GetString("_modstitle", cul);
+                stin.Text = res_man.GetString("_modsinstall", cul);
+                kryptonButton4.Text = res_man.GetString("_modsinstall", cul);
+                ilg.Text = res_man.GetString("_modsinstall", cul);
+                hninstall.Text = res_man.GetString("_modsinstall", cul);
+                aipinstall.Text = res_man.GetString("_modsinstall", cul);
+                bbinstall.Text = res_man.GetString("_modsinstall", cul);
+
+                stun.Text = res_man.GetString("_modsuninstall", cul);
+                kryptonButton3.Text = res_man.GetString("_modsuninstall", cul);
+                ulg.Text = res_man.GetString("_modsuninstall", cul);
+                hnuninstall.Text = res_man.GetString("_modsuninstall", cul);
+                aipuninstall.Text = res_man.GetString("_modsuninstall", cul);
+                bbuninstall.Text = res_man.GetString("_modsuninstall", cul);
+
+                groupBox1.Text = res_man.GetString("_modgb", cul);
+              
+
+
+            });
+        }
         private void kryptonButton4_Click(object sender, EventArgs e)
         {
             //install short walls
@@ -79,8 +136,8 @@ namespace WindowsFormsApplication3
                     shortwallspreload.Enabled = true;
                     shortwallspreload.Visible = true;
 
-                    string drspth = Directory.GetCurrentDirectory() + @"\data\" + "drsbuild.exe";
-                    string _modsinstall = Directory.GetCurrentDirectory() + @"\data\mods\" + "Short Walls" + "\\i\\";
+                    string drspth = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\data\" + "drsbuild.exe";
+                    string _modsinstall = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\data\mods\" + "Short Walls" + "\\i\\";
                     string _Gdata = mkdpath.Text + "\\Data\\";
                     System.Diagnostics.Process process8 = new System.Diagnostics.Process();
                     System.Diagnostics.ProcessStartInfo startInfo8 = new System.Diagnostics.ProcessStartInfo();
@@ -130,8 +187,8 @@ namespace WindowsFormsApplication3
                 shortwallspreload.Enabled = true;
                 shortwallspreload.Visible = true;
 
-                string drspth = Directory.GetCurrentDirectory() + @"\data\" + "drsbuild.exe";
-                string _modsinstall = Directory.GetCurrentDirectory() + @"\data\mods\" + "Short Walls" + "\\u\\";
+                string drspth = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\data\" + "drsbuild.exe";
+                string _modsinstall = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\data\mods\" + "Short Walls" + "\\u\\";
                 string _Gdata = mkdpath.Text + "\\Data\\";
                 System.Diagnostics.Process process8 = new System.Diagnostics.Process();
                 System.Diagnostics.ProcessStartInfo startInfo8 = new System.Diagnostics.ProcessStartInfo();
@@ -175,9 +232,10 @@ namespace WindowsFormsApplication3
                 {
   
 
-                    string drspth = Directory.GetCurrentDirectory() + @"\data\" + "drsbuild.exe";
-                    string _modsinstall = Directory.GetCurrentDirectory() + @"\data\mods\" + "Small Trees" + "\\i\\";
+                    string drspth = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\data\" + "drsbuild.exe";
+                    string _modsinstall = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\data\mods\" + "Small Trees" + "\\i\\";
                     string _Gdata = mkdpath.Text + "\\Data\\";
+                    //string _GdataMod = mkdpath.Text + "\\Data\\";
                     System.Diagnostics.Process process8 = new System.Diagnostics.Process();
                     System.Diagnostics.ProcessStartInfo startInfo8 = new System.Diagnostics.ProcessStartInfo();
                     startInfo8.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
@@ -229,8 +287,8 @@ namespace WindowsFormsApplication3
                     smalltreespreload.Enabled = true;
                     smalltreespreload.Visible = true;
 
-                    string drspth = Directory.GetCurrentDirectory() + @"\data\" + "drsbuild.exe";
-                    string _modsinstall = Directory.GetCurrentDirectory() + @"\data\mods\" + "Small Trees" + "\\u\\";
+                    string drspth = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\data\" + "drsbuild.exe";
+                    string _modsinstall = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\data\mods\" + "Small Trees" + "\\u\\";
                     string _Gdata = mkdpath.Text + "\\Data\\";
                     System.Diagnostics.Process process8 = new System.Diagnostics.Process();
                     System.Diagnostics.ProcessStartInfo startInfo8 = new System.Diagnostics.ProcessStartInfo();
@@ -278,8 +336,8 @@ namespace WindowsFormsApplication3
                     aippreload.Enabled = true;
                     aippreload.Visible = true;
 
-                    string drspth = Directory.GetCurrentDirectory() + @"\data\" + "drsbuild.exe";
-                    string _modsinstall = Directory.GetCurrentDirectory() + @"\data\mods\" + "Advanced Idle Pointer" + "\\i\\";
+                    string drspth = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\data\" + "drsbuild.exe";
+                    string _modsinstall = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\data\mods\" + "Advanced Idle Pointer" + "\\i\\";
                     string _Gdata = mkdpath.Text + "\\Data\\";
                     System.Diagnostics.Process process8 = new System.Diagnostics.Process();
                     System.Diagnostics.ProcessStartInfo startInfo8 = new System.Diagnostics.ProcessStartInfo();
@@ -332,8 +390,8 @@ namespace WindowsFormsApplication3
                     aippreload.Enabled = true;
                     aippreload.Visible = true;
 
-                    string drspth = Directory.GetCurrentDirectory() + @"\data\" + "drsbuild.exe";
-                    string _modsinstall = Directory.GetCurrentDirectory() + @"\data\mods\" + "Advanced Idle Pointer" + "\\u\\";
+                    string drspth = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\data\" + "drsbuild.exe";
+                    string _modsinstall = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\data\mods\" + "Advanced Idle Pointer" + "\\u\\";
                     string _Gdata = mkdpath.Text + "\\Data\\";
                     System.Diagnostics.Process process8 = new System.Diagnostics.Process();
                     System.Diagnostics.ProcessStartInfo startInfo8 = new System.Diagnostics.ProcessStartInfo();
@@ -393,8 +451,8 @@ namespace WindowsFormsApplication3
                     hnpreload.Enabled = true;
                     hnpreload.Visible = true;
 
-                    string drspth = Directory.GetCurrentDirectory() + @"\data\" + "drsbuild.exe";
-                    string _modsinstall = Directory.GetCurrentDirectory() + @"\data\mods\" + "Huge Number" + "\\i\\";
+                    string drspth = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\data\" + "drsbuild.exe";
+                    string _modsinstall = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\data\mods\" + "Huge Number" + "\\i\\";
                     string _Gdata = mkdpath.Text + "\\Data\\";
                     System.Diagnostics.Process process8 = new System.Diagnostics.Process();
                     System.Diagnostics.ProcessStartInfo startInfo8 = new System.Diagnostics.ProcessStartInfo();
@@ -442,8 +500,8 @@ namespace WindowsFormsApplication3
                     hnpreload.Enabled = true;
                     hnpreload.Visible = true;
 
-                    string drspth = Directory.GetCurrentDirectory() + @"\data\" + "drsbuild.exe";
-                    string _modsinstall = Directory.GetCurrentDirectory() + @"\data\mods\" + "Huge Number" + "\\u\\";
+                    string drspth = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\data\" + "drsbuild.exe";
+                    string _modsinstall = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\data\mods\" + "Huge Number" + "\\u\\";
                     string _Gdata = mkdpath.Text + "\\Data\\";
                     System.Diagnostics.Process process8 = new System.Diagnostics.Process();
                     System.Diagnostics.ProcessStartInfo startInfo8 = new System.Diagnostics.ProcessStartInfo();
@@ -501,8 +559,8 @@ namespace WindowsFormsApplication3
                     bbpreload.Enabled = true;
                     bbpreload.Visible = true;
 
-                    string drspth = Directory.GetCurrentDirectory() + @"\data\" + "drsbuild.exe";
-                    string _modsinstall = Directory.GetCurrentDirectory() + @"\data\mods\" + "Blue Berries" + "\\i\\";
+                    string drspth = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\data\" + "drsbuild.exe";
+                    string _modsinstall = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\data\mods\" + "Blue Berries" + "\\i\\";
                     string _Gdata = mkdpath.Text + "\\Data\\";
                     System.Diagnostics.Process process8 = new System.Diagnostics.Process();
                     System.Diagnostics.ProcessStartInfo startInfo8 = new System.Diagnostics.ProcessStartInfo();
@@ -550,8 +608,8 @@ namespace WindowsFormsApplication3
                     bbpreload.Enabled = true;
                     bbpreload.Visible = true;
 
-                    string drspth = Directory.GetCurrentDirectory() + @"\data\" + "drsbuild.exe";
-                    string _modsinstall = Directory.GetCurrentDirectory() + @"\data\mods\" + "Blue Berries" + "\\u\\";
+                    string drspth = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\data\" + "drsbuild.exe";
+                    string _modsinstall = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\data\mods\" + "Blue Berries" + "\\u\\";
                     string _Gdata = mkdpath.Text + "\\Data\\";
                     System.Diagnostics.Process process8 = new System.Diagnostics.Process();
                     System.Diagnostics.ProcessStartInfo startInfo8 = new System.Diagnostics.ProcessStartInfo();
@@ -609,8 +667,8 @@ namespace WindowsFormsApplication3
                     lgpreload.Enabled = true;
                     lgpreload.Visible = true;
 
-                    string drspth = Directory.GetCurrentDirectory() + @"\data\" + "drsbuild.exe";
-                    string _modsinstall = Directory.GetCurrentDirectory() + @"\data\mods\" + "Light Grid" + "\\i\\";
+                    string drspth = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\data\" + "drsbuild.exe";
+                    string _modsinstall = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\data\mods\" + "Light Grid" + "\\i\\";
                     string _Gdata = mkdpath.Text + "\\Data\\";
                     System.Diagnostics.Process process8 = new System.Diagnostics.Process();
                     System.Diagnostics.ProcessStartInfo startInfo8 = new System.Diagnostics.ProcessStartInfo();
@@ -658,8 +716,8 @@ namespace WindowsFormsApplication3
                     lgpreload.Enabled = true;
                     lgpreload.Visible = true;
 
-                    string drspth = Directory.GetCurrentDirectory() + @"\data\" + "drsbuild.exe";
-                    string _modsinstall = Directory.GetCurrentDirectory() + @"\data\mods\" + "Light Grid" + "\\u\\";
+                    string drspth = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\data\" + "drsbuild.exe";
+                    string _modsinstall = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\data\mods\" + "Light Grid" + "\\u\\";
                     string _Gdata = mkdpath.Text + "\\Data\\";
                     System.Diagnostics.Process process8 = new System.Diagnostics.Process();
                     System.Diagnostics.ProcessStartInfo startInfo8 = new System.Diagnostics.ProcessStartInfo();
@@ -714,8 +772,8 @@ namespace WindowsFormsApplication3
             bbpreload.Visible = true;
             
             bbinstall.Enabled = false;
-            string drspth = Directory.GetCurrentDirectory() + @"\data\";
-            string _modsinstall = Directory.GetCurrentDirectory() + @"\data\mods\" + "Blue Berries" + "\\i\\";
+            string drspth = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\data\";
+            string _modsinstall = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\data\mods\" + "Blue Berries" + "\\i\\";
             System.Diagnostics.Process process12 = new System.Diagnostics.Process();
             System.Diagnostics.ProcessStartInfo startInfo12 = new System.Diagnostics.ProcessStartInfo();
             startInfo12.WindowStyle = System.Diagnostics.ProcessWindowStyle.Normal;
@@ -738,8 +796,8 @@ namespace WindowsFormsApplication3
             bbpreload.Visible = true;
 
             bbinstall.Enabled = false;
-            string drspth = Directory.GetCurrentDirectory() + @"\data\";
-            string _modsinstall = Directory.GetCurrentDirectory() + @"\data\mods\" + "Blue Berries" + "\\u\\";
+            string drspth = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\data\";
+            string _modsinstall = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\data\mods\" + "Blue Berries" + "\\u\\";
             System.Diagnostics.Process process12 = new System.Diagnostics.Process();
             System.Diagnostics.ProcessStartInfo startInfo12 = new System.Diagnostics.ProcessStartInfo();
             startInfo12.WindowStyle = System.Diagnostics.ProcessWindowStyle.Normal;

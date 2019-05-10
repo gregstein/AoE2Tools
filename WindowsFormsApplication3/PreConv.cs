@@ -58,28 +58,26 @@ namespace WindowsFormsApplication3
 
                 using (RegistryKey SetVoobly = Registry.CurrentUser.OpenSubKey(@"Software\AoE2Tools", true))
                 {
-                    if (SetVoobly != null)
-                    {
+                    
 
 
                         //Object o32 = key32.GetValue("InstallPath");
                         SetVoobly.SetValue("Ren", "Save Replay");
                         SetVoobly.SetValue("Launcher", "1");
                         SetVoobly.SetValue("Flag", LangTxt.Text.ToLower());
-                    }
+                    
                 }
             //Check Voobly Settings
             if(VoobAuto.Checked == true)
             {
                 using (RegistryKey SetVoobly = Registry.CurrentUser.OpenSubKey(@"Software\AoE2Tools", true))
                 {
-                    if (SetVoobly != null)
-                    {
+                    
 
 
                         //Object o32 = key32.GetValue("InstallPath");
                         SetVoobly.SetValue("SetVoobly", "auto");
-                    }
+                    
                 }
 
             }
@@ -88,13 +86,12 @@ namespace WindowsFormsApplication3
             {
                 using (RegistryKey SetVoobly = Registry.CurrentUser.OpenSubKey(@"Software\AoE2Tools", true))
                 {
-                    if (SetVoobly != null)
-                    {
+                   
 
 
                         //Object o32 = key32.GetValue("InstallPath");
                         SetVoobly.SetValue("SetVoobly", "manual");
-                    }
+                    
                 }
             }
             //Check Game Settings
@@ -102,60 +99,55 @@ namespace WindowsFormsApplication3
             {
                 using (RegistryKey SetGame = Registry.CurrentUser.OpenSubKey(@"Software\AoE2Tools", true))
                 {
-                    if (SetGame != null)
-                    {
+                    
 
 
                         //Object o32 = key32.GetValue("InstallPath");
                         SetGame.SetValue("SetGame", "auto");
-                    }
+                    
                 }
             }
             else if (GameCustom.Checked == true)
             {
                 using (RegistryKey SetGame = Registry.CurrentUser.OpenSubKey(@"Software\AoE2Tools", true))
                 {
-                    if (SetGame != null)
-                    {
+                    
 
 
                         //Object o32 = key32.GetValue("InstallPath");
                         SetGame.SetValue("SetGame", "manual");
-                    }
+                    
                 }
             }
             //Check Game Directory
             using (RegistryKey SetGame = Registry.CurrentUser.OpenSubKey(@"Software\AoE2Tools", true))
             {
-                if (SetGame != null)
-                {
+                
 
 
                     //Object o32 = key32.GetValue("InstallPath");
                     SetGame.SetValue("AoE2Path", GameDir.Text);
-                }
+                
             }
             //Check Hotkeys
             if (!kryptonComboBox1.Text.Contains("="))
             {
                 using (RegistryKey SetHotkeys = Registry.CurrentUser.OpenSubKey(@"Software\AoE2Tools", true))
                 {
-                    if (SetHotkeys != null)
-                    {
+                    
 
                         SetHotkeys.SetValue("SetHotkeys", kryptonComboBox1.Text);
-                    }
+                    
                 }
             }
             else
             {
                 using (RegistryKey SetHotkeys = Registry.CurrentUser.OpenSubKey(@"Software\AoE2Tools", true))
                 {
-                    if (SetHotkeys != null)
-                    {
+                    
 
                         SetHotkeys.SetValue("SetHotkeys", "Default (Recommended)");
-                    }
+                    
                 }
             }
             
@@ -165,22 +157,20 @@ namespace WindowsFormsApplication3
             {
                 using (RegistryKey smalltree = Registry.CurrentUser.OpenSubKey(@"Software\AoE2Tools", true))
                 {
-                    if (smalltree != null)
-                    {
+                    
 
                         smalltree.SetValue("Small Trees", "yes");
-                    }
+                    
                 }
             }
             else
             {
                 using (RegistryKey smalltree = Registry.CurrentUser.OpenSubKey(@"Software\AoE2Tools", true))
                 {
-                    if (smalltree != null)
-                    {
+                    
 
                         smalltree.SetValue("Small Trees", "no");
-                    }
+                    
                 }
             }
 
@@ -189,22 +179,20 @@ namespace WindowsFormsApplication3
             {
                 using (RegistryKey shortwall = Registry.CurrentUser.OpenSubKey(@"Software\AoE2Tools", true))
                 {
-                    if (shortwall != null)
-                    {
+                   
 
                         shortwall.SetValue("Short Walls", "yes");
-                    }
+                    
                 }
             }
             else 
             {
                 using (RegistryKey shortwall = Registry.CurrentUser.OpenSubKey(@"Software\AoE2Tools", true))
                 {
-                    if (shortwall != null)
-                    {
+                    
 
                         shortwall.SetValue("Short Walls", "no");
-                    }
+                    
                 }
             }
 
@@ -213,22 +201,20 @@ namespace WindowsFormsApplication3
             {
                 using (RegistryKey boldtexts = Registry.CurrentUser.OpenSubKey(@"Software\AoE2Tools", true))
                 {
-                    if (boldtexts != null)
-                    {
+                    
 
                         boldtexts.SetValue("Light Grid", "yes");
-                    }
+                    
                 }
             }
             else
             {
                 using (RegistryKey boldtexts = Registry.CurrentUser.OpenSubKey(@"Software\AoE2Tools", true))
                 {
-                    if (boldtexts != null)
-                    {
+                    
 
                         boldtexts.SetValue("Light Grid", "no");
-                    }
+                    
                 }
             }
 
@@ -237,22 +223,20 @@ namespace WindowsFormsApplication3
             {
                 using (RegistryKey advidles = Registry.CurrentUser.OpenSubKey(@"Software\AoE2Tools", true))
                 {
-                    if (advidles != null)
-                    {
+                    
 
                         advidles.SetValue("Advanced Idle Pointer", "yes");
-                    }
+                    
                 }
             }
             else
             {
                 using (RegistryKey advidles = Registry.CurrentUser.OpenSubKey(@"Software\AoE2Tools", true))
                 {
-                    if (advidles != null)
-                    {
+                    
 
                         advidles.SetValue("Advanced Idle Pointer", "no");
-                    }
+                    
                 }
             }
 
@@ -261,22 +245,20 @@ namespace WindowsFormsApplication3
             {
                 using (RegistryKey hugenumbers = Registry.CurrentUser.OpenSubKey(@"Software\AoE2Tools", true))
                 {
-                    if (hugenumbers != null)
-                    {
+                   
 
                         hugenumbers.SetValue("Huge Number", "yes");
-                    }
+                    
                 }
             }
             else
             {
                 using (RegistryKey hugenumbers = Registry.CurrentUser.OpenSubKey(@"Software\AoE2Tools", true))
                 {
-                    if (hugenumbers != null)
-                    {
+                    
 
                         hugenumbers.SetValue("Huge Number", "no");
-                    }
+                    
                 }
             }
 
@@ -285,22 +267,20 @@ namespace WindowsFormsApplication3
             {
                 using (RegistryKey blueberry = Registry.CurrentUser.OpenSubKey(@"Software\AoE2Tools", true))
                 {
-                    if (blueberry != null)
-                    {
+                    
 
                         blueberry.SetValue("Blue Berries", "yes");
-                    }
+                    
                 }
             }
             else if (blueberries.Checked == false)
             {
                 using (RegistryKey blueberry = Registry.CurrentUser.OpenSubKey(@"Software\AoE2Tools", true))
                 {
-                    if (blueberry != null)
-                    {
+                    
 
                         blueberry.SetValue("Blue Berries", "no");
-                    }
+                    
                 }
             }
                 //End Operation
@@ -316,18 +296,14 @@ namespace WindowsFormsApplication3
             //Retrieve Default Lang
             using (RegistryKey key = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Microsoft Games\Age of Empires II HD", true))
             {
-                if (key != null)
+                if (Registry.GetValue(@"HKEY_CURRENT_USER\Software\Microsoft\Microsoft Games\Age of Empires II HD", "Language", null) != null)
                 {
                     string osy = key.GetValue("Language").ToString();
                     LangTxt.Text = osy.ToUpper();
                     using (RegistryKey blueberry = Registry.CurrentUser.OpenSubKey(@"Software\AoE2Tools", true))
                     {
-                        if (blueberry != null)
-                        {
-
-                            blueberry.SetValue("Flag", osy);
-                            
-                        }
+                       
+                            blueberry.SetValue("Flag", osy);    
                     }
                 }
             }
@@ -428,7 +404,7 @@ if (GameCustom.Checked == true)
                             RegistryKey keyAdd = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\AoE2Tools");
                             keyAdd.SetValue("SteamPath", Spath32);
                             keyAdd.Close();
-                            FixSteam.Enabled = false;
+                            //FixSteam.Enabled = false;
                             SteamBox.Image = Properties.Resources.check;
                             SteamLabel.StateNormal.ShortText.Color1 = Color.ForestGreen;
                             SteamLabel.Text = "Success!";
@@ -440,7 +416,7 @@ if (GameCustom.Checked == true)
 
                         else
                         {
-                            FixSteam.Enabled = true;
+                            //FixSteam.Enabled = true;
                             SteamBox.Image = Properties.Resources.uncheck;
                             SteamLabel.StateNormal.ShortText.Color1 = Color.Red;
                             SteamLabel.Text = "Failed!";
@@ -473,7 +449,7 @@ if (GameCustom.Checked == true)
                             RegistryKey keyAdd = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\AoE2Tools");
                             keyAdd.SetValue("SteamPath", Spath64);
                             keyAdd.Close();
-                            FixSteam.Enabled = false;
+                            //FixSteam.Enabled = false;
                             SteamBox.Image = Properties.Resources.check;
                             SteamLabel.StateNormal.ShortText.Color1 = Color.ForestGreen;
                             SteamLabel.Text = "Success!";
@@ -483,7 +459,7 @@ if (GameCustom.Checked == true)
 
                         else
                         {
-                            FixSteam.Enabled = true;
+                            //FixSteam.Enabled = true;
                             SteamBox.Image = Properties.Resources.uncheck;
                             SteamLabel.StateNormal.ShortText.Color1 = Color.Red;
                             SteamLabel.Text = "Failed!";
@@ -651,7 +627,9 @@ if (GameCustom.Checked == true)
 
         private void FixSteam_Click(object sender, EventArgs e)
         {
+            if(SteamLabel.Text != "Ready!")
             KryptonMessageBox.Show("We Didn't Find Age of Empires 2 HD!\n If It is Installed SomeWhere Else. You Need To Locate \"AoK HD.exe\" In Your Custom Steam Games Folder", "Important!");
+
             //OPEN DIALOG
             this.openFileDialog1.FileName = "AoK HD.exe";
             this.openFileDialog1.Filter = "AoK HD.exe|AoK HD.exe";
@@ -664,7 +642,13 @@ if (GameCustom.Checked == true)
                 string SpathAlt = openFileDialog1.FileName;
                 keyAddAlt.SetValue("SteamPath", Path.GetDirectoryName(SpathAlt));
                 keyAddAlt.Close();
-                SteamAssets();
+                SteamAssets();            
+                backgroundWorker1.RunWorkerAsync();
+                SteamLabel.Text = "Ready!";
+                SteamLabel.StateNormal.ShortText.Color1 = Color.ForestGreen;
+                SteamBox.Image = WindowsFormsApplication3.Properties.Resources.check;
+                kryptonButton1.Enabled = true;
+                //FixSteam.Enabled = false;
             }
             else
             {
@@ -709,6 +693,16 @@ if (GameCustom.Checked == true)
             //{
             //    e.Cancel = true;
             //};
+        }
+
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void shortwalls_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
         //public static bool CloseCancel()
         //{

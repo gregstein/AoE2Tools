@@ -13,11 +13,14 @@ using Microsoft.Win32;
 using System.Diagnostics;
 using ICSharpCode.SharpZipLib.Zip.Compression;
 using ICSharpCode.SharpZipLib.Zip.Compression.Streams;
+using System.Resources;
+using System.Globalization;
 
 namespace WindowsFormsApplication3
 {
     public partial class RecentReplay : KryptonForm
     {
+ 
         public RecentReplay()
         {
             InitializeComponent();
@@ -25,41 +28,119 @@ namespace WindowsFormsApplication3
             //this.TopMost = true;
         }
         private static Random random = new Random();
-        private void RecentReplay_Load(object sender, EventArgs e)
+        ResourceManager res_man;    // declare Resource manager to access to specific cultureinfo
+        CultureInfo cul;            // declare culture info
+        private async void RecentReplay_Load(object sender, EventArgs e)
         {
-            aoepath();
+            res_man = new ResourceManager("WindowsFormsApplication3.langs.Res", typeof(Options).Assembly);
+            await Task.Run(() => switchlang());
+           
+            //aoepath();
             RecentR();
+        }
+        public void switchlang()
+        {
+            using (RegistryKey rk = Registry.CurrentUser.OpenSubKey("Software\\AoE2Tools", true))
+            {
+                if (Registry.GetValue(@"HKEY_CURRENT_USER\Software\AoE2Tools", "Transl", null) != null)
+                {
+                    string translatestr = rk.GetValue("Transl").ToString();
+                    if (translatestr == "en")
+                    {
+                        cul = CultureInfo.CreateSpecificCulture("en");
+                    }
+                    else if (translatestr == "fr")
+                    {
+                        cul = CultureInfo.CreateSpecificCulture("fr");
+                    }
+                    else if (translatestr == "es")
+                    {
+                        cul = CultureInfo.CreateSpecificCulture("es");
+                    }
+                    else if (translatestr == "zh-cn")
+                    {
+                        cul = CultureInfo.CreateSpecificCulture("zh-cn");
+                    }
+
+                }
+                else
+                {
+                    cul = CultureInfo.CreateSpecificCulture("en");
+                }
+            }
+            BeginInvoke((MethodInvoker)delegate
+            {
+
+                RecentReplay.ActiveForm.Text = res_man.GetString("_recenttitlebar", cul);
+                label7.Text = res_man.GetString("_recentreplayteam1", cul);
+                label8.Text = res_man.GetString("_recentreplayteam2", cul);
+                kryptonLabel1.Text = res_man.GetString("_recentreplayname", cul);
+                kryptonLabel2.Text = res_man.GetString("_recentversion", cul);
+                watchrec.Text = res_man.GetString("_recentwatch", cul);
+                saverec.Text = res_man.GetString("_recentrename", cul);
+                delrec.Text = res_man.GetString("_recentdelete", cul);
+                closerec.Text = res_man.GetString("_recentclose", cul);
+                kryptonGroupBox1.Text = res_man.GetString("_recentreplaymanage", cul);
+
+            });
         }
         public async void RecentR()
         {
+            
             await Task.Run(() => aoepath());
             try
             {
                 this.TopMost = true;
                 this.TopMost = false;
-                var directory = new DirectoryInfo(mskdpath.Text + @"\SaveGame");
-                var myFile = directory.GetFiles()
-             .OrderByDescending(f => f.LastWriteTime)
-             .First();
 
-                //WK
-                var directory2 = new DirectoryInfo(mskdpath.Text + @"\Voobly Mods\AOC\Data Mods\WololoKingdoms\SaveGame");
-                var myFile2 = directory2.GetFiles()
-             .OrderByDescending(f => f.LastWriteTime)
-             .First();
-                string _wkrec = mskdpath.Text + @"\Games\WololoKingdoms\SaveGame\" + myFile2.ToString();
+           
+                    //has matching rec files 1.5
+                    var directory = new DirectoryInfo(mskdpath.Text + @"\SaveGame");
+                    int RCRecCount = directory.GetFiles("*.mgz").Where(x => !x.FullName.Contains("voobly-spec.mgz") && !x.FullName.Contains("rec.mgz"))
+                 .Count();
+                   
+
+                
+
+              
+                    //has matching rec files WK
+                    
+                    var directory2 = new DirectoryInfo(mskdpath.Text + @"\Voobly Mods\AOC\Data Mods\WololoKingdoms\SaveGame");
+                    int WKRecCount = directory2.GetFiles("*.mgz").Where(x => !x.FullName.Contains("voobly-spec.mgz") && !x.FullName.Contains("rec.mgz"))
+                         .Count();
+
+                   
+
+
+               
 
                // Games\WololoKingdoms
-                if (!File.Exists(mskdpath.Text + @"\Games\WololoKingdoms\SaveGame\" + myFile2.ToString()))
+                //if (!File.Exists(mskdpath.Text + @"\Voobly Mods\AOC\Data Mods\WololoKingdoms\SaveGame\" + myFile2.ToString()))
+                //{
+                //    File.Copy(mskdpath.Text + @"\Voobly Mods\AOC\Data Mods\WololoKingdoms\SaveGame\" + myFile2.ToString(), mskdpath.Text + @"\Games\WololoKingdoms\SaveGame\" + myFile2.ToString());
+                //}
+
+
+
+                //MessageBox.Show(mskdpath.Text + @"\Games\WololoKingdoms AK\SaveGame\" + myFile2.ToString(), "");
+                    if (RCRecCount == 0 && WKRecCount != 0)
                 {
-                    File.Copy(mskdpath.Text + @"\Voobly Mods\AOC\Data Mods\WololoKingdoms\SaveGame\" + myFile2.ToString(), mskdpath.Text + @"\Games\WololoKingdoms\SaveGame\" + myFile2.ToString());
+                    var myFile2 = directory2.GetFiles("*.mgz").Where(x => !x.FullName.Contains("voobly-spec.mgz") && !x.FullName.Contains("rec.mgz"))
+             .OrderByDescending(f => f.LastWriteTime)
+             .First();
+                    if (File.Exists(mskdpath.Text + @"\Voobly Mods\AOC\Data Mods\WololoKingdoms\SaveGame\" + myFile2.ToString()))
+                        PlayerN(mskdpath.Text + @"\Voobly Mods\AOC\Data Mods\WololoKingdoms\SaveGame\" + myFile2.ToString());
+                    gamever.Text = "WK 5.8.1";
+                    recentrec.Text = myFile2.ToString().Remove(myFile2.ToString().Length - 4);
+                    oldfn.Text = myFile2.ToString().Remove(myFile2.ToString().Length - 4);
+                    getext.Text = myFile2.ToString().Substring(Math.Max(0, myFile2.ToString().Length - 4));
                 }
 
-                
-                
-                //MessageBox.Show(mskdpath.Text + @"\Games\WololoKingdoms AK\SaveGame\" + myFile2.ToString(), "");
-                if (File.GetLastWriteTime(mskdpath.Text + @"\SaveGame\" + myFile.ToString()) > File.GetLastWriteTime(mskdpath.Text + @"\Voobly Mods\AOC\Data Mods\WololoKingdoms\SaveGame\" + myFile2.ToString()))
+                    else if (RCRecCount != 0 && WKRecCount == 0)
                 {
+                    var myFile = directory.GetFiles("*.mgz").Where(x => !x.FullName.Contains("voobly-spec.mgz") && !x.FullName.Contains("rec.mgz"))
+             .OrderByDescending(f => f.LastWriteTime)
+             .First();
                     if (File.Exists(mskdpath.Text + @"\SaveGame\" + myFile.ToString()))
                         PlayerN(mskdpath.Text + @"\SaveGame\" + myFile.ToString());
                     gamever.Text = "1.5 RC";
@@ -67,23 +148,18 @@ namespace WindowsFormsApplication3
                     oldfn.Text = myFile.ToString().Remove(myFile.ToString().Length - 4);
                     getext.Text = myFile.ToString().Substring(Math.Max(0, myFile.ToString().Length - 4));
                 }
-                else
+                    else if (RCRecCount == 0 && WKRecCount == 0)
                 {
-                    if (File.Exists(mskdpath.Text + @"\Games\WololoKingdoms\SaveGame\" + myFile2.ToString()))
-                    PlayerN(mskdpath.Text + @"\Games\WololoKingdoms\SaveGame\" + myFile2.ToString());
-                    gamever.Text = "WK";
-                    recentrec.Text = myFile2.ToString().Remove(myFile2.ToString().Length - 4);
-                    oldfn.Text = myFile2.ToString().Remove(myFile2.ToString().Length - 4);
-                    getext.Text = myFile2.ToString().Substring(Math.Max(0, myFile2.ToString().Length - 4));
+                    KryptonMessageBox.Show("No replays yet! Play one game and come back!");
                 }
 
-              
+
             }
             catch (Exception gh)
             {
-                throw gh;
-                //KryptonMessageBox.Show("No replays yet! Play one game and come back!");
-                //this.Close();
+                //throw gh;
+                KryptonMessageBox.Show(gh.ToString());
+                this.Close();
             }
            
         }
@@ -137,14 +213,14 @@ namespace WindowsFormsApplication3
             this.Close();
         }
 
-        private void delrec_Click(object sender, EventArgs e)
+        private async void delrec_Click(object sender, EventArgs e)
         {
             try
             {
                 DialogResult dialogResult = KryptonMessageBox.Show("Delete This Replay?", "Confirmation", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    if(gamever.Text == "WK")
+                    if (gamever.Text == "WK 5.7.2" || gamever.Text == "WK 5.7.4" || gamever.Text == "WK 5.8.1")
                     {
                         if (File.Exists(mskdpath.Text + @"\Voobly Mods\AOC\Data Mods\WololoKingdoms\SaveGame\" + recentrec.Text + getext.Text))
                         {
@@ -155,17 +231,18 @@ namespace WindowsFormsApplication3
                             File.Delete(mskdpath.Text + @"\Voobly Mods\AOC\Data Mods\WololoKingdoms\SaveGame\" + oldfn.Text + getext.Text);
                         }
                         //2nd wk folder
-                        if (File.Exists(mskdpath.Text + @"\Games\WololoKingdoms\SaveGame\" + recentrec.Text + getext.Text))
+                        if (File.Exists(mskdpath.Text + @"\Voobly Mods\AOC\Data Mods\WololoKingdoms\SaveGame\" + recentrec.Text + getext.Text))
                         {
-                            File.Delete(mskdpath.Text + @"\Games\WololoKingdoms\SaveGame\" + recentrec.Text + getext.Text);
+                            File.Delete(mskdpath.Text + @"\Voobly Mods\AOC\Data Mods\WololoKingdoms\SaveGame\" + recentrec.Text + getext.Text);
                         }
-                        if (File.Exists(mskdpath.Text + @"\Games\WololoKingdoms\SaveGame\" + oldfn.Text + getext.Text))
+                        if (File.Exists(mskdpath.Text + @"\Voobly Mods\AOC\Data Mods\WololoKingdoms\SaveGame\" + oldfn.Text + getext.Text))
                         {
-                            File.Delete(mskdpath.Text + @"\Games\WololoKingdoms\SaveGame\" + oldfn.Text + getext.Text);
+                            File.Delete(mskdpath.Text + @"\Voobly Mods\AOC\Data Mods\WololoKingdoms\SaveGame\" + oldfn.Text + getext.Text);
                         }
-                        this.Close();
+                        //this.Close();
+                        RecentR();
                     }
-                    else if (gamever.Text != "WK")
+                    else if (gamever.Text != "WK 5.7.2" && gamever.Text != "WK 5.7.4" && gamever.Text != "WK 5.8.1")
                     {
                         if (File.Exists(mskdpath.Text + "\\SaveGame\\" + recentrec.Text + getext.Text))
                         {
@@ -175,7 +252,8 @@ namespace WindowsFormsApplication3
                         {
                             File.Delete(mskdpath.Text + "\\SaveGame\\" + oldfn.Text + getext.Text);
                         }
-                        this.Close();
+                        //this.Close();
+                        await Task.Run(() => RecentR());
                     }
 
                 }
@@ -184,13 +262,17 @@ namespace WindowsFormsApplication3
 
                 }
             }
-            catch (SystemException)
+            catch (Exception gt)
             {
-                MessageBox.Show("Could not delete this replay! Close Age of empires 2 first!", "Error");
+               // MessageBox.Show("Could not delete this replay! Close Age of empires 2 first!", "Error");
+                throw gt;
             }
+
  
         }
-
+        public bool movedornot = true;
+        private FileInfo myFile;
+        private FileInfo myFile2;
         private void saverec_Click(object sender, EventArgs e)
         {
             try
@@ -199,15 +281,42 @@ namespace WindowsFormsApplication3
                 saverec.Enabled = false;
                 if (File.Exists(mskdpath.Text + @"\Voobly Mods\AOC\Data Mods\WololoKingdoms\SaveGame\" + oldfn.Text + getext.Text) && oldfn.Text != recentrec.Text)
                 {
-                    if (gamever.Text == "WK")
+                    try
                     {
-                        File.Move(mskdpath.Text + @"\Voobly Mods\AOC\Data Mods\WololoKingdoms\SaveGame\" + oldfn.Text + getext.Text, mskdpath.Text + @"\Voobly Mods\AOC\Data Mods\WololoKingdoms\SaveGame\" + recentrec.Text + getext.Text);
-                        File.Move(mskdpath.Text + @"\Games\WololoKingdoms\Savegame\" + oldfn.Text + getext.Text, mskdpath.Text + @"\Games\WololoKingdoms\Savegame\" + recentrec.Text + getext.Text);
-                        oldfn.Text = recentrec.Text;
-            
-                        KryptonMessageBox.Show("Replay Renamed!", "Success");
+                        if (gamever.Text == "WK 5.7.2" || gamever.Text == "WK 5.7.2" || gamever.Text == "WK 5.8.1")
+                        {
+                            File.Move(mskdpath.Text + @"\Voobly Mods\AOC\Data Mods\WololoKingdoms\SaveGame\" + oldfn.Text + getext.Text, mskdpath.Text + @"\Voobly Mods\AOC\Data Mods\WololoKingdoms\SaveGame\" + recentrec.Text + getext.Text);
+                            File.Move(mskdpath.Text + @"\Voobly Mods\AOC\Data Mods\WololoKingdoms\SaveGame\" + oldfn.Text + getext.Text, mskdpath.Text + @"\Voobly Mods\AOC\Data Mods\WololoKingdoms\SaveGame\" + recentrec.Text + getext.Text);
+
+                        }
+                    }
+                    catch (UnauthorizedAccessException)
+                    {
+                        MessageBox.Show("Please Run AoE2Tools As Administrator!");
+                        movedornot = false;
                         saverec.Enabled = true;
                     }
+                    catch(SystemException)
+                    {
+                        //movedornot = false;
+                        saverec.Enabled = true;
+                    }
+                    finally
+                    {
+                        if (movedornot == true)
+                        {
+                        oldfn.Text = recentrec.Text;
+
+                        KryptonMessageBox.Show("Replay Renamed!", "Success");
+                        saverec.Enabled = true;
+                        }
+                        else
+                        {
+                            KryptonMessageBox.Show("Failed to rename!", "Failed!");
+                        }
+                       
+                    }
+            
                 }
                 else if (File.Exists(mskdpath.Text + "\\SaveGame\\" + oldfn.Text + getext.Text) && oldfn.Text != recentrec.Text)
                 {
@@ -218,7 +327,7 @@ namespace WindowsFormsApplication3
                     //    KryptonMessageBox.Show("Replay Renamed!", "Success");
                     //    saverec.Enabled = true;
                     //}
-                    if(gamever.Text != "WK")
+                    if (gamever.Text != "WK 5.7.2" && gamever.Text != "WK 5.7.4" && gamever.Text != "WK 5.8.1")
                     {
                         File.Move(mskdpath.Text + "\\SaveGame\\" + oldfn.Text + getext.Text, mskdpath.Text + "\\SaveGame\\" + recentrec.Text + getext.Text);
                         oldfn.Text = recentrec.Text;
@@ -229,24 +338,43 @@ namespace WindowsFormsApplication3
                 }
                
             }
+                catch(UnauthorizedAccessException)
+            {
+                MessageBox.Show("Please Run AoE2Tools As Administrator!");
+                saverec.Enabled = true;
+            }
             catch (SystemException)
             {
-                MessageBox.Show("Could not save this replay! Close Age of empires 2 first or move the game to the recommended directory!", "Error");
+                saverec.Enabled = true;
+                //throw ex;
+                ////MessageBox.Show("Could not save this replay! Close Age of empires 2 first or move the game to the recommended directory!", "Error");
             }
         }
 
         private void watchrec_Click(object sender, EventArgs e)
         {
-            if(gamever.Text == "WK")
+            MessageBox.Show(gamever.Text);
+            if(gamever.Text == "WK 5.7.2")
             {
+                if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"data\patches\5.7.2\empires2_x1_p1.dat") && File.Exists(mskdpath.Text + @"\Games\WololoKingdoms\Data\empires2_x1_p1.dat"))
+                {
+                    File.Copy(AppDomain.CurrentDomain.BaseDirectory + @"data\patches\5.7.2\empires2_x1_p1.dat", mskdpath.Text + @"\Games\WololoKingdoms\Data\empires2_x1_p1.dat", true);
+                }
+                else
+                {
+                    if (!File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"data\patches\5.7.2\empires2_x1_p1.dat"))
+                        KryptonMessageBox.Show(AppDomain.CurrentDomain.BaseDirectory + @"data\patches\5.7.2\empires2_x1_p1.dat" + "is not found!", "Error");
+                    if (!File.Exists(mskdpath.Text + @"\Games\WololoKingdoms\Data\empires2_x1_p1.dat"))
+                        KryptonMessageBox.Show(mskdpath.Text + @"\Games\WololoKingdoms\Data\empires2_x1_p1.dat" + "is not found!", "Error");
+                }
                 //WK "oldfn.Text == recentrec.Text"
                 if (File.Exists(mskdpath.Text + "\\Voobly Mods\\AOC\\Data Mods\\WololoKingdoms\\SaveGame\\" + oldfn.Text + getext.Text))
                 {
    
                     string notrenamedrec = mskdpath.Text + "\\Voobly Mods\\AOC\\Data Mods\\WololoKingdoms\\SaveGame\\" + oldfn.Text + getext.Text;
-                    if (!File.Exists(mskdpath.Text + "\\Games\\WololoKingdoms\\Savegame\\" + oldfn.Text + getext.Text))
+                    if (!File.Exists(mskdpath.Text + "\\Voobly Mods\\AOC\\Data Mods\\WololoKingdoms\\SaveGame\\" + oldfn.Text + getext.Text))
                     {
-                            File.Copy(mskdpath.Text + "\\Voobly Mods\\AOC\\Data Mods\\WololoKingdoms\\SaveGame\\" + oldfn.Text + getext.Text, mskdpath.Text + "\\Games\\WololoKingdoms\\Savegame\\" + oldfn.Text + getext.Text);    
+                            File.Copy(mskdpath.Text + "\\Voobly Mods\\AOC\\Data Mods\\WololoKingdoms\\SaveGame\\" + oldfn.Text + getext.Text, mskdpath.Text + "\\Voobly Mods\\AOC\\Data Mods\\WololoKingdoms\\SaveGame\\" + oldfn.Text + getext.Text);    
                     }
                     WatchRepm(notrenamedrec);
                 }
@@ -254,15 +382,86 @@ namespace WindowsFormsApplication3
                 else if (File.Exists(mskdpath.Text + "\\Voobly Mods\\AOC\\Data Mods\\WololoKingdoms\\SaveGame\\" + recentrec.Text + getext.Text))
                 {
                     string renamedrec = mskdpath.Text + "\\Voobly Mods\\AOC\\Data Mods\\WololoKingdoms\\SaveGame\\" + recentrec.Text + getext.Text;
-                    if (!File.Exists(mskdpath.Text + "\\Games\\WololoKingdoms\\Savegame\\" + recentrec.Text + getext.Text))
+                    if (!File.Exists(mskdpath.Text + "\\Voobly Mods\\AOC\\Data Mods\\WololoKingdoms\\SaveGame\\" + recentrec.Text + getext.Text))
                     {
-                        File.Copy(mskdpath.Text + "\\Voobly Mods\\AOC\\Data Mods\\WololoKingdoms\\SaveGame\\" + recentrec.Text + getext.Text, mskdpath.Text + "\\Games\\WololoKingdoms\\Savegame\\" + recentrec.Text + getext.Text);
+                        File.Copy(mskdpath.Text + "\\Voobly Mods\\AOC\\Data Mods\\WololoKingdoms\\SaveGame\\" + recentrec.Text + getext.Text, mskdpath.Text + "\\Voobly Mods\\AOC\\Data Mods\\WololoKingdoms\\SaveGame\\" + recentrec.Text + getext.Text);
                     }
                     WatchRepm(renamedrec);
                 }
             }
+            else if (gamever.Text == "WK 5.7.4")
+            {
+                if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"data\patches\5.7.4\empires2_x1_p1.dat") && File.Exists(mskdpath.Text + @"\Games\WololoKingdoms\Data\empires2_x1_p1.dat"))
+                {
+                    
+                    File.Copy(AppDomain.CurrentDomain.BaseDirectory + @"data\patches\5.7.4\empires2_x1_p1.dat", mskdpath.Text + @"\Games\WololoKingdoms\Data\empires2_x1_p1.dat", true);
+                }
+                else
+                {
+                    if (!File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"data\patches\5.7.4\empires2_x1_p1.dat"))
+                        KryptonMessageBox.Show(AppDomain.CurrentDomain.BaseDirectory + @"data\patches\5.7.4\empires2_x1_p1.dat" + "is not found!", "Error");
+                    if (!File.Exists(mskdpath.Text + @"\Games\WololoKingdoms\Data\empires2_x1_p1.dat"))
+                        KryptonMessageBox.Show(mskdpath.Text + @"\Games\WololoKingdoms\Data\empires2_x1_p1.dat" + "is not found!", "Error");
+                }
+                //WK "oldfn.Text == recentrec.Text"
+                if (File.Exists(mskdpath.Text + "\\Voobly Mods\\AOC\\Data Mods\\WololoKingdoms\\SaveGame\\" + oldfn.Text + getext.Text))
+                {
 
-            else if (gamever.Text != "WK")
+                    string notrenamedrec = mskdpath.Text + "\\Voobly Mods\\AOC\\Data Mods\\WololoKingdoms\\SaveGame\\" + oldfn.Text + getext.Text;
+                    if (!File.Exists(mskdpath.Text + "\\Voobly Mods\\AOC\\Data Mods\\WololoKingdoms\\SaveGame\\" + oldfn.Text + getext.Text))
+                    {
+                        File.Copy(mskdpath.Text + "\\Voobly Mods\\AOC\\Data Mods\\WololoKingdoms\\SaveGame\\" + oldfn.Text + getext.Text, mskdpath.Text + "\\Voobly Mods\\AOC\\Data Mods\\WololoKingdoms\\SaveGame\\" + oldfn.Text + getext.Text);
+                    }
+                    WatchRepm(notrenamedrec);
+                }
+                // oldfn.Text != recentrec.Text && File.Exists(mskdpath.Text + "\\Voobly Mods\\AOC\\Data Mods\\WololoKingdoms\\SaveGame\\" + recentrec.Text + getext.Text)
+                else if (File.Exists(mskdpath.Text + "\\Voobly Mods\\AOC\\Data Mods\\WololoKingdoms\\SaveGame\\" + recentrec.Text + getext.Text))
+                {
+                    string renamedrec = mskdpath.Text + "\\Voobly Mods\\AOC\\Data Mods\\WololoKingdoms\\SaveGame\\" + recentrec.Text + getext.Text;
+                    if (!File.Exists(mskdpath.Text + "\\Voobly Mods\\AOC\\Data Mods\\WololoKingdoms\\SaveGame\\" + recentrec.Text + getext.Text))
+                    {
+                        File.Copy(mskdpath.Text + "\\Voobly Mods\\AOC\\Data Mods\\WololoKingdoms\\SaveGame\\" + recentrec.Text + getext.Text, mskdpath.Text + "\\Voobly Mods\\AOC\\Data Mods\\WololoKingdoms\\SaveGame\\" + recentrec.Text + getext.Text);
+                    }
+                    WatchRepm(renamedrec);
+                }
+            }
+            else if (gamever.Text == "WK 5.8.1")
+            {
+                if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"data\patches\5.8.1\empires2_x1_p1.dat") && File.Exists(mskdpath.Text + @"\Games\WololoKingdoms\Data\empires2_x1_p1.dat"))
+                {
+
+                    File.Copy(AppDomain.CurrentDomain.BaseDirectory + @"data\patches\5.8.1\empires2_x1_p1.dat", mskdpath.Text + @"\Games\WololoKingdoms\Data\empires2_x1_p1.dat", true);
+                }
+                else
+                {
+                    if (!File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"data\patches\5.8.1\empires2_x1_p1.dat"))
+                        KryptonMessageBox.Show(AppDomain.CurrentDomain.BaseDirectory + @"data\patches\5.8.4\empires2_x1_p1.dat" + "is not found!", "Error");
+                    if (!File.Exists(mskdpath.Text + @"\Games\WololoKingdoms\Data\empires2_x1_p1.dat"))
+                        KryptonMessageBox.Show(mskdpath.Text + @"\Games\WololoKingdoms\Data\empires2_x1_p1.dat" + "is not found!", "Error");
+                }
+                //WK "oldfn.Text == recentrec.Text"
+                if (File.Exists(mskdpath.Text + "\\Voobly Mods\\AOC\\Data Mods\\WololoKingdoms\\SaveGame\\" + oldfn.Text + getext.Text))
+                {
+
+                    string notrenamedrec = mskdpath.Text + "\\Voobly Mods\\AOC\\Data Mods\\WololoKingdoms\\SaveGame\\" + oldfn.Text + getext.Text;
+                    if (!File.Exists(mskdpath.Text + "\\Voobly Mods\\AOC\\Data Mods\\WololoKingdoms\\SaveGame\\" + oldfn.Text + getext.Text))
+                    {
+                        File.Copy(mskdpath.Text + "\\Voobly Mods\\AOC\\Data Mods\\WololoKingdoms\\SaveGame\\" + oldfn.Text + getext.Text, mskdpath.Text + "\\Voobly Mods\\AOC\\Data Mods\\WololoKingdoms\\SaveGame\\" + oldfn.Text + getext.Text);
+                    }
+                    WatchRepm(notrenamedrec);
+                }
+                // oldfn.Text != recentrec.Text && File.Exists(mskdpath.Text + "\\Voobly Mods\\AOC\\Data Mods\\WololoKingdoms\\SaveGame\\" + recentrec.Text + getext.Text)
+                else if (File.Exists(mskdpath.Text + "\\Voobly Mods\\AOC\\Data Mods\\WololoKingdoms\\SaveGame\\" + recentrec.Text + getext.Text))
+                {
+                    string renamedrec = mskdpath.Text + "\\Voobly Mods\\AOC\\Data Mods\\WololoKingdoms\\SaveGame\\" + recentrec.Text + getext.Text;
+                    if (!File.Exists(mskdpath.Text + "\\Voobly Mods\\AOC\\Data Mods\\WololoKingdoms\\SaveGame\\" + recentrec.Text + getext.Text))
+                    {
+                        File.Copy(mskdpath.Text + "\\Voobly Mods\\AOC\\Data Mods\\WololoKingdoms\\SaveGame\\" + recentrec.Text + getext.Text, mskdpath.Text + "\\Voobly Mods\\AOC\\Data Mods\\WololoKingdoms\\SaveGame\\" + recentrec.Text + getext.Text);
+                    }
+                    WatchRepm(renamedrec);
+                }
+            }
+            else if (gamever.Text != "WK 5.7.2" && gamever.Text != "WK 5.7.4" && gamever.Text != "WK 5.8.1")
             {
                 //Not WK
                 if (oldfn.Text == recentrec.Text)
@@ -293,17 +492,18 @@ namespace WindowsFormsApplication3
                 {
                     try
                     {
+                        
                         byte[] passjuice = File.ReadAllBytes(mskdpath.Text + "\\Age2_x1\\age2_x1.5.exe");
                         File.WriteAllBytes(mskdpath.Text + "\\Age2_x1\\AoE2Tools.exe", passjuice);
-                        System.Diagnostics.Process process = new System.Diagnostics.Process();
+                        System.Diagnostics.Process process15 = new System.Diagnostics.Process();
                         System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
                         startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
                         startInfo.FileName = "cmd.exe";
                         startInfo.Arguments = "/c" + "start \"" + mskdpath.Text + "\\Age2_x1\\AoE2Tools.exe" + "\"" + " \"" + renfilerec + "\"";
                         //startInfo.Verb = "runas";
-                        process.StartInfo = startInfo;
-                        process.Start();
-                        process.WaitForExit();
+                        process15.StartInfo = startInfo;
+                        process15.Start();
+                        process15.WaitForExit();
 
                     }
                     catch (Exception goy)
@@ -383,25 +583,26 @@ namespace WindowsFormsApplication3
 
                 //    }
                 //}
-                else if (gamever.Text == "WK")
+                else if (gamever.Text == "WK 5.7.2" || gamever.Text == "WK 5.7.4" || gamever.Text == "WK 5.8.1")
                 {
                     if (File.Exists(mskdpath.Text + "\\Age2_x1\\WK.exe"))
                     {
                         try
                         {
 
-                            byte[] passjuice = File.ReadAllBytes(mskdpath.Text + "\\Age2_x1\\WK.exe");
-                            File.WriteAllBytes(mskdpath.Text + "\\Age2_x1\\AoE2Tools.exe", passjuice);
-                            System.Diagnostics.Process process = new System.Diagnostics.Process();
-                            System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
-                            startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
-                            startInfo.FileName = "cmd.exe";
-                            startInfo.Arguments = "/c" + "start \"" + mskdpath.Text + "\\Age2_x1\\AoE2Tools.exe" + "\"" + " \"" + renfilerec + "\"";
+                            //byte[] passjuice = File.ReadAllBytes(mskdpath.Text + "\\Age2_x1\\WK.exe");
+                            //File.WriteAllBytes(mskdpath.Text + "\\Age2_x1\\AoE2Tools.exe", passjuice);
+                            File.Copy(mskdpath.Text + "\\Age2_x1\\WK.exe", mskdpath.Text + "\\Age2_x1\\AoE2Tools.exe", true);
+                            System.Diagnostics.Process processwk = new System.Diagnostics.Process();
+                            System.Diagnostics.ProcessStartInfo startInfowk = new System.Diagnostics.ProcessStartInfo();
+                            startInfowk.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+                            startInfowk.FileName = "cmd.exe";
+                            startInfowk.Arguments = "/c" + "start \"" + mskdpath.Text + "\\Age2_x1\\AoE2Tools.exe" + "\"" + " \"" + renfilerec + "\"";
                        
                             //startInfo.Verb = "runas";
-                            process.StartInfo = startInfo;
-                            process.Start();
-                            process.WaitForExit();
+                            processwk.StartInfo = startInfowk;
+                            processwk.Start();
+                            processwk.WaitForExit();
 
                         }
                             catch(System.IO.IOException)
@@ -414,84 +615,16 @@ namespace WindowsFormsApplication3
 
                         }
                     }
-                    //else if (File.Exists(mskdpath.Text + "\\Age2_x1\\WKAK.exe"))
-                    //{
-                    //    try
-                    //    {
-                    //        byte[] passjuice = File.ReadAllBytes(mskdpath.Text + "\\Age2_x1\\WKAK.exe");
-                    //        File.WriteAllBytes(mskdpath.Text + "\\Age2_x1\\AoE2Tools.exe", passjuice);
-                    //        System.Diagnostics.Process process = new System.Diagnostics.Process();
-                    //        System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
-                    //        startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
-                    //        startInfo.FileName = "cmd.exe";
-                    //        startInfo.Arguments = "/c" + "start \"" + mskdpath.Text + "\\Age2_x1\\AoE2Tools.exe" + "\"" + " \"" + renfilerec + "\"";
-                    //        //startInfo.Verb = "runas";
-                    //        process.StartInfo = startInfo;
-                    //        process.Start();
-                    //        process.WaitForExit();
-
-                    //    }
-                    //    catch (Exception goy)
-                    //    {
-                    //        throw goy;
-
-                    //    }
-                    //}
-
-                    //else if (File.Exists(mskdpath.Text + "\\Age2_x1\\WKRR.exe"))
-                    //{
-                    //    try
-                    //    {
-                    //        byte[] passjuice = File.ReadAllBytes(mskdpath.Text + "\\Age2_x1\\WKRR.exe");
-                    //        File.WriteAllBytes(mskdpath.Text + "\\Age2_x1\\AoE2Tools.exe", passjuice);
-                    //        System.Diagnostics.Process process = new System.Diagnostics.Process();
-                    //        System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
-                    //        startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
-                    //        startInfo.FileName = "cmd.exe";
-                    //        startInfo.Arguments = "/c" + "start \"" + mskdpath.Text + "\\Age2_x1\\AoE2Tools.exe" + "\"" + " \"" + renfilerec + "\"";
-                    //        //startInfo.Verb = "runas";
-                    //        process.StartInfo = startInfo;
-                    //        process.Start();
-                    //        process.WaitForExit();
-
-                    //    }
-                    //    catch (Exception goy)
-                    //    {
-                    //        throw goy;
-
-                    //    }
-                    //}
-
-                    //else if (File.Exists(mskdpath.Text + "\\Age2_x1\\WKFE.exe"))
-                    //{
-                    //    try
-                    //    {
-                    //        byte[] passjuice = File.ReadAllBytes(mskdpath.Text + "\\Age2_x1\\WKFE.exe");
-                    //        File.WriteAllBytes(mskdpath.Text + "\\Age2_x1\\AoE2Tools.exe", passjuice);
-                    //        System.Diagnostics.Process process = new System.Diagnostics.Process();
-                    //        System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
-                    //        startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
-                    //        startInfo.FileName = "cmd.exe";
-                    //        startInfo.Arguments = "/c" + "start \"" + mskdpath.Text + "\\Age2_x1\\AoE2Tools.exe" + "\"" + " \"" + renfilerec + "\"";
-                    //        //startInfo.Verb = "runas";
-                    //        process.StartInfo = startInfo;
-                    //        process.Start();
-                    //        process.WaitForExit();
-
-                    //    }
-                    //    catch (Exception goy)
-                    //    {
-                    //        throw goy;
-
-                    //    }
-                    //}
-                    else if (!File.Exists(mskdpath.Text + "\\Age2_x1\\WKFE.exe") && !File.Exists(mskdpath.Text + "\\Age2_x1\\WKRR.exe") && !File.Exists(mskdpath.Text + "\\Age2_x1\\WKAK.exe") && !File.Exists(mskdpath.Text + "\\Age2_x1\\WK.exe"))
+                    
+                    else if (!File.Exists(mskdpath.Text + "\\Age2_x1\\WK.exe"))
                     {
                         if (KryptonMessageBox.Show(
 "WololoKingdom is Not Installed! \n Would you like to install WK now?", "WK is Missing", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk
 ) == DialogResult.Yes)
                         {
-                            System.Diagnostics.Process.Start("https://github.com/AoE2CommunityGitHub/WololoKingdoms/releases");
+                            WololoInstaller wkwind = new WololoInstaller();
+                            wkwind.ShowDialog();
+                            
                         }
                     }
 
@@ -553,15 +686,17 @@ namespace WindowsFormsApplication3
             return new string(Enumerable.Repeat(chars, length)
               .Select(s => s[random.Next(s.Length)]).ToArray());
         }
-        public async void PlayerN(string RecName)
+        public void PlayerN(string RecName)
         {
             try
             {
 
 
                 //extracting recorde header
-                FileStream fs = new FileStream(RecName, FileMode.Open, FileAccess.Read);
+                using (FileStream fs = new FileStream(RecName, FileMode.Open, FileAccess.Read, FileShare.Read))
+                { 
                 BinaryReader br = new BinaryReader(fs);
+                
                 byte[] buffer;
 
                 int headerLength = br.ReadInt32();
@@ -684,8 +819,7 @@ namespace WindowsFormsApplication3
                 if (Player8.Text == "Loading...")
                     Player8.Text = "-";
 
-                ms.Close();
-                ms.Dispose();
+                }
                 //if (File.Exists(System.IO.Path.GetTempPath() + @"\rep-" + afx))
                 //    File.Delete(System.IO.Path.GetTempPath() + @"\rep-" + afx);
             }
@@ -701,7 +835,8 @@ namespace WindowsFormsApplication3
 
                 ms.Seek(0, SeekOrigin.Begin);
                 Inflater inflater = new Inflater(true);
-                InflaterInputStream inStream = new InflaterInputStream(ms, inflater);
+                using(InflaterInputStream inStream = new InflaterInputStream(ms, inflater))
+                { 
                 byte[] buf = new byte[5000000];
                 int buf_pos = 0;
                 int count = buf.Length;
@@ -716,8 +851,11 @@ namespace WindowsFormsApplication3
                     buf_pos += numRead;
                     count -= numRead;
                 }
-
+                ms.Close();
+                ms.Dispose();
                 return buf;
+                }
+              
             }
             catch (Exception ju)
             {
@@ -729,5 +867,7 @@ namespace WindowsFormsApplication3
         {
 
         }
+
+  
     }
 }

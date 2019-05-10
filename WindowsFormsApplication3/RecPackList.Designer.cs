@@ -87,10 +87,10 @@
             // 
             // mskdpath
             // 
-            this.mskdpath.Location = new System.Drawing.Point(694, 556);
+            this.mskdpath.Location = new System.Drawing.Point(595, 452);
             this.mskdpath.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mskdpath.Name = "mskdpath";
-            this.mskdpath.Size = new System.Drawing.Size(21, 24);
+            this.mskdpath.Size = new System.Drawing.Size(19, 20);
             this.mskdpath.TabIndex = 3;
             this.mskdpath.Visible = false;
             // 
@@ -121,7 +121,7 @@
             this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel5);
             this.kryptonGroupBox1.Panel.Controls.Add(this.folderradio);
             this.kryptonGroupBox1.Panel.Controls.Add(this.savetodir);
-            this.kryptonGroupBox1.Size = new System.Drawing.Size(568, 222);
+            this.kryptonGroupBox1.Size = new System.Drawing.Size(487, 180);
             this.kryptonGroupBox1.TabIndex = 29;
             this.kryptonGroupBox1.Values.Heading = "Manage Replays";
             this.kryptonGroupBox1.Values.Image = global::WindowsFormsApplication3.Properties.Resources.aoe2_2;
@@ -129,10 +129,10 @@
             // help2
             // 
             this.help2.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.ButtonSpec;
-            this.help2.Location = new System.Drawing.Point(447, 48);
+            this.help2.Location = new System.Drawing.Point(383, 39);
             this.help2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.help2.Name = "help2";
-            this.help2.Size = new System.Drawing.Size(30, 37);
+            this.help2.Size = new System.Drawing.Size(26, 30);
             this.help2.TabIndex = 33;
             this.help2.Values.Image = global::WindowsFormsApplication3.Properties.Resources.help;
             this.help2.Values.Text = "";
@@ -141,10 +141,10 @@
             // help1
             // 
             this.help1.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.ButtonSpec;
-            this.help1.Location = new System.Drawing.Point(447, 91);
+            this.help1.Location = new System.Drawing.Point(383, 74);
             this.help1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.help1.Name = "help1";
-            this.help1.Size = new System.Drawing.Size(30, 37);
+            this.help1.Size = new System.Drawing.Size(26, 30);
             this.help1.TabIndex = 33;
             this.help1.Values.Image = global::WindowsFormsApplication3.Properties.Resources.help;
             this.help1.Values.Text = "";
@@ -154,11 +154,11 @@
             // kryptonButton1
             // 
             this.kryptonButton1.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Alternate;
-            this.kryptonButton1.Location = new System.Drawing.Point(363, 97);
+            this.kryptonButton1.Location = new System.Drawing.Point(311, 79);
             this.kryptonButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.kryptonButton1.MinimumSize = new System.Drawing.Size(0, 25);
+            this.kryptonButton1.MinimumSize = new System.Drawing.Size(0, 20);
             this.kryptonButton1.Name = "kryptonButton1";
-            this.kryptonButton1.Size = new System.Drawing.Size(79, 32);
+            this.kryptonButton1.Size = new System.Drawing.Size(68, 26);
             this.kryptonButton1.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonButton1.StatePressed.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.kryptonButton1.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
@@ -170,11 +170,11 @@
             // renametxt
             // 
             this.renametxt.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Alternate;
-            this.renametxt.Location = new System.Drawing.Point(307, 57);
+            this.renametxt.Location = new System.Drawing.Point(263, 46);
             this.renametxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.renametxt.MinimumSize = new System.Drawing.Size(0, 25);
+            this.renametxt.MinimumSize = new System.Drawing.Size(0, 20);
             this.renametxt.Name = "renametxt";
-            this.renametxt.Size = new System.Drawing.Size(134, 28);
+            this.renametxt.Size = new System.Drawing.Size(115, 23);
             this.renametxt.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.renametxt.StatePressed.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.renametxt.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
@@ -188,17 +188,18 @@
             this.gamever.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.gamever.DropDownWidth = 71;
             this.gamever.Items.AddRange(new object[] {
-            "WK",
+            "WK 5.7.2",
+            "WK 5.7.4",
             "1.5 RC",
             "1.4 RC",
             "1.0 C",
             "1.0"});
-            this.gamever.Location = new System.Drawing.Point(350, 15);
+            this.gamever.Location = new System.Drawing.Point(300, 12);
             this.gamever.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gamever.MinimumSize = new System.Drawing.Size(0, 20);
             this.gamever.Name = "gamever";
             this.gamever.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
-            this.gamever.Size = new System.Drawing.Size(91, 25);
+            this.gamever.Size = new System.Drawing.Size(87, 21);
             this.gamever.StateActive.ComboBox.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gamever.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gamever.StateCommon.Item.Content.LongText.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -208,18 +209,18 @@
             this.gamever.StateNormal.Item.Content.ShortText.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gamever.StateTracking.Item.Content.ShortText.Color1 = System.Drawing.Color.Black;
             this.gamever.TabIndex = 29;
-            this.gamever.Text = "1.5 RC";
+            this.gamever.Text = "WK 5.7.2";
             // 
             // packfn
             // 
             this.packfn.AllowButtonSpecToolTips = true;
             this.packfn.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.packfn.Location = new System.Drawing.Point(178, 98);
+            this.packfn.Location = new System.Drawing.Point(153, 80);
             this.packfn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.packfn.MinimumSize = new System.Drawing.Size(0, 25);
             this.packfn.Name = "packfn";
             this.packfn.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
-            this.packfn.Size = new System.Drawing.Size(178, 25);
+            this.packfn.Size = new System.Drawing.Size(153, 25);
             this.packfn.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.packfn.StateNormal.Content.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.packfn.TabIndex = 0;
@@ -236,12 +237,12 @@
             this.recchoice.Items.AddRange(new object[] {
             "Save Replay",
             "Don\'t Save!"});
-            this.recchoice.Location = new System.Drawing.Point(121, 14);
+            this.recchoice.Location = new System.Drawing.Point(104, 11);
             this.recchoice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.recchoice.MinimumSize = new System.Drawing.Size(0, 25);
             this.recchoice.Name = "recchoice";
             this.recchoice.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
-            this.recchoice.Size = new System.Drawing.Size(122, 25);
+            this.recchoice.Size = new System.Drawing.Size(105, 25);
             this.recchoice.StateActive.ComboBox.Content.Color1 = System.Drawing.Color.Black;
             this.recchoice.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.recchoice.StateCommon.Item.Content.LongText.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -258,12 +259,12 @@
             // 
             this.recfield.AllowButtonSpecToolTips = true;
             this.recfield.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.recfield.Location = new System.Drawing.Point(118, 57);
+            this.recfield.Location = new System.Drawing.Point(101, 46);
             this.recfield.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.recfield.MinimumSize = new System.Drawing.Size(0, 25);
             this.recfield.Name = "recfield";
             this.recfield.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
-            this.recfield.Size = new System.Drawing.Size(174, 25);
+            this.recfield.Size = new System.Drawing.Size(149, 25);
             this.recfield.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.recfield.StateNormal.Content.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.recfield.TabIndex = 0;
@@ -272,10 +273,10 @@
             // 
             // kryptonLabel3
             // 
-            this.kryptonLabel3.Location = new System.Drawing.Point(276, 16);
+            this.kryptonLabel3.Location = new System.Drawing.Point(237, 13);
             this.kryptonLabel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel3.Name = "kryptonLabel3";
-            this.kryptonLabel3.Size = new System.Drawing.Size(75, 22);
+            this.kryptonLabel3.Size = new System.Drawing.Size(62, 18);
             this.kryptonLabel3.StateNormal.ShortText.Color1 = System.Drawing.SystemColors.Desktop;
             this.kryptonLabel3.StateNormal.ShortText.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel3.TabIndex = 16;
@@ -283,10 +284,10 @@
             // 
             // kryptonLabel4
             // 
-            this.kryptonLabel4.Location = new System.Drawing.Point(6, 15);
+            this.kryptonLabel4.Location = new System.Drawing.Point(5, 12);
             this.kryptonLabel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel4.Name = "kryptonLabel4";
-            this.kryptonLabel4.Size = new System.Drawing.Size(117, 22);
+            this.kryptonLabel4.Size = new System.Drawing.Size(95, 18);
             this.kryptonLabel4.StateNormal.ShortText.Color1 = System.Drawing.SystemColors.Desktop;
             this.kryptonLabel4.StateNormal.ShortText.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel4.TabIndex = 16;
@@ -294,10 +295,10 @@
             // 
             // kryptonLabel5
             // 
-            this.kryptonLabel5.Location = new System.Drawing.Point(6, 60);
+            this.kryptonLabel5.Location = new System.Drawing.Point(5, 49);
             this.kryptonLabel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel5.Name = "kryptonLabel5";
-            this.kryptonLabel5.Size = new System.Drawing.Size(108, 22);
+            this.kryptonLabel5.Size = new System.Drawing.Size(88, 18);
             this.kryptonLabel5.StateNormal.ShortText.Color1 = System.Drawing.SystemColors.Desktop;
             this.kryptonLabel5.StateNormal.ShortText.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel5.TabIndex = 16;
@@ -315,11 +316,11 @@
             this.folderradio.Images.UncheckedPressed = global::WindowsFormsApplication3.Properties.Resources.on;
             this.folderradio.Images.UncheckedTracking = global::WindowsFormsApplication3.Properties.Resources.on;
             this.folderradio.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip;
-            this.folderradio.Location = new System.Drawing.Point(114, 100);
+            this.folderradio.Location = new System.Drawing.Point(98, 81);
             this.folderradio.Margin = new System.Windows.Forms.Padding(0);
-            this.folderradio.MinimumSize = new System.Drawing.Size(22, 25);
+            this.folderradio.MinimumSize = new System.Drawing.Size(19, 20);
             this.folderradio.Name = "folderradio";
-            this.folderradio.Size = new System.Drawing.Size(58, 25);
+            this.folderradio.Size = new System.Drawing.Size(58, 22);
             this.folderradio.TabIndex = 31;
             this.folderradio.Values.Text = "";
             this.folderradio.Visible = false;
@@ -327,10 +328,10 @@
             // 
             // savetodir
             // 
-            this.savetodir.Location = new System.Drawing.Point(6, 101);
+            this.savetodir.Location = new System.Drawing.Point(5, 82);
             this.savetodir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.savetodir.Name = "savetodir";
-            this.savetodir.Size = new System.Drawing.Size(106, 22);
+            this.savetodir.Size = new System.Drawing.Size(86, 18);
             this.savetodir.StateNormal.ShortText.Color1 = System.Drawing.SystemColors.Desktop;
             this.savetodir.StateNormal.ShortText.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.savetodir.TabIndex = 16;
@@ -343,9 +344,9 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.SlateGray;
-            this.label1.Location = new System.Drawing.Point(605, 498);
+            this.label1.Location = new System.Drawing.Point(519, 405);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 20);
+            this.label1.Size = new System.Drawing.Size(37, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = ".mgx";
             // 
@@ -357,7 +358,7 @@
             this.watchrec.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.watchrec.Name = "watchrec";
             this.watchrec.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
-            this.watchrec.Size = new System.Drawing.Size(113, 56);
+            this.watchrec.Size = new System.Drawing.Size(95, 46);
             this.watchrec.StateCommon.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.watchrec.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this.watchrec.TabIndex = 30;
@@ -369,11 +370,11 @@
             // 
             this.delthis.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.LowProfile;
             this.delthis.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.delthis.Location = new System.Drawing.Point(273, 2);
+            this.delthis.Location = new System.Drawing.Point(233, 2);
             this.delthis.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.delthis.Name = "delthis";
             this.delthis.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
-            this.delthis.Size = new System.Drawing.Size(149, 56);
+            this.delthis.Size = new System.Drawing.Size(127, 46);
             this.delthis.StateCommon.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.delthis.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this.delthis.TabIndex = 31;
@@ -385,11 +386,11 @@
             // 
             this.kryptonButton4.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.LowProfile;
             this.kryptonButton4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonButton4.Location = new System.Drawing.Point(428, 2);
+            this.kryptonButton4.Location = new System.Drawing.Point(366, 2);
             this.kryptonButton4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonButton4.Name = "kryptonButton4";
             this.kryptonButton4.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
-            this.kryptonButton4.Size = new System.Drawing.Size(137, 56);
+            this.kryptonButton4.Size = new System.Drawing.Size(118, 46);
             this.kryptonButton4.StateCommon.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonButton4.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this.kryptonButton4.TabIndex = 32;
@@ -401,11 +402,11 @@
             // 
             this.kryptonButton6.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.LowProfile;
             this.kryptonButton6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonButton6.Location = new System.Drawing.Point(122, 2);
+            this.kryptonButton6.Location = new System.Drawing.Point(104, 2);
             this.kryptonButton6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonButton6.Name = "kryptonButton6";
             this.kryptonButton6.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
-            this.kryptonButton6.Size = new System.Drawing.Size(145, 56);
+            this.kryptonButton6.Size = new System.Drawing.Size(123, 46);
             this.kryptonButton6.StateCommon.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonButton6.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this.kryptonButton6.TabIndex = 32;
@@ -415,26 +416,26 @@
             // 
             // oldfolder
             // 
-            this.oldfolder.Location = new System.Drawing.Point(559, 353);
+            this.oldfolder.Location = new System.Drawing.Point(479, 287);
             this.oldfolder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.oldfolder.Name = "oldfolder";
-            this.oldfolder.Size = new System.Drawing.Size(35, 24);
+            this.oldfolder.Size = new System.Drawing.Size(31, 20);
             this.oldfolder.TabIndex = 36;
             // 
             // oldfilen
             // 
-            this.oldfilen.Location = new System.Drawing.Point(653, 450);
+            this.oldfilen.Location = new System.Drawing.Point(560, 366);
             this.oldfilen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.oldfilen.Name = "oldfilen";
-            this.oldfilen.Size = new System.Drawing.Size(37, 24);
+            this.oldfilen.Size = new System.Drawing.Size(32, 20);
             this.oldfilen.TabIndex = 37;
             // 
             // refdir
             // 
-            this.refdir.Location = new System.Drawing.Point(694, 177);
+            this.refdir.Location = new System.Drawing.Point(595, 144);
             this.refdir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.refdir.Name = "refdir";
-            this.refdir.Size = new System.Drawing.Size(31, 24);
+            this.refdir.Size = new System.Drawing.Size(27, 20);
             this.refdir.TabIndex = 38;
             // 
             // panel1
@@ -442,10 +443,9 @@
             this.panel1.AutoSize = true;
             this.panel1.Controls.Add(this.tableLayoutPanel1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 533);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel1.Location = new System.Drawing.Point(0, 432);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(568, 60);
+            this.panel1.Size = new System.Drawing.Size(487, 50);
             this.panel1.TabIndex = 39;
             // 
             // tableLayoutPanel1
@@ -454,29 +454,27 @@
             this.tableLayoutPanel1.ColumnCount = 4;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 56F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 155F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 142F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 133F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 123F));
             this.tableLayoutPanel1.Controls.Add(this.watchrec, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.kryptonButton6, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.kryptonButton4, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.delthis, 2, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.07407F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(568, 60);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(487, 50);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.kryptonGroupBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 311);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel2.Location = new System.Drawing.Point(0, 252);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(568, 222);
+            this.panel2.Size = new System.Drawing.Size(487, 180);
             this.panel2.TabIndex = 40;
             // 
             // panel3
@@ -485,19 +483,17 @@
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(568, 299);
+            this.panel3.Size = new System.Drawing.Size(487, 243);
             this.panel3.TabIndex = 41;
             // 
             // panel5
             // 
             this.panel5.Controls.Add(this.reclistpack);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(0, 53);
-            this.panel5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel5.Location = new System.Drawing.Point(0, 43);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(568, 246);
+            this.panel5.Size = new System.Drawing.Size(487, 200);
             this.panel5.TabIndex = 40;
             // 
             // reclistpack
@@ -506,7 +502,7 @@
             this.reclistpack.Location = new System.Drawing.Point(0, 0);
             this.reclistpack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.reclistpack.Name = "reclistpack";
-            this.reclistpack.Size = new System.Drawing.Size(568, 246);
+            this.reclistpack.Size = new System.Drawing.Size(487, 200);
             this.reclistpack.StateCheckedNormal.Item.Content.ShortText.Font = new System.Drawing.Font("Arial Narrow", 10.8F, System.Drawing.FontStyle.Bold);
             this.reclistpack.StateCheckedPressed.Item.Content.LongText.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold);
             this.reclistpack.StateCheckedPressed.Item.Content.ShortText.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -528,17 +524,16 @@
             this.panel4.Controls.Add(this.kryptonLabel1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(568, 53);
+            this.panel4.Size = new System.Drawing.Size(487, 43);
             this.panel4.TabIndex = 39;
             // 
             // repcount
             // 
-            this.repcount.Location = new System.Drawing.Point(99, 15);
+            this.repcount.Location = new System.Drawing.Point(85, 12);
             this.repcount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.repcount.Name = "repcount";
-            this.repcount.Size = new System.Drawing.Size(31, 21);
+            this.repcount.Size = new System.Drawing.Size(26, 18);
             this.repcount.StateNormal.ShortText.Color1 = System.Drawing.Color.SteelBlue;
             this.repcount.StateNormal.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.repcount.TabIndex = 43;
@@ -546,10 +541,10 @@
             // 
             // recsize
             // 
-            this.recsize.Location = new System.Drawing.Point(462, 16);
+            this.recsize.Location = new System.Drawing.Point(396, 13);
             this.recsize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.recsize.Name = "recsize";
-            this.recsize.Size = new System.Drawing.Size(44, 21);
+            this.recsize.Size = new System.Drawing.Size(37, 18);
             this.recsize.StateNormal.ShortText.Color1 = System.Drawing.Color.SteelBlue;
             this.recsize.StateNormal.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.recsize.TabIndex = 44;
@@ -557,28 +552,28 @@
             // 
             // kryptonLabel2
             // 
-            this.kryptonLabel2.Location = new System.Drawing.Point(392, 15);
+            this.kryptonLabel2.Location = new System.Drawing.Point(336, 12);
             this.kryptonLabel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel2.Name = "kryptonLabel2";
-            this.kryptonLabel2.Size = new System.Drawing.Size(80, 24);
+            this.kryptonLabel2.Size = new System.Drawing.Size(65, 20);
             this.kryptonLabel2.TabIndex = 41;
             this.kryptonLabel2.Values.Text = "Total Size:";
             // 
             // kryptonLabel1
             // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(42, 14);
+            this.kryptonLabel1.Location = new System.Drawing.Point(36, 11);
             this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(71, 24);
+            this.kryptonLabel1.Size = new System.Drawing.Size(58, 20);
             this.kryptonLabel1.TabIndex = 42;
             this.kryptonLabel1.Values.Text = "Replays :";
             // 
             // RecPackList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FloralWhite;
-            this.ClientSize = new System.Drawing.Size(568, 593);
+            this.ClientSize = new System.Drawing.Size(487, 482);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

@@ -67,10 +67,10 @@
             // 
             // kryptonLabel1
             // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(188, 12);
+            this.kryptonLabel1.Location = new System.Drawing.Point(161, 10);
             this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(271, 47);
+            this.kryptonLabel1.Size = new System.Drawing.Size(218, 38);
             this.kryptonLabel1.StateNormal.ShortText.Color1 = System.Drawing.Color.DarkBlue;
             this.kryptonLabel1.StateNormal.ShortText.Font = new System.Drawing.Font("Tahoma", 20.2F);
             this.kryptonLabel1.StateNormal.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
@@ -80,7 +80,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::WindowsFormsApplication3.Properties.Resources.WololoKingdomsThumbnail;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(10, 10);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(150, 113);
@@ -94,9 +94,9 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label1.Location = new System.Drawing.Point(12, 156);
+            this.label1.Location = new System.Drawing.Point(10, 127);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 17);
+            this.label1.Size = new System.Drawing.Size(94, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Latest Version: ";
             // 
@@ -105,9 +105,9 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(258, 156);
+            this.label2.Location = new System.Drawing.Point(221, 127);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 17);
+            this.label2.Size = new System.Drawing.Size(36, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Size: ";
             // 
@@ -116,21 +116,21 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(9, 197);
+            this.label3.Location = new System.Drawing.Point(8, 160);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 17);
+            this.label3.Size = new System.Drawing.Size(77, 13);
             this.label3.TabIndex = 2;
             this.label3.Text = "Description: ";
             // 
             // desctxt
             // 
-            this.desctxt.Location = new System.Drawing.Point(15, 233);
+            this.desctxt.Location = new System.Drawing.Point(13, 189);
             this.desctxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.desctxt.Multiline = true;
             this.desctxt.Name = "desctxt";
             this.desctxt.ReadOnly = true;
             this.desctxt.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.desctxt.Size = new System.Drawing.Size(427, 111);
+            this.desctxt.Size = new System.Drawing.Size(367, 91);
             this.desctxt.TabIndex = 3;
             this.desctxt.Text = "Loading...";
             // 
@@ -138,11 +138,11 @@
             // 
             this.dnldwk.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Alternate;
             this.dnldwk.Enabled = false;
-            this.dnldwk.Location = new System.Drawing.Point(204, 85);
+            this.dnldwk.Location = new System.Drawing.Point(175, 69);
             this.dnldwk.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dnldwk.Name = "dnldwk";
             this.dnldwk.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.SparkleBlue;
-            this.dnldwk.Size = new System.Drawing.Size(190, 39);
+            this.dnldwk.Size = new System.Drawing.Size(163, 32);
             this.dnldwk.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -159,9 +159,9 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Tahoma", 7F);
             this.label4.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label4.Location = new System.Drawing.Point(201, 59);
+            this.label4.Location = new System.Drawing.Point(172, 48);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(212, 14);
+            this.label4.Size = new System.Drawing.Size(179, 12);
             this.label4.TabIndex = 2;
             this.label4.Text = "Play HD Expansions On Voobly/Offline";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -170,9 +170,9 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(12, 351);
+            this.label5.Location = new System.Drawing.Point(10, 285);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 17);
+            this.label5.Size = new System.Drawing.Size(38, 13);
             this.label5.TabIndex = 2;
             this.label5.Text = "Status";
             // 
@@ -182,9 +182,9 @@
             this.latestver.BackColor = System.Drawing.Color.Transparent;
             this.latestver.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.latestver.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.latestver.Location = new System.Drawing.Point(125, 156);
+            this.latestver.Location = new System.Drawing.Point(128, 127);
             this.latestver.Name = "latestver";
-            this.latestver.Size = new System.Drawing.Size(75, 17);
+            this.latestver.Size = new System.Drawing.Size(60, 13);
             this.latestver.TabIndex = 5;
             this.latestver.Text = "Loading...";
             // 
@@ -194,19 +194,19 @@
             this.wksizetxt.BackColor = System.Drawing.Color.Transparent;
             this.wksizetxt.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.wksizetxt.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.wksizetxt.Location = new System.Drawing.Point(304, 156);
+            this.wksizetxt.Location = new System.Drawing.Point(269, 127);
             this.wksizetxt.Name = "wksizetxt";
-            this.wksizetxt.Size = new System.Drawing.Size(75, 17);
+            this.wksizetxt.Size = new System.Drawing.Size(60, 13);
             this.wksizetxt.TabIndex = 5;
             this.wksizetxt.Text = "Loading...";
             this.wksizetxt.Click += new System.EventHandler(this.wksize_Click);
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(83, 354);
+            this.progressBar1.Location = new System.Drawing.Point(71, 288);
             this.progressBar1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(359, 14);
+            this.progressBar1.Size = new System.Drawing.Size(308, 11);
             this.progressBar1.TabIndex = 6;
             // 
             // repotxt
@@ -214,9 +214,9 @@
             this.repotxt.AutoSize = true;
             this.repotxt.BackColor = System.Drawing.Color.Transparent;
             this.repotxt.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
-            this.repotxt.Location = new System.Drawing.Point(258, 197);
+            this.repotxt.Location = new System.Drawing.Point(221, 160);
             this.repotxt.Name = "repotxt";
-            this.repotxt.Size = new System.Drawing.Size(53, 17);
+            this.repotxt.Size = new System.Drawing.Size(42, 13);
             this.repotxt.TabIndex = 2;
             this.repotxt.Text = "Repo: ";
             // 
@@ -224,9 +224,9 @@
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.linkLabel1.Location = new System.Drawing.Point(304, 197);
+            this.linkLabel1.Location = new System.Drawing.Point(269, 160);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(64, 17);
+            this.linkLabel1.Size = new System.Drawing.Size(52, 13);
             this.linkLabel1.TabIndex = 7;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Loading..";
@@ -234,10 +234,10 @@
             // 
             // mskdwk
             // 
-            this.mskdwk.Location = new System.Drawing.Point(556, 112);
+            this.mskdwk.Location = new System.Drawing.Point(477, 91);
             this.mskdwk.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mskdwk.Name = "mskdwk";
-            this.mskdwk.Size = new System.Drawing.Size(70, 24);
+            this.mskdwk.Size = new System.Drawing.Size(61, 20);
             this.mskdwk.TabIndex = 8;
             this.mskdwk.Visible = false;
             this.mskdwk.TextChanged += new System.EventHandler(this.mskdwk_TextChanged);
@@ -252,10 +252,10 @@
             // 
             // mskdurl
             // 
-            this.mskdurl.Location = new System.Drawing.Point(514, 156);
+            this.mskdurl.Location = new System.Drawing.Point(441, 127);
             this.mskdurl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mskdurl.Name = "mskdurl";
-            this.mskdurl.Size = new System.Drawing.Size(60, 24);
+            this.mskdurl.Size = new System.Drawing.Size(52, 20);
             this.mskdurl.TabIndex = 9;
             this.mskdurl.Visible = false;
             // 
@@ -269,19 +269,19 @@
             // 
             // bgw2
             // 
-            this.bgw2.Location = new System.Drawing.Point(581, 281);
+            this.bgw2.Location = new System.Drawing.Point(498, 228);
             this.bgw2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bgw2.Name = "bgw2";
-            this.bgw2.Size = new System.Drawing.Size(30, 24);
+            this.bgw2.Size = new System.Drawing.Size(26, 20);
             this.bgw2.TabIndex = 10;
             this.bgw2.Visible = false;
             // 
             // progressBar2
             // 
-            this.progressBar2.Location = new System.Drawing.Point(83, 354);
+            this.progressBar2.Location = new System.Drawing.Point(71, 288);
             this.progressBar2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.progressBar2.Name = "progressBar2";
-            this.progressBar2.Size = new System.Drawing.Size(359, 14);
+            this.progressBar2.Size = new System.Drawing.Size(308, 11);
             this.progressBar2.TabIndex = 6;
             this.progressBar2.Visible = false;
             // 
@@ -289,11 +289,11 @@
             // 
             this.launchwk.AutoSize = true;
             this.launchwk.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Alternate;
-            this.launchwk.Location = new System.Drawing.Point(348, 350);
+            this.launchwk.Location = new System.Drawing.Point(298, 284);
             this.launchwk.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.launchwk.Name = "launchwk";
             this.launchwk.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.SparkleBlue;
-            this.launchwk.Size = new System.Drawing.Size(94, 25);
+            this.launchwk.Size = new System.Drawing.Size(81, 21);
             this.launchwk.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -324,7 +324,7 @@
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2007Silver;
             this.kryptonPanel1.PanelBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridHeaderColumnList;
-            this.kryptonPanel1.Size = new System.Drawing.Size(450, 380);
+            this.kryptonPanel1.Size = new System.Drawing.Size(386, 309);
             this.kryptonPanel1.TabIndex = 11;
             // 
             // OnCloseCheck
@@ -335,9 +335,9 @@
             // 
             // WololoInstaller
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(450, 380);
+            this.ClientSize = new System.Drawing.Size(386, 309);
             this.Controls.Add(this.launchwk);
             this.Controls.Add(this.bgw2);
             this.Controls.Add(this.mskdurl);

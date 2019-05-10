@@ -19,6 +19,8 @@ using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
 using System.Security.Principal;
 using System.Threading;
+using System.Resources;
+using System.Globalization;
 namespace WindowsFormsApplication3
 {
     public partial class WololoInstaller : KryptonForm
@@ -30,13 +32,63 @@ namespace WindowsFormsApplication3
         }
         private int totalFiles;
         private int filesExtracted;
-        private void WololoInstaller_Load(object sender, EventArgs e)
+        ResourceManager res_man;    // declare Resource manager to access to specific cultureinfo
+        CultureInfo cul;            // declare culture info
+        private async void WololoInstaller_Load(object sender, EventArgs e)
         {
+            res_man = new ResourceManager("WindowsFormsApplication3.langs.Res", typeof(Options).Assembly);
+            await Task.Run(() => switchlang());
 
             backgroundWorker1.RunWorkerAsync();
 
         }
-        
+        public void switchlang()
+        {
+            using (RegistryKey rk = Registry.CurrentUser.OpenSubKey("Software\\AoE2Tools", true))
+            {
+                if (Registry.GetValue(@"HKEY_CURRENT_USER\Software\AoE2Tools", "Transl", null) != null)
+                {
+                    string translatestr = rk.GetValue("Transl").ToString();
+                    if (translatestr == "en")
+                    {
+                        cul = CultureInfo.CreateSpecificCulture("en");
+                    }
+                    else if (translatestr == "fr")
+                    {
+                        cul = CultureInfo.CreateSpecificCulture("fr");
+                    }
+                    else if (translatestr == "es")
+                    {
+                        cul = CultureInfo.CreateSpecificCulture("es");
+                    }
+                    else if (translatestr == "zh-cn")
+                    {
+                        cul = CultureInfo.CreateSpecificCulture("zh-cn");
+                    }
+                }
+                else
+                {
+                    cul = CultureInfo.CreateSpecificCulture("en");
+                }
+            }
+            BeginInvoke((MethodInvoker)delegate
+            {
+
+                WololoInstaller.ActiveForm.Text = res_man.GetString("_wkautoinstaller", cul);
+                label1.Text = res_man.GetString("_wklatestver", cul);
+                label2.Text = res_man.GetString("_wksize", cul);
+                label3.Text = res_man.GetString("_wkdesc", cul);
+                launchwk.Text = res_man.GetString("_wklaunch", cul);
+                repotxt.Text = res_man.GetString("_wkpage", cul);
+                label5.Text = res_man.GetString("_wkstatus", cul);
+                dnldwk.Text = res_man.GetString("_wkdownrun", cul);
+                label4.Text = res_man.GetString("_wkplayhd", cul);
+                
+
+                
+                
+            });
+        }
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
@@ -52,13 +104,25 @@ wk.Headers.Add("user-agent", "tesft");
 
                 
                 string wkdnlnk = (string)jObject["assets"][0]["browser_download_url"];
+                string wkdnlnk2 = (string)jObject["assets"][1]["browser_download_url"];
                 string wktag = (string)jObject["tag_name"];
                 string wkhome = (string)jObject["html_url"];
                 long wksize = (long)jObject["assets"][0]["size"];
+                long wksize2 = (long)jObject["assets"][1]["size"];
                 string wkbody = (string)jObject["body"];
                 wksizetxt.Invoke((MethodInvoker)delegate
                 {
-                    wksizetxt.Text = FormatByteSize(wksize);
+                    if (wkdnlnk.Contains(".exe"))
+                    {
+                        
+                        wksizetxt.Text = FormatByteSize(wksize2);
+                    }
+                    else if (wkdnlnk.Contains(".zip"))
+                    {
+                        
+                        wksizetxt.Text = FormatByteSize(wksize);
+                    }
+                    
                 });
                 latestver.Invoke((MethodInvoker)delegate
                 {
@@ -76,7 +140,15 @@ wk.Headers.Add("user-agent", "tesft");
 
                 mskdurl.Invoke((MethodInvoker)delegate
                 {
-                    mskdurl.Text = wkdnlnk;
+                    if (wkdnlnk.Contains(".exe"))
+                    {
+                        mskdurl.Text = wkdnlnk2;
+                    }
+                    else if(wkdnlnk.Contains(".zip"))
+                    {
+                        mskdurl.Text = wkdnlnk;
+                    }
+                   
                 });
               //Warner
                 string Select_p = mskdwk.Text;
@@ -200,6 +272,28 @@ wk.Headers.Add("user-agent", "tesft");
 
         private void Completed2(object sender, AsyncCompletedEventArgs e)
         {
+
+            //progressBar1.Value = 0;
+            //Decompress
+            //if (!Directory.Exists(mskdwk.Text))
+            //{
+            //    Directory.CreateDirectory(mskdwk.Text);
+            //}
+            //string rplepath = mskdwk.Text;
+            //Ionic.Zip.ZipFile zip = Ionic.Zip.ZipFile.Read(System.IO.Path.GetTempPath() + @"\hdtotc-tmp\wk.zip");
+            //int zm = 0;
+            //long lengthf = new System.IO.FileInfo(System.IO.Path.GetTempPath() + @"\hdtotc-tmp\wk.zip").Length;
+            ////int totalf = ZipFileCount(System.IO.Path.GetTempPath() + @"\hdtotc-tmp\wk.zip");
+            //foreach (ZipEntry es in zip)
+            //{
+                
+
+            //    zip.ExtractProgress += ExtractProgress;
+            //    es.Extract(rplepath, ExtractExistingFileAction.OverwriteSilently);
+
+            //    //backgroundWorker2.ReportProgress(zm / totalf);
+
+            //}
             label5.Text = "Extracting";
             progressBar1.Value = 0;
             backgroundWorker3.RunWorkerAsync();
@@ -315,28 +409,30 @@ wk.Headers.Add("user-agent", "tesft");
                 howtowkimg.Show();
                 try
                 {
-                    string argument = "/select, \"" + mskdwk.Text + "\\WololoKingdoms " + latestver.Text + "\\WololoKingdoms.exe" + "\"";
-                    //var process = new Process
-                    //{
 
-                    //    StartInfo = new ProcessStartInfo
-                    //    {
-                    //        FileName = "popup.exe"
-                    //    }
-                    //};
-                    //process.Start();
+                    //string argument = "/select, \"" + mskdwk.Text + "\\WololoKingdoms " + latestver.Text + "\\WololoKingdoms.exe" + "\"";
+                    ////var process = new Process
+                    ////{
+
+                    ////    StartInfo = new ProcessStartInfo
+                    ////    {
+                    ////        FileName = "popup.exe"
+                    ////    }
+                    ////};
+                    ////process.Start();
+                    ////process.WaitForExit();
+                    //Process.Start("explorer.exe", argument);
+                    //ProcessStartInfo psi = new ProcessStartInfo();
+                    //psi.FileName = "explorer.exe";
+                    //psi.Arguments = "/select, \"" + mskdwk.Text + "\\WololoKingdoms " + latestver.Text + "\\WololoKingdoms.exe" + "\"";
+                    //psi.UseShellExecute = true;
+                    //psi.WindowStyle = ProcessWindowStyle.Minimized;
+
+                    //var process = Process.Start(psi);
                     //process.WaitForExit();
-                    Process.Start("explorer.exe", argument);
-                    ProcessStartInfo psi = new ProcessStartInfo();
-                    psi.FileName = "explorer.exe";
-                    psi.Arguments = "/select, \"" + mskdwk.Text + "\\WololoKingdoms " + latestver.Text + "\\WololoKingdoms.exe" + "\"";
-                    psi.UseShellExecute = true;
-                    psi.WindowStyle = ProcessWindowStyle.Minimized;
-
-                    var process = Process.Start(psi);
-                    process.WaitForExit();
-                    Thread.Sleep(1000);
-                    SendKeys.Send("{ENTER}");
+                    //Thread.Sleep(1000);
+                    //SendKeys.Send("{ENTER}");
+                    Process.Start(mskdwk.Text + "\\WololoKingdoms " + latestver.Text + "\\WololoKingdoms.exe");
                 }
                 catch (SystemException)
                 {
@@ -352,6 +448,7 @@ wk.Headers.Add("user-agent", "tesft");
                     }
 
                 }
+
                 
             }
             else
@@ -380,18 +477,16 @@ wk.Headers.Add("user-agent", "tesft");
                 ////info.Verb = "runas";
                 //Process.Start(info);
                 // combine the arguments together
-                // it doesn't matter if there is a space after ','
-                string argument = "/select, \"" + mskdwk.Text + "\\WololoKingdoms " + latestver.Text + "\\WololoKingdoms.exe" + "\"";
-                //var process = new Process
-                //{
 
-                //    StartInfo = new ProcessStartInfo
-                //    {
-                //        FileName = "popup.exe"
-                //    }
-                //};
-                //process.Start();
-                //process.WaitForExit();
+
+
+
+
+
+                if (latestver.Text == "5.7.2")
+                {
+                string argument = "/select, \"" + mskdwk.Text + "\\WololoKingdoms " + latestver.Text + "\\WololoKingdoms.exe" + "\"";
+
                 Process.Start("explorer.exe", argument);
                 ProcessStartInfo psi = new ProcessStartInfo();
                 psi.FileName = "explorer.exe";
@@ -403,7 +498,12 @@ wk.Headers.Add("user-agent", "tesft");
                 process.WaitForExit();
                 Thread.Sleep(1000);
                 SendKeys.Send("{ENTER}");
-                //Process.Start(mskdwk.Text + "\\WololoKingdoms " + latestver.Text + "\\WololoKingdoms.exe");
+                }
+                else
+                {
+                    Process.Start(mskdwk.Text + "\\WololoKingdoms " + latestver.Text + "\\WololoKingdoms.exe");
+                }
+                
             }
             catch (SystemException)
             {
@@ -425,7 +525,7 @@ wk.Headers.Add("user-agent", "tesft");
 
     launchwk.Enabled = true;
     launchwk.Visible = true;
-    label5.Text = "Latest WololoKingdoms is Already Installed! ";
+    label5.Text = res_man.GetString("_wkmsg1", cul);
     progressBar2.Enabled = false;
     progressBar2.Visible = false;
     progressBar1.Visible = false;

@@ -31,7 +31,7 @@
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -82,6 +82,7 @@
     <Reference Include="ComponentFactory.Krypton.Design, Version=4.4.1.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\..\Krypton-master\Bin\ComponentFactory.Krypton.Design.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Docking, Version=4.4.1.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -96,13 +97,20 @@
     <Reference Include="ComponentFactory.Krypton.Ribbon, Version=4.4.1.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\..\Krypton-master\Bin\ComponentFactory.Krypton.Ribbon.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Toolkit, Version=4.4.1.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\..\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="ComponentFactory.Krypton.Workspace, Version=4.5.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e" />
+    <Reference Include="ComponentFactory.Krypton.Workspace, Version=4.5.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Dropbox.Api, Version=4.0.0.0, Culture=neutral, PublicKeyToken=310f0e82fbb45d01, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dropbox.Api.4.9.2\lib\net45\Dropbox.Api.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="ICSharpCode.SharpZipLib">
       <HintPath>..\..\aocrecs2\ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
@@ -112,23 +120,35 @@
     <Reference Include="Json.NET.Web">
       <HintPath>..\packages\Json.NET.Web.1.0.49\lib\portable45-net45+win8+wpa81\Json.NET.Web.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SevenZipExtractor">
+      <HintPath>..\Game Tweaker\bin\Debug\Steamworks.NET-StandaloneTest-master\Steamworks.NET-StandaloneTest\bin\Debug\SevenZipExtractor.dll</HintPath>
+    </Reference>
+    <Reference Include="SevenZipSharp">
+      <HintPath>..\Game Tweaker\bin\Debug\Steamworks.NET-StandaloneTest-master\Steamworks.NET-StandaloneTest\bin\Debug\SevenZipSharp.dll</HintPath>
     </Reference>
     <Reference Include="SplashScreen, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\SplashScreen.Winforms.1.0.0\lib\SplashScreen.dll</HintPath>
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Steamworks.NET, Version=11.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Steamworks.NET\Steamworks.NET.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.IO.Compression" />
     <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.ServiceProcess">
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq">
       <Private>True</Private>
     </Reference>
@@ -157,12 +177,42 @@
     <Compile Include="Conv.Designer.cs">
       <DependentUpon>Conv.cs</DependentUpon>
     </Compile>
+    <Compile Include="DrVoobly.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DrVoobly.Designer.cs">
+      <DependentUpon>DrVoobly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditStream.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditStream.Designer.cs">
+      <DependentUpon>EditStream.cs</DependentUpon>
+    </Compile>
     <Compile Include="FirewallHelper.cs" />
+    <Compile Include="FixDirectDraw.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FixDirectDraw.Designer.cs">
+      <DependentUpon>FixDirectDraw.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fixing Permissions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fixing Permissions.Designer.cs">
+      <DependentUpon>Fixing Permissions.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SteamPathScan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SteamPathScan.Designer.cs">
+      <DependentUpon>SteamPathScan.cs</DependentUpon>
     </Compile>
     <Compile Include="Hotkeys.cs">
       <SubType>Form</SubType>
@@ -180,11 +230,41 @@
     <Compile Include="INetFwMgr_2.cs" />
     <Compile Include="INetFwMgr_3.cs" />
     <Compile Include="JObject.cs" />
+    <Compile Include="langs\Res.en.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Res.en.resx</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="langs\Res.es.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Res.es.resx</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="langs\Res.fr.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Res.fr.resx</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="langs\Res.zh-cn.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Res.zh-cn.resx</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
     <Compile Include="Launcher.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Launcher.Designer.cs">
       <DependentUpon>Launcher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModsBackup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModsBackup.Designer.cs">
+      <DependentUpon>ModsBackup.cs</DependentUpon>
     </Compile>
     <Compile Include="ModsOffline.cs">
       <SubType>Form</SubType>
@@ -260,6 +340,12 @@
     <Compile Include="Splash.Designer.cs">
       <DependentUpon>Splash.cs</DependentUpon>
     </Compile>
+    <Compile Include="Stats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stats.Designer.cs">
+      <DependentUpon>Stats.cs</DependentUpon>
+    </Compile>
     <Compile Include="SupportUs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -271,6 +357,24 @@
     </Compile>
     <Compile Include="TestUI.Designer.cs">
       <DependentUpon>TestUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tweaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tweaker.Designer.cs">
+      <DependentUpon>Tweaker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TwitchAlertPopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TwitchAlertPopUp.Designer.cs">
+      <DependentUpon>TwitchAlertPopUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TwitchStreams.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TwitchStreams.Designer.cs">
+      <DependentUpon>TwitchStreams.cs</DependentUpon>
     </Compile>
     <Compile Include="UserPatch.cs">
       <SubType>Form</SubType>
@@ -296,6 +400,18 @@
     <EmbeddedResource Include="Conv.resx">
       <DependentUpon>Conv.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DrVoobly.resx">
+      <DependentUpon>DrVoobly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditStream.resx">
+      <DependentUpon>EditStream.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FixDirectDraw.resx">
+      <DependentUpon>FixDirectDraw.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fixing Permissions.resx">
+      <DependentUpon>Fixing Permissions.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -306,8 +422,31 @@
     <EmbeddedResource Include="HowToWk.resx">
       <DependentUpon>HowToWk.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="langs\Res.en.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Res.en.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="langs\Res.es.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Res.es.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="langs\Res.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Res.fr.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="langs\Res.zh-cn.resx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Res.zh-cn.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Launcher.resx">
       <DependentUpon>Launcher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModsBackup.resx">
+      <DependentUpon>ModsBackup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModsOffline.resx">
       <DependentUpon>ModsOffline.cs</DependentUpon>
@@ -347,11 +486,26 @@
     <EmbeddedResource Include="Splash.resx">
       <DependentUpon>Splash.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Stats.resx">
+      <DependentUpon>Stats.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SteamPathScan.resx">
+      <DependentUpon>SteamPathScan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SupportUs.resx">
       <DependentUpon>SupportUs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TestUI.resx">
       <DependentUpon>TestUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tweaker.resx">
+      <DependentUpon>Tweaker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TwitchAlertPopUp.resx">
+      <DependentUpon>TwitchAlertPopUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TwitchStreams.resx">
+      <DependentUpon>TwitchStreams.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserPatch.resx">
       <DependentUpon>UserPatch.cs</DependentUpon>
@@ -366,6 +520,7 @@
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="bin\Debug\up" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -378,6 +533,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resources\up" />
     <None Include="WindowsFormsApplication3_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
@@ -420,9 +576,43 @@
     <Content Include="AoE2ToolsLogo.png.ico" />
     <Content Include="icon.ico" />
     <Content Include="icon2.ico" />
-    <None Include="Resources\management_fr.jpg" />
-    <None Include="Resources\gamesettings_fr.jpg" />
-    <None Include="Resources\Recorded_fr.jpg" />
+    <None Include="Resources\vooblykit.png" />
+    <None Include="Resources\vooblyvaccine.png" />
+    <Content Include="steam_api.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="steam_appid.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\performprof.png" />
+    <None Include="Resources\management_tw.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\gamesettings_tw.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Recorded_tw.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Touch.png" />
+    <None Include="Resources\Open v2.png" />
+    <None Include="Resources\gamesettings_es.jpg" />
+    <None Include="Resources\management_es.jpg" />
+    <None Include="Resources\Recorded_es.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\gear.png" />
+    <None Include="Resources\vlc-logo.gif" />
+    <None Include="Resources\twitchlogo.png" />
+    <None Include="Resources\management_fr.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\gamesettings_fr.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Recorded_fr.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Resources\management.png" />
     <None Include="Resources\upico.png" />
     <None Include="Resources\LogoTopFaded.png" />
@@ -454,8 +644,12 @@
     <None Include="Resources\Hearts-icon.png" />
     <None Include="Resources\youtube-icon-32.png" />
     <None Include="Resources\unchkvoob.png" />
-    <None Include="Resources\import-27.png" />
-    <None Include="Resources\import.png" />
+    <None Include="Resources\import-27.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\import.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Resources\Save-20x20.png" />
     <None Include="Resources\voobly.png" />
     <None Include="Resources\menu-shield.png" />
@@ -486,7 +680,6 @@
     <None Include="Resources\UIclose1.png" />
     <None Include="Resources\uncheckL.png" />
     <None Include="Resources\headermis.png" />
-    <None Include="Resources\headerall.png" />
     <None Include="Resources\headerg.png" />
     <None Include="Resources\uncheckb.png" />
     <None Include="Resources\header2.png" />
@@ -555,6 +748,15 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Resources\Footer.png" />
+    <None Include="Resources\aoclogo.png" />
+    <None Include="Resources\edit.png" />
+    <None Include="Resources\edit-file.png" />
+    <None Include="Resources\close-icon.png" />
+    <None Include="Resources\bell.png" />
+    <None Include="Resources\AoE2ToolsSmall.png" />
+    <None Include="Resources\check1.png" />
+    <None Include="Resources\battery-optimizer-icon.png" />
+    <None Include="Resources\cloud.png" />
     <Content Include="Resources\Fortwall4.png" />
     <None Include="Resources\wololo.gif" />
     <None Include="Resources\AoE2ToolsLogo1.png">
@@ -591,7 +793,6 @@
     <None Include="Resources\Conversion-Step3_check.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Resources\Aoe2Tools-UI.jpg" />
     <None Include="Resources\eraser2.png" />
     <None Include="Resources\eraser1.png" />
     <None Include="Resources\on.jpg" />
@@ -627,6 +828,15 @@
   <ItemGroup>
     <COMReference Include="IWshRuntimeLibrary">
       <Guid>{F935DC20-1CF0-11D0-ADB9-00C04FD58A0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="NATUPNPLib">
+      <Guid>{1C565858-F302-471E-B409-F180AA4ABEC6}</Guid>
       <VersionMajor>1</VersionMajor>
       <VersionMinor>0</VersionMinor>
       <Lcid>0</Lcid>

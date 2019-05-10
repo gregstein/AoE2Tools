@@ -26,7 +26,7 @@ namespace WindowsFormsApplication3
     public partial class AoE2Tools : KryptonForm
     {
         private MessageBoxIcon _mbIcon = MessageBoxIcon.Information;
-        private MessageBoxIcon _mbIcon2 = MessageBoxIcon.Warning;
+        //private MessageBoxIcon _mbIcon2 = MessageBoxIcon.Warning;
         private MessageBoxButtons _mbButtons = MessageBoxButtons.OK;
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
@@ -490,8 +490,8 @@ namespace WindowsFormsApplication3
                     System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
                     startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
                     startInfo.FileName = "cmd.exe";
-                    startInfo.Arguments = "/c" + "\"" + Directory.GetCurrentDirectory() + "\\data\\perf\\mouse.exe" + "\"" + " -opt";
-                    //File.WriteAllText(System.IO.Path.GetTempPath() + "\\e-m.bat", "\"" + Directory.GetCurrentDirectory() + "\\data\\perf\\mouse.exe" + "\"" + " -opt");
+                    startInfo.Arguments = "/c" + "\"" + System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\data\\perf\\mouse.exe" + "\"" + " -opt";
+                    //File.WriteAllText(System.IO.Path.GetTempPath() + "\\e-m.bat", "\"" + System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\data\\perf\\mouse.exe" + "\"" + " -opt");
                     startInfo.Verb = "runas";
                     process.StartInfo = startInfo;
                     process.Start();
@@ -518,8 +518,8 @@ namespace WindowsFormsApplication3
                     System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
                     startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
                     startInfo.FileName = "cmd.exe";
-                    startInfo.Arguments = "/c" + "\"" + Directory.GetCurrentDirectory() + "\\data\\perf\\mouse.exe" + "\"" + " -unopt";
-                    //File.WriteAllText(System.IO.Path.GetTempPath() + "\\e-m.bat", "\"" + Directory.GetCurrentDirectory() + "\\data\\perf\\mouse.exe" + "\"" + " -unopt");
+                    startInfo.Arguments = "/c" + "\"" + System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\data\\perf\\mouse.exe" + "\"" + " -unopt";
+                    //File.WriteAllText(System.IO.Path.GetTempPath() + "\\e-m.bat", "\"" + System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\data\\perf\\mouse.exe" + "\"" + " -unopt");
                     startInfo.Verb = "runas";
                     process.StartInfo = startInfo;
                     process.Start();
@@ -1545,7 +1545,7 @@ namespace WindowsFormsApplication3
                             if (dialogResult == DialogResult.Yes)
                              {
                                 //Invoke Mover
-                                 Process.Start(Directory.GetCurrentDirectory() + "\\AoE2Tools Mover.exe");
+                                 Process.Start(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\AoE2Tools Mover.exe");
                              }
                             else if (dialogResult == DialogResult.No)
                             {

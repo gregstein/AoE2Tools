@@ -12,7 +12,9 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Globalization;
+using System.Resources;
+using Microsoft.Win32;
 namespace WindowsFormsApplication3
 {
     public partial class ReplaysPacker : KryptonForm
@@ -25,14 +27,17 @@ namespace WindowsFormsApplication3
         }
         private string _recpacker = System.IO.Path.GetTempPath() + @"\hdtotc-tmp\savegametmp\RecPacker-" + DateTime.Now.ToString(@"MM\-dd\-yyyy") + rndstr(8) + "\\";
         private static Random random = new Random();
+        ResourceManager res_man;    // declare Resource manager to access to specific cultureinfo
+        CultureInfo cul;            // declare culture info
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }
 
-        private void ReplaysPacker_Load(object sender, EventArgs e)
+        private async void ReplaysPacker_Load(object sender, EventArgs e)
         {
-
+            res_man = new ResourceManager("WindowsFormsApplication3.langs.Res", typeof(Options).Assembly);
+            await Task.Run(() => switchlang());
         }
         public static string rndstr(int length)
         {
@@ -716,6 +721,55 @@ namespace WindowsFormsApplication3
             }
         }
 
+
+        private void switchlang()
+        {
+            using (RegistryKey rk = Registry.CurrentUser.OpenSubKey("Software\\AoE2Tools", true))
+            {
+                if (Registry.GetValue(@"HKEY_CURRENT_USER\Software\AoE2Tools", "Transl", null) != null)
+                {
+                    string translatestr = rk.GetValue("Transl").ToString();
+                    if (translatestr == "en")
+                    {
+                        cul = CultureInfo.CreateSpecificCulture("en");
+                    }
+                    else if (translatestr == "fr")
+                    {
+                        cul = CultureInfo.CreateSpecificCulture("fr");
+                    }
+                    else if (translatestr == "es")
+                    {
+                        cul = CultureInfo.CreateSpecificCulture("es");
+                    }
+                    else if (translatestr == "zh-cn")
+                    {
+                        cul = CultureInfo.CreateSpecificCulture("zh-cn");
+                    }
+
+                }
+                else
+                {
+                    cul = CultureInfo.CreateSpecificCulture("en");
+                }
+            }
+            BeginInvoke((MethodInvoker)delegate
+            {
+
+
+                groupBox2.Text = res_man.GetString("_dragandropreplays", cul);
+                kryptonLabel1.Text = res_man.GetString("_replays", cul);
+                kryptonLabel2.Text = res_man.GetString("_totalsize", cul);
+                kryptonLabel5.Text = res_man.GetString("_renamerec", cul);
+                renametxt.Text = res_man.GetString("_renameselected", cul);
+
+                groupBox1.Text = res_man.GetString("_actions", cul);
+                kryptonButton2.Text = res_man.GetString("_packall", cul);
+                kryptonButton1.Text = res_man.GetString("_clearthis", cul);
+                clearall.Text = res_man.GetString("_clearall", cul);
+                ReplaysPacker.ActiveForm.Text = res_man.GetString("_replaypackertitle", cul);
+
+            });
+        }
 
         
     }

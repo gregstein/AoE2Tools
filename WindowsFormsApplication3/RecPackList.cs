@@ -369,159 +369,16 @@ namespace WindowsFormsApplication3
             if (NativeDir() != "") { DirCopy(NativeDir(), mskdpath.Text + "\\SaveGame\\"); } else { KryptonMessageBox.Show("Replay Pack Folder-Name is empty!", "Error!"); }
                             if (reclistpack.SelectedIndex >= 0)
                             {
-                                if(gamever.Text == "WK")
+                                if (gamever.Text == "WK 5.7.2" || gamever.Text == "WK 5.7.4")
                                 {
                                     DirCopy(NativeDir(), mskdpath.Text + @"\Games\WololoKingdoms\Savegame\");
                                 }
-                                //Save Replay
-                                //if (recchoice.Text == "Save Replay")
-                                ////{
-                                //    if (folderradio.Checked == false)
-                                //    {
-
+                       
                                     WatchReplay("");
-
-
-                                    //}
-                                    ////radio checked
-                                    //else if (folderradio.Checked == true)
-                                    //{
-                                    //    //radio check begin
-
-                                    //    WatchReplay(packfn.Text);
-
-                                    //    //radio check end
-
-                                    //}
-                                    //end launch
-                                //}
-                                //Don't Save
-                                //else if (recchoice.Text == "Don't Save")
-                                //{
-                                //    if (folderradio.Checked == false)
-                                //    {
-                                //        foreach (var recitem in reclistpack.Items)
-                                //        {
-                                //            string oldfln = mskdpath.Text + "\\SaveGame\\" + recitem;
-
-                                //            if (Directory.Exists(oldfln))
-                                //            {
-                                //                File.AppendAllText(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\data\recs\pending-removal.txt", oldfln + Environment.NewLine);
-                                //            }
-                                //        }
-
-
-                                //        WatchReplay("");
-
-
-                                //    }
-                                //    //radio checked
-                                //    else if (folderradio.Checked == true)
-                                //    {
-                                //        //radio check begin
-                                //        string oldfln = mskdpath.Text + "\\SaveGame\\" + oldfolder.Text;
-                                //        if (Directory.Exists(oldfln))
-                                //        {
-                                //            File.AppendAllText(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\data\recs\pending-removal.txt", oldfln + Environment.NewLine);
-                                //        }
-                                //        WatchReplay(packfn.Text);
-
-                                //        //radio check end
-
-                                //    }
-                                //}
+      
 
                             }
 
-
-                            //end watch
-                        //}//here
-                        //else
-                        //{
-                        //                    DialogResult dialogResult = MessageBox.Show("Age of Empires 2 is already running!\n Would you like to close it to watch your replay?", "Already Running!", MessageBoxButtons.YesNo);
-                        //                    if (dialogResult == DialogResult.Yes)
-                        //                    {
-                        //                        foreach (var process in Process.GetProcessesByName("AoE2Tools"))
-                        //                        {
-                        //                            process.Kill();
-                        //                            process.WaitForExit();
-                        //                        }
-                        //                        //now watch
-
-                        //                        if (NativeDir() != "") { DirCopy(NativeDir(), mskdpath.Text + "\\SaveGame\\"); } else { KryptonMessageBox.Show("Replay Pack Folder-Name is empty!", "Error!"); }
-                        //                        if (reclistpack.SelectedIndex >= 0)
-                        //                        {
-                        //                            //Save Replay
-                        //                            if (recchoice.Text == "Save Replay")
-                        //                            {
-                        //                                if (folderradio.Checked == false)
-                        //                                {
-
-                        //                                    WatchReplay("");
-
-
-                        //                                }
-                        //                                //radio checked
-                        //                                else if (folderradio.Checked == true)
-                        //                                {
-                        //                                    //radio check begin
-
-                        //                                    WatchReplay(packfn.Text);
-
-                        //                                    //radio check end
-
-                        //                                }
-                        //                                //end launch
-                        //                            }
-                        //                            //Don't Save
-                        //                            else if (recchoice.Text == "Don't Save")
-                        //                            {
-                        //                                if (folderradio.Checked == false)
-                        //                                {
-                        //                                    foreach (var recitem in reclistpack.Items)
-                        //                                    {
-                        //                                        string oldfln = mskdpath.Text + "\\SaveGame\\" + recitem;
-
-                        //                                        if (Directory.Exists(oldfln))
-                        //                                        {
-                        //                                            File.AppendAllText(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\data\recs\pending-removal.txt", oldfln + Environment.NewLine);
-                        //                                        }
-                        //                                    }
-
-
-                        //                                    WatchReplay("");
-
-
-                        //                                }
-                        //                                //radio checked
-                        //                                else if (folderradio.Checked == true)
-                        //                                {
-                        //                                    //radio check begin
-                        //                                    string oldfln = mskdpath.Text + "\\SaveGame\\" + oldfolder.Text;
-                        //                                    if (Directory.Exists(oldfln))
-                        //                                    {
-                        //                                        File.AppendAllText(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\data\recs\pending-removal.txt", oldfln + Environment.NewLine);
-                        //                                    }
-                        //                                    WatchReplay(packfn.Text);
-
-                        //                                    //radio check end
-
-                        //                                }
-                        //                            }
-                        //                        }
-
-
-                        //                        //end watch
-
-                        //                    }
-                        //                    else if (dialogResult == DialogResult.No)
-                        //                    {
-
-                        //                    }
-                        //}//here
-
-            
-            //Running
 
         }
 
@@ -941,7 +798,7 @@ namespace WindowsFormsApplication3
 
                     //    }
                     //}
-                    else if (gamever.Text == "WK")
+                    else if (gamever.Text == "WK 5.7.2" || gamever.Text == "WK 5.7.4")
                     {
                         //first create file and dir
                         if (_isfolder != "" && !Directory.Exists(_isfolder))
@@ -977,77 +834,7 @@ namespace WindowsFormsApplication3
 
                             }
                         }
-                        //else if (File.Exists(mskdpath.Text + "\\Age2_x1\\WKAK.exe"))
-                        //{
-                        //    try
-                        //    {
-                        //        byte[] passjuice = File.ReadAllBytes(mskdpath.Text + "\\Age2_x1\\WKAK.exe");
-                        //        File.WriteAllBytes(mskdpath.Text + "\\Age2_x1\\AoE2Tools.exe", passjuice);
-                        //        System.Diagnostics.Process process = new System.Diagnostics.Process();
-                        //        System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
-                        //        startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
-                        //        startInfo.FileName = "cmd.exe";
-                        //        startInfo.Arguments = "/c" + "start \"" + mskdpath.Text + "\\Age2_x1\\AoE2Tools.exe" + "\"" + " \"" + renfilerec + "\"";
-                        //        //startInfo.Verb = "runas";
-                        //        process.StartInfo = startInfo;
-                        //        process.Start();
-                        //        process.WaitForExit();
-
-                        //    }
-                        //    catch (Exception goy)
-                        //    {
-                        //        throw goy;
-
-                        //    }
-                        //}
-
-                        //else if (File.Exists(mskdpath.Text + "\\Age2_x1\\WKRR.exe"))
-                        //{
-                        //    try
-                        //    {
-                        //        byte[] passjuice = File.ReadAllBytes(mskdpath.Text + "\\Age2_x1\\WKRR.exe");
-                        //        File.WriteAllBytes(mskdpath.Text + "\\Age2_x1\\AoE2Tools.exe", passjuice);
-                        //        System.Diagnostics.Process process = new System.Diagnostics.Process();
-                        //        System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
-                        //        startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
-                        //        startInfo.FileName = "cmd.exe";
-                        //        startInfo.Arguments = "/c" + "start \"" + mskdpath.Text + "\\Age2_x1\\AoE2Tools.exe" + "\"" + " \"" + renfilerec + "\"";
-                        //        //startInfo.Verb = "runas";
-                        //        process.StartInfo = startInfo;
-                        //        process.Start();
-                        //        process.WaitForExit();
-
-                        //    }
-                        //    catch (Exception goy)
-                        //    {
-                        //        throw goy;
-
-                        //    }
-                        //}
-
-                        //else if (File.Exists(mskdpath.Text + "\\Age2_x1\\WKFE.exe"))
-                        //{
-                        //    try
-                        //    {
-                        //        byte[] passjuice = File.ReadAllBytes(mskdpath.Text + "\\Age2_x1\\WKFE.exe");
-                        //        File.WriteAllBytes(mskdpath.Text + "\\Age2_x1\\AoE2Tools.exe", passjuice);
-                        //        System.Diagnostics.Process process = new System.Diagnostics.Process();
-                        //        System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
-                        //        startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
-                        //        startInfo.FileName = "cmd.exe";
-                        //        startInfo.Arguments = "/c" + "start \"" + mskdpath.Text + "\\Age2_x1\\AoE2Tools.exe" + "\"" + " \"" + renfilerec + "\"";
-                        //        //startInfo.Verb = "runas";
-                        //        process.StartInfo = startInfo;
-                        //        process.Start();
-                        //        process.WaitForExit();
-
-                        //    }
-                        //    catch (Exception goy)
-                        //    {
-                        //        throw goy;
-
-                        //    }
-                        //}
+ 
                         else if (!File.Exists(mskdpath.Text + "\\Age2_x1\\WKFE.exe") && !File.Exists(mskdpath.Text + "\\Age2_x1\\WKRR.exe") && !File.Exists(mskdpath.Text + "\\Age2_x1\\WKAK.exe") && !File.Exists(mskdpath.Text + "\\Age2_x1\\WK.exe"))
                         {
                             if (KryptonMessageBox.Show(

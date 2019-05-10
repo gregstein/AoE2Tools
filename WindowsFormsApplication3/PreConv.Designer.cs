@@ -78,10 +78,11 @@
             // kryptonLabel1
             // 
             this.kryptonLabel1.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.BoldPanel;
-            this.kryptonLabel1.Location = new System.Drawing.Point(5, 19);
+            this.kryptonLabel1.Location = new System.Drawing.Point(4, 15);
+            this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel1.Name = "kryptonLabel1";
             this.kryptonLabel1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
-            this.kryptonLabel1.Size = new System.Drawing.Size(111, 24);
+            this.kryptonLabel1.Size = new System.Drawing.Size(90, 20);
             this.kryptonLabel1.TabIndex = 0;
             this.kryptonLabel1.Values.Text = "Install Voobly";
             // 
@@ -89,9 +90,10 @@
             // 
             this.VoobAuto.AutoSize = true;
             this.VoobAuto.Checked = true;
-            this.VoobAuto.Location = new System.Drawing.Point(127, 19);
+            this.VoobAuto.Location = new System.Drawing.Point(109, 15);
+            this.VoobAuto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.VoobAuto.Name = "VoobAuto";
-            this.VoobAuto.Size = new System.Drawing.Size(58, 21);
+            this.VoobAuto.Size = new System.Drawing.Size(48, 17);
             this.VoobAuto.TabIndex = 1;
             this.VoobAuto.TabStop = true;
             this.VoobAuto.Text = "Auto";
@@ -102,18 +104,21 @@
             this.groupBox1.Controls.Add(this.VoobManual);
             this.groupBox1.Controls.Add(this.kryptonLabel1);
             this.groupBox1.Controls.Add(this.VoobAuto);
-            this.groupBox1.Location = new System.Drawing.Point(4, 25);
+            this.groupBox1.Location = new System.Drawing.Point(3, 20);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(272, 55);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(233, 45);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             // 
             // VoobManual
             // 
             this.VoobManual.AutoSize = true;
-            this.VoobManual.Location = new System.Drawing.Point(191, 19);
+            this.VoobManual.Location = new System.Drawing.Point(164, 15);
+            this.VoobManual.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.VoobManual.Name = "VoobManual";
-            this.VoobManual.Size = new System.Drawing.Size(71, 21);
+            this.VoobManual.Size = new System.Drawing.Size(59, 17);
             this.VoobManual.TabIndex = 3;
             this.VoobManual.Text = "Manual";
             this.VoobManual.UseVisualStyleBackColor = true;
@@ -124,26 +129,30 @@
             this.groupBox2.Controls.Add(this.GameCustom);
             this.groupBox2.Controls.Add(this.GameAuto);
             this.groupBox2.Controls.Add(this.kryptonLabel3);
-            this.groupBox2.Location = new System.Drawing.Point(4, 79);
+            this.groupBox2.Location = new System.Drawing.Point(3, 64);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(272, 82);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Size = new System.Drawing.Size(233, 67);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             // 
             // GameDir
             // 
-            this.GameDir.Location = new System.Drawing.Point(9, 46);
+            this.GameDir.Location = new System.Drawing.Point(8, 37);
+            this.GameDir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.GameDir.Name = "GameDir";
             this.GameDir.ReadOnly = true;
-            this.GameDir.Size = new System.Drawing.Size(258, 24);
+            this.GameDir.Size = new System.Drawing.Size(221, 20);
             this.GameDir.TabIndex = 5;
             // 
             // GameCustom
             // 
             this.GameCustom.AutoSize = true;
-            this.GameCustom.Location = new System.Drawing.Point(191, 19);
+            this.GameCustom.Location = new System.Drawing.Point(164, 15);
+            this.GameCustom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.GameCustom.Name = "GameCustom";
-            this.GameCustom.Size = new System.Drawing.Size(77, 21);
+            this.GameCustom.Size = new System.Drawing.Size(61, 17);
             this.GameCustom.TabIndex = 3;
             this.GameCustom.Text = "Custom";
             this.GameCustom.UseVisualStyleBackColor = true;
@@ -153,9 +162,10 @@
             // 
             this.GameAuto.AutoSize = true;
             this.GameAuto.Checked = true;
-            this.GameAuto.Location = new System.Drawing.Point(126, 19);
+            this.GameAuto.Location = new System.Drawing.Point(108, 15);
+            this.GameAuto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.GameAuto.Name = "GameAuto";
-            this.GameAuto.Size = new System.Drawing.Size(58, 21);
+            this.GameAuto.Size = new System.Drawing.Size(48, 17);
             this.GameAuto.TabIndex = 1;
             this.GameAuto.TabStop = true;
             this.GameAuto.Text = "Auto";
@@ -165,10 +175,11 @@
             // kryptonLabel3
             // 
             this.kryptonLabel3.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.BoldPanel;
-            this.kryptonLabel3.Location = new System.Drawing.Point(5, 16);
+            this.kryptonLabel3.Location = new System.Drawing.Point(4, 13);
+            this.kryptonLabel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel3.Name = "kryptonLabel3";
             this.kryptonLabel3.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
-            this.kryptonLabel3.Size = new System.Drawing.Size(125, 24);
+            this.kryptonLabel3.Size = new System.Drawing.Size(101, 20);
             this.kryptonLabel3.TabIndex = 4;
             this.kryptonLabel3.Values.Text = "Game Directory";
             // 
@@ -182,18 +193,21 @@
             this.groupBox3.Controls.Add(this.smalltrees);
             this.groupBox3.Controls.Add(this.kryptonLabel2);
             this.groupBox3.Controls.Add(this.radioButton6);
-            this.groupBox3.Location = new System.Drawing.Point(4, 257);
+            this.groupBox3.Location = new System.Drawing.Point(3, 209);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(396, 83);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox3.Size = new System.Drawing.Size(339, 67);
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             // 
             // boldtext
             // 
             this.boldtext.AutoSize = true;
-            this.boldtext.Location = new System.Drawing.Point(295, 18);
+            this.boldtext.Location = new System.Drawing.Point(253, 15);
+            this.boldtext.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.boldtext.Name = "boldtext";
-            this.boldtext.Size = new System.Drawing.Size(88, 21);
+            this.boldtext.Size = new System.Drawing.Size(71, 17);
             this.boldtext.TabIndex = 10;
             this.boldtext.Text = "Light Grid";
             this.boldtext.UseVisualStyleBackColor = true;
@@ -201,9 +215,10 @@
             // blueberries
             // 
             this.blueberries.AutoSize = true;
-            this.blueberries.Location = new System.Drawing.Point(292, 49);
+            this.blueberries.Location = new System.Drawing.Point(250, 40);
+            this.blueberries.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.blueberries.Name = "blueberries";
-            this.blueberries.Size = new System.Drawing.Size(99, 21);
+            this.blueberries.Size = new System.Drawing.Size(82, 17);
             this.blueberries.TabIndex = 9;
             this.blueberries.Text = "Blue Berries";
             this.blueberries.UseVisualStyleBackColor = true;
@@ -211,9 +226,10 @@
             // hugenumber
             // 
             this.hugenumber.AutoSize = true;
-            this.hugenumber.Location = new System.Drawing.Point(169, 49);
+            this.hugenumber.Location = new System.Drawing.Point(145, 40);
+            this.hugenumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.hugenumber.Name = "hugenumber";
-            this.hugenumber.Size = new System.Drawing.Size(115, 21);
+            this.hugenumber.Size = new System.Drawing.Size(91, 17);
             this.hugenumber.TabIndex = 8;
             this.hugenumber.Text = "Huge Number";
             this.hugenumber.UseVisualStyleBackColor = true;
@@ -221,9 +237,10 @@
             // advidle
             // 
             this.advidle.AutoSize = true;
-            this.advidle.Location = new System.Drawing.Point(8, 50);
+            this.advidle.Location = new System.Drawing.Point(7, 41);
+            this.advidle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.advidle.Name = "advidle";
-            this.advidle.Size = new System.Drawing.Size(163, 21);
+            this.advidle.Size = new System.Drawing.Size(132, 17);
             this.advidle.TabIndex = 7;
             this.advidle.Text = "Advanced Idle Pointer";
             this.advidle.UseVisualStyleBackColor = true;
@@ -233,21 +250,24 @@
             this.shortwalls.AutoSize = true;
             this.shortwalls.Checked = true;
             this.shortwalls.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.shortwalls.Location = new System.Drawing.Point(196, 18);
+            this.shortwalls.Location = new System.Drawing.Point(168, 15);
+            this.shortwalls.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.shortwalls.Name = "shortwalls";
-            this.shortwalls.Size = new System.Drawing.Size(99, 21);
+            this.shortwalls.Size = new System.Drawing.Size(80, 17);
             this.shortwalls.TabIndex = 6;
             this.shortwalls.Text = "Short Walls";
             this.shortwalls.UseVisualStyleBackColor = true;
+            this.shortwalls.CheckedChanged += new System.EventHandler(this.shortwalls_CheckedChanged);
             // 
             // smalltrees
             // 
             this.smalltrees.AutoSize = true;
             this.smalltrees.Checked = true;
             this.smalltrees.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.smalltrees.Location = new System.Drawing.Point(100, 18);
+            this.smalltrees.Location = new System.Drawing.Point(86, 15);
+            this.smalltrees.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.smalltrees.Name = "smalltrees";
-            this.smalltrees.Size = new System.Drawing.Size(98, 21);
+            this.smalltrees.Size = new System.Drawing.Size(80, 17);
             this.smalltrees.TabIndex = 5;
             this.smalltrees.Text = "Small Trees";
             this.smalltrees.UseVisualStyleBackColor = true;
@@ -255,19 +275,21 @@
             // kryptonLabel2
             // 
             this.kryptonLabel2.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.BoldPanel;
-            this.kryptonLabel2.Location = new System.Drawing.Point(0, 15);
+            this.kryptonLabel2.Location = new System.Drawing.Point(0, 12);
+            this.kryptonLabel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel2.Name = "kryptonLabel2";
             this.kryptonLabel2.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
-            this.kryptonLabel2.Size = new System.Drawing.Size(106, 24);
+            this.kryptonLabel2.Size = new System.Drawing.Size(86, 20);
             this.kryptonLabel2.TabIndex = 4;
             this.kryptonLabel2.Values.Text = "Offline Mods";
             // 
             // radioButton6
             // 
             this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(56, 18);
+            this.radioButton6.Location = new System.Drawing.Point(48, 15);
+            this.radioButton6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(41, 21);
+            this.radioButton6.Size = new System.Drawing.Size(36, 17);
             this.radioButton6.TabIndex = 1;
             this.radioButton6.TabStop = true;
             this.radioButton6.Text = "All";
@@ -277,9 +299,11 @@
             // 
             this.groupBox4.Controls.Add(this.kryptonComboBox1);
             this.groupBox4.Controls.Add(this.kryptonLabel4);
-            this.groupBox4.Location = new System.Drawing.Point(4, 202);
+            this.groupBox4.Location = new System.Drawing.Point(3, 164);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(272, 55);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox4.Size = new System.Drawing.Size(233, 45);
             this.groupBox4.TabIndex = 5;
             this.groupBox4.TabStop = false;
             // 
@@ -299,10 +323,11 @@
             "===Game Default===",
             "AoE2 HD Hotkeys",
             "AoC2 Hotkeys"});
-            this.kryptonComboBox1.Location = new System.Drawing.Point(77, 18);
+            this.kryptonComboBox1.Location = new System.Drawing.Point(66, 15);
+            this.kryptonComboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonComboBox1.Name = "kryptonComboBox1";
             this.kryptonComboBox1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
-            this.kryptonComboBox1.Size = new System.Drawing.Size(190, 25);
+            this.kryptonComboBox1.Size = new System.Drawing.Size(163, 21);
             this.kryptonComboBox1.TabIndex = 1;
             this.kryptonComboBox1.Text = "Default (Recommended)";
             this.kryptonComboBox1.SelectedIndexChanged += new System.EventHandler(this.kryptonComboBox1_SelectedIndexChanged);
@@ -311,20 +336,22 @@
             // kryptonLabel4
             // 
             this.kryptonLabel4.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.BoldPanel;
-            this.kryptonLabel4.Location = new System.Drawing.Point(5, 19);
+            this.kryptonLabel4.Location = new System.Drawing.Point(4, 15);
+            this.kryptonLabel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel4.Name = "kryptonLabel4";
             this.kryptonLabel4.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
-            this.kryptonLabel4.Size = new System.Drawing.Size(71, 24);
+            this.kryptonLabel4.Size = new System.Drawing.Size(58, 20);
             this.kryptonLabel4.TabIndex = 0;
             this.kryptonLabel4.Values.Text = "Hotkeys";
             // 
             // kryptonButton1
             // 
             this.kryptonButton1.Enabled = false;
-            this.kryptonButton1.Location = new System.Drawing.Point(70, 346);
+            this.kryptonButton1.Location = new System.Drawing.Point(60, 281);
+            this.kryptonButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonButton1.Name = "kryptonButton1";
             this.kryptonButton1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.SparkleBlue;
-            this.kryptonButton1.Size = new System.Drawing.Size(229, 33);
+            this.kryptonButton1.Size = new System.Drawing.Size(196, 27);
             this.kryptonButton1.StateCommon.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonButton1.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonButton1.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
@@ -335,18 +362,20 @@
             // 
             // kryptonLabel5
             // 
-            this.kryptonLabel5.Location = new System.Drawing.Point(296, 101);
+            this.kryptonLabel5.Location = new System.Drawing.Point(254, 82);
+            this.kryptonLabel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel5.Name = "kryptonLabel5";
-            this.kryptonLabel5.Size = new System.Drawing.Size(78, 24);
+            this.kryptonLabel5.Size = new System.Drawing.Size(63, 20);
             this.kryptonLabel5.StateCommon.ShortText.Color1 = System.Drawing.Color.DarkGray;
             this.kryptonLabel5.TabIndex = 7;
             this.kryptonLabel5.Values.Text = "Detecting";
             // 
             // kryptonLabel6
             // 
-            this.kryptonLabel6.Location = new System.Drawing.Point(11, 6);
+            this.kryptonLabel6.Location = new System.Drawing.Point(9, 5);
+            this.kryptonLabel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel6.Name = "kryptonLabel6";
-            this.kryptonLabel6.Size = new System.Drawing.Size(139, 24);
+            this.kryptonLabel6.Size = new System.Drawing.Size(112, 20);
             this.kryptonLabel6.StateCommon.ShortText.Color1 = System.Drawing.Color.Maroon;
             this.kryptonLabel6.TabIndex = 7;
             this.kryptonLabel6.Values.Text = "Pre-Install Settings";
@@ -354,22 +383,24 @@
             // kryptonLabel7
             // 
             this.kryptonLabel7.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.SuperTip;
-            this.kryptonLabel7.Location = new System.Drawing.Point(299, 131);
+            this.kryptonLabel7.Location = new System.Drawing.Point(256, 106);
+            this.kryptonLabel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel7.Name = "kryptonLabel7";
             this.kryptonLabel7.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
-            this.kryptonLabel7.Size = new System.Drawing.Size(53, 30);
+            this.kryptonLabel7.Size = new System.Drawing.Size(44, 26);
             this.kryptonLabel7.TabIndex = 9;
             this.kryptonLabel7.Values.Text = "Lang:";
             // 
             // LangTxt
             // 
             this.LangTxt.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip;
-            this.LangTxt.Location = new System.Drawing.Point(345, 133);
+            this.LangTxt.Location = new System.Drawing.Point(296, 108);
+            this.LangTxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.LangTxt.Name = "LangTxt";
             this.LangTxt.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
-            this.LangTxt.Size = new System.Drawing.Size(16, 26);
+            this.LangTxt.Size = new System.Drawing.Size(24, 22);
             this.LangTxt.TabIndex = 9;
-            this.LangTxt.Values.Text = "-";
+            this.LangTxt.Values.Text = "EN";
             // 
             // backgroundWorker1
             // 
@@ -380,9 +411,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::WindowsFormsApplication3.Properties.Resources.AoE2ToolsLogo;
-            this.pictureBox1.Location = new System.Drawing.Point(299, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(256, 10);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(74, 83);
+            this.pictureBox1.Size = new System.Drawing.Size(63, 67);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
@@ -391,6 +423,7 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
             // groupBox5
             // 
@@ -398,33 +431,37 @@
             this.groupBox5.Controls.Add(this.SteamBox);
             this.groupBox5.Controls.Add(this.kryptonLabel9);
             this.groupBox5.Controls.Add(this.SteamLabel);
-            this.groupBox5.Location = new System.Drawing.Point(4, 161);
+            this.groupBox5.Location = new System.Drawing.Point(3, 131);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(272, 40);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox5.Size = new System.Drawing.Size(233, 32);
             this.groupBox5.TabIndex = 10;
             this.groupBox5.TabStop = false;
             // 
             // FixSteam
             // 
             this.FixSteam.AutoSize = true;
-            this.FixSteam.Location = new System.Drawing.Point(218, 11);
+            this.FixSteam.Location = new System.Drawing.Point(177, 9);
+            this.FixSteam.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.FixSteam.Name = "FixSteam";
             this.FixSteam.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
-            this.FixSteam.Size = new System.Drawing.Size(49, 25);
+            this.FixSteam.Size = new System.Drawing.Size(55, 20);
             this.FixSteam.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Tahoma", 7.5F, System.Drawing.FontStyle.Bold);
             this.FixSteam.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Tahoma", 7.5F, System.Drawing.FontStyle.Bold);
             this.FixSteam.StatePressed.Content.ShortText.Font = new System.Drawing.Font("Tahoma", 7.5F, System.Drawing.FontStyle.Bold);
             this.FixSteam.TabIndex = 10;
-            this.FixSteam.Values.Text = "Fix it!";
+            this.FixSteam.Values.Text = "Custom?";
             this.FixSteam.Click += new System.EventHandler(this.FixSteam_Click);
             // 
             // SteamBox
             // 
             this.SteamBox.BackColor = System.Drawing.Color.Transparent;
             this.SteamBox.Image = global::WindowsFormsApplication3.Properties.Resources.check;
-            this.SteamBox.Location = new System.Drawing.Point(106, 11);
+            this.SteamBox.Location = new System.Drawing.Point(88, 9);
+            this.SteamBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SteamBox.Name = "SteamBox";
-            this.SteamBox.Size = new System.Drawing.Size(19, 22);
+            this.SteamBox.Size = new System.Drawing.Size(16, 18);
             this.SteamBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.SteamBox.TabIndex = 4;
             this.SteamBox.TabStop = false;
@@ -432,19 +469,21 @@
             // kryptonLabel9
             // 
             this.kryptonLabel9.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.BoldPanel;
-            this.kryptonLabel9.Location = new System.Drawing.Point(3, 11);
+            this.kryptonLabel9.Location = new System.Drawing.Point(3, 9);
+            this.kryptonLabel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel9.Name = "kryptonLabel9";
             this.kryptonLabel9.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
-            this.kryptonLabel9.Size = new System.Drawing.Size(107, 24);
+            this.kryptonLabel9.Size = new System.Drawing.Size(87, 20);
             this.kryptonLabel9.TabIndex = 0;
             this.kryptonLabel9.Values.Text = "Steam Assets";
             // 
             // SteamLabel
             // 
-            this.SteamLabel.Location = new System.Drawing.Point(124, 12);
+            this.SteamLabel.Location = new System.Drawing.Point(103, 10);
+            this.SteamLabel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SteamLabel.Name = "SteamLabel";
             this.SteamLabel.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
-            this.SteamLabel.Size = new System.Drawing.Size(92, 21);
+            this.SteamLabel.Size = new System.Drawing.Size(75, 18);
             this.SteamLabel.StateCommon.LongText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.SteamLabel.StateCommon.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.SteamLabel.StateNormal.ShortText.Color1 = System.Drawing.Color.ForestGreen;
@@ -466,9 +505,9 @@
             // 
             // PreConv
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(405, 392);
+            this.ClientSize = new System.Drawing.Size(347, 318);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.LangTxt);
             this.Controls.Add(this.kryptonLabel7);
@@ -481,6 +520,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "PreConv";
             this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

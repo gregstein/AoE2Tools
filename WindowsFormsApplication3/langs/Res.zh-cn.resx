@@ -1,0 +1,654 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="_actions" xml:space="preserve">
+    <value>動作</value>
+  </data>
+  <data name="_addstream" xml:space="preserve">
+    <value>增加實況</value>
+  </data>
+  <data name="_addstreamer" xml:space="preserve">
+    <value>增加實況主</value>
+  </data>
+  <data name="_AddToStartup" xml:space="preserve">
+    <value>添加至電腦啟動項目</value>
+  </data>
+  <data name="_age2_x1notfound" xml:space="preserve">
+    <value>AoE2未找到! 請確認AoE2安裝目錄包含"age2_x1\age2_x1.exe"!</value>
+  </data>
+  <data name="_agenotfound" xml:space="preserve">
+    <value>AoE2 檔案未找到!\n\n您是否希望使用HDToAoC從Steam的AoE2HD來產生遊戲?</value>
+  </data>
+  <data name="_aifolder" xml:space="preserve">
+    <value>AI資料夾</value>
+  </data>
+  <data name="_aoe2toolssettings" xml:space="preserve">
+    <value>AoE2Tools 設定</value>
+  </data>
+  <data name="_backuprestorehotkeys" xml:space="preserve">
+    <value>備份 / 還原 熱鍵</value>
+  </data>
+  <data name="_backuprestoreinfo" xml:space="preserve">
+    <value>從這裡備份和還原你的熱鍵資料</value>
+  </data>
+  <data name="_backups" xml:space="preserve">
+    <value>備份</value>
+  </data>
+  <data name="_browsebtn" xml:space="preserve">
+    <value>瀏覽</value>
+  </data>
+  <data name="_clearall" xml:space="preserve">
+    <value>清除全部</value>
+  </data>
+  <data name="_clearthis" xml:space="preserve">
+    <value>清除此項</value>
+  </data>
+  <data name="_configtwitchalerts" xml:space="preserve">
+    <value>設定Twitch通知</value>
+  </data>
+  <data name="_customname" xml:space="preserve">
+    <value>自定義名稱</value>
+  </data>
+  <data name="_delete" xml:space="preserve">
+    <value>刪除</value>
+  </data>
+  <data name="_demo" xml:space="preserve">
+    <value>展示</value>
+  </data>
+  <data name="_disablelauncher" xml:space="preserve">
+    <value>停用更新</value>
+  </data>
+  <data name="_disablesounds" xml:space="preserve">
+    <value>停用音效</value>
+  </data>
+  <data name="_disabletwitchalerts" xml:space="preserve">
+    <value>停用Twitch通知</value>
+  </data>
+  <data name="_dragandropreplays" xml:space="preserve">
+    <value>從電腦/網頁拖曳RP連結</value>
+  </data>
+  <data name="_edit" xml:space="preserve">
+    <value>編輯</value>
+  </data>
+  <data name="_exitaoe2tools" xml:space="preserve">
+    <value>是否確定關閉AoE2Tools?</value>
+  </data>
+  <data name="_fixit" xml:space="preserve">
+    <value>修正此項</value>
+  </data>
+  <data name="_gamenotfound" xml:space="preserve">
+    <value>遊戲未找到!</value>
+  </data>
+  <data name="_gamesettingstab" xml:space="preserve">
+    <value>gamesettings_tw.jpg</value>
+  </data>
+  <data name="_hdhotkeystotc" xml:space="preserve">
+    <value>AOE2 HD熱鍵至 AoC/FE/HD2.0</value>
+  </data>
+  <data name="_hotfixrequiem" xml:space="preserve">
+    <value>需要修補程序！是否立刻執行?</value>
+  </data>
+  <data name="_hotkeysinfo" xml:space="preserve">
+    <value>載入你的熱鍵檔案,將AoE2 HD (Steam)熱鍵轉至"AoC/FE/HD2.0" </value>
+  </data>
+  <data name="_importyourhotkeys" xml:space="preserve">
+    <value>載入你的熱鍵</value>
+  </data>
+  <data name="_install" xml:space="preserve">
+    <value>安裝</value>
+  </data>
+  <data name="_installotherhotkeys" xml:space="preserve">
+    <value>安裝其他熱鍵</value>
+  </data>
+  <data name="_langswitch" xml:space="preserve">
+    <value>語言</value>
+  </data>
+  <data name="_livelist" xml:space="preserve">
+    <value>實況列表</value>
+  </data>
+  <data name="_manage" xml:space="preserve">
+    <value>管理</value>
+  </data>
+  <data name="_managementtab" xml:space="preserve">
+    <value>management_tw.jpg</value>
+  </data>
+  <data name="_manager" xml:space="preserve">
+    <value>管理</value>
+  </data>
+  <data name="_mapfolder" xml:space="preserve">
+    <value>地圖資料夾</value>
+  </data>
+  <data name="_maytake" xml:space="preserve">
+    <value>需要1~5分鐘</value>
+  </data>
+  <data name="_misconfig" xml:space="preserve">
+    <value>AoE2Tools 配置錯誤或AoE2沒有找到!</value>
+  </data>
+  <data name="_modgb" xml:space="preserve">
+    <value>安裝離線套件                                        </value>
+  </data>
+  <data name="_modsinstall" xml:space="preserve">
+    <value>安裝</value>
+  </data>
+  <data name="_modstitle" xml:space="preserve">
+    <value>AoE2Tools [#離線套件]</value>
+  </data>
+  <data name="_modsuninstall" xml:space="preserve">
+    <value>移除</value>
+  </data>
+  <data name="_mustintallwk" xml:space="preserve">
+    <value>您必須安裝 Wololokingdoms 離線版. 單擊“OK”並查看圖片展示.</value>
+  </data>
+  <data name="_needrestart" xml:space="preserve">
+    <value>成功! 請重新啟動 AoE2Tools !</value>
+  </data>
+  <data name="_open" xml:space="preserve">
+    <value>開啟</value>
+  </data>
+  <data name="_packall" xml:space="preserve">
+    <value>全包</value>
+  </data>
+  <data name="_playsound" xml:space="preserve">
+    <value>開啟音效</value>
+  </data>
+  <data name="_plswait" xml:space="preserve">
+    <value>請稍待 ...</value>
+  </data>
+  <data name="_quickstats" xml:space="preserve">
+    <value>快速統計</value>
+  </data>
+  <data name="_recentclose" xml:space="preserve">
+    <value>關閉</value>
+  </data>
+  <data name="_recentdelete" xml:space="preserve">
+    <value>刪除</value>
+  </data>
+  <data name="_recentrename" xml:space="preserve">
+    <value>重新命名</value>
+  </data>
+  <data name="_recentreplay" xml:space="preserve">
+    <value>近期RP</value>
+  </data>
+  <data name="_recentreplaymanage" xml:space="preserve">
+    <value>管理近期RP</value>
+  </data>
+  <data name="_recentreplayname" xml:space="preserve">
+    <value>RP名稱</value>
+  </data>
+  <data name="_recentreplayteam1" xml:space="preserve">
+    <value>隊伍 1</value>
+  </data>
+  <data name="_recentreplayteam2" xml:space="preserve">
+    <value>隊伍 2</value>
+  </data>
+  <data name="_recenttitlebar" xml:space="preserve">
+    <value>AoE2Tools [#近期RP]</value>
+  </data>
+  <data name="_recentversion" xml:space="preserve">
+    <value>版本</value>
+  </data>
+  <data name="_recentwatch" xml:space="preserve">
+    <value>觀看</value>
+  </data>
+  <data name="_recgb" xml:space="preserve">
+    <value>自定您的RP</value>
+  </data>
+  <data name="_recordedtab" xml:space="preserve">
+    <value>Recorded_tw.jpg</value>
+  </data>
+  <data name="_renamerec" xml:space="preserve">
+    <value>名稱</value>
+  </data>
+  <data name="_renameselected" xml:space="preserve">
+    <value>已選擇重新命名</value>
+  </data>
+  <data name="_replaypackertitle" xml:space="preserve">
+    <value>AoE2Tools [#RP打包]</value>
+  </data>
+  <data name="_replays" xml:space="preserve">
+    <value>Replays:</value>
+  </data>
+  <data name="_requireadmin" xml:space="preserve">
+    <value>此遊戲位置需要管理員權限! 點選OK 用管理員權限來重新啟動AoE2Tools</value>
+  </data>
+  <data name="_requirefixdialog" xml:space="preserve">
+    <value>是否希望AoE2Tools修復你的遊戲路徑權限問題?</value>
+  </data>
+  <data name="_requirefixperm" xml:space="preserve">
+    <value>AoE2Tools想修復遊戲路徑的權限問題。 單擊"OK"以管理員身份重新啟動AoE2Tools</value>
+  </data>
+  <data name="_resetaoe2tools" xml:space="preserve">
+    <value>重置 AoE2Tools</value>
+  </data>
+  <data name="_resetoptions" xml:space="preserve">
+    <value>重置</value>
+  </data>
+  <data name="_selectall" xml:space="preserve">
+    <value>選擇全部</value>
+  </data>
+  <data name="_selecthotkeyssettings" xml:space="preserve">
+    <value>選擇熱鍵設定</value>
+  </data>
+  <data name="_settings" xml:space="preserve">
+    <value>設定</value>
+  </data>
+  <data name="_start" xml:space="preserve">
+    <value>開始</value>
+  </data>
+  <data name="_statsbackupdesc" xml:space="preserve">
+    <value>將整個遊戲備份為一個zip檔.</value>
+  </data>
+  <data name="_statsbtmdesc" xml:space="preserve">
+    <value>1v1或2v2重新命名比3v3和4v4重新命名更準確</value>
+  </data>
+  <data name="_statsbulkrename" xml:space="preserve">
+    <value>批次 Replays 重新命名</value>
+  </data>
+  <data name="_statsbulkrenbtn" xml:space="preserve">
+    <value>開始批次重新命名</value>
+  </data>
+  <data name="_statsbulkrened" xml:space="preserve">
+    <value>改名為:</value>
+  </data>
+  <data name="_statsbulkrentitle" xml:space="preserve">
+    <value>批次重新命名</value>
+  </data>
+  <data name="_statschoosefolder" xml:space="preserve">
+    <value>選擇資料夾</value>
+  </data>
+  <data name="_statsclean" xml:space="preserve">
+    <value>清除</value>
+  </data>
+  <data name="_statscusbackup" xml:space="preserve">
+    <value>自定備份</value>
+  </data>
+  <data name="_statsexportcusbackup" xml:space="preserve">
+    <value>匯出自定備份</value>
+  </data>
+  <data name="_statsexportfulbackup" xml:space="preserve">
+    <value>匯出完整備份</value>
+  </data>
+  <data name="_statsfullbackup" xml:space="preserve">
+    <value>完整備份</value>
+  </data>
+  <data name="_statsimport" xml:space="preserve">
+    <value>載入</value>
+  </data>
+  <data name="_statslive" xml:space="preserve">
+    <value>簡單管理 AoE2</value>
+  </data>
+  <data name="_statsrecaoc" xml:space="preserve">
+    <value>紀錄遊戲 (AoC):</value>
+  </data>
+  <data name="_statsrecsize" xml:space="preserve">
+    <value>總 Replays 大小:</value>
+  </data>
+  <data name="_statsrecwk" xml:space="preserve">
+    <value>紀錄遊戲 (WK):</value>
+  </data>
+  <data name="_statsresgames" xml:space="preserve">
+    <value>清理還原遊戲:</value>
+  </data>
+  <data name="_statsrestore" xml:space="preserve">
+    <value>還原</value>
+  </data>
+  <data name="_statsrestorebackup" xml:space="preserve">
+    <value>還原備份</value>
+  </data>
+  <data name="_statsrestoremybackup" xml:space="preserve">
+    <value>還原我的備份</value>
+  </data>
+  <data name="_statsselectbulk" xml:space="preserve">
+    <value>選擇批次重新命名RP的資料夾 (1.5 RC, WK)</value>
+  </data>
+  <data name="_statsselectrestore" xml:space="preserve">
+    <value>選擇並還原你的自定/完整備份 (Zip檔案)</value>
+  </data>
+  <data name="_statstitle" xml:space="preserve">
+    <value>管理 - AoE2Tools</value>
+  </data>
+  <data name="_statstmpfiles" xml:space="preserve">
+    <value>清除暫存檔案:</value>
+  </data>
+  <data name="_statstrack" xml:space="preserve">
+    <value>管理/備份/還原遊戲文件並優化磁碟空間</value>
+  </data>
+  <data name="_streamlist" xml:space="preserve">
+    <value>實況列表</value>
+  </data>
+  <data name="_streamslist" xml:space="preserve">
+    <value>實況主列表</value>
+  </data>
+  <data name="_topme" xml:space="preserve">
+    <value>最上層顯示</value>
+  </data>
+  <data name="_totalsize" xml:space="preserve">
+    <value>總大小</value>
+  </data>
+  <data name="_tryreset" xml:space="preserve">
+    <value>嘗試在選項中重置AoE2Tools並掃描更新以解決此問題.</value>
+  </data>
+  <data name="_twitchalerts" xml:space="preserve">
+    <value>Twitch 通知</value>
+  </data>
+  <data name="_twitchinterval" xml:space="preserve">
+    <value>Twitch 檢查間隔</value>
+  </data>
+  <data name="_twitchlivestreams" xml:space="preserve">
+    <value>Twitch 正在實況頻道</value>
+  </data>
+  <data name="_twitchloading" xml:space="preserve">
+    <value>載入中...</value>
+  </data>
+  <data name="_twitchoptions" xml:space="preserve">
+    <value>選項</value>
+  </data>
+  <data name="_twitchrefresh" xml:space="preserve">
+    <value>刷新列表</value>
+  </data>
+  <data name="_twitchtitle" xml:space="preserve">
+    <value>AoE2 Twitch 正在實況頻道</value>
+  </data>
+  <data name="_upmissing" xml:space="preserve">
+    <value>找不到 Userpatch:</value>
+  </data>
+  <data name="_userpatchnotfound" xml:space="preserve">
+    <value>UserPatch 沒有找到!</value>
+  </data>
+  <data name="_vooblymissing" xml:space="preserve">
+    <value>找不到 Voobly:</value>
+  </data>
+  <data name="_watchvlc" xml:space="preserve">
+    <value>VLC撥放觀看</value>
+  </data>
+  <data name="_watchweb" xml:space="preserve">
+    <value>網頁上觀看</value>
+  </data>
+  <data name="_wkautoinstaller" xml:space="preserve">
+    <value>WololoKingdoms 自動安裝程式 - AoE2Tools</value>
+  </data>
+  <data name="_wkdesc" xml:space="preserve">
+    <value>描述:</value>
+  </data>
+  <data name="_wkdownrun" xml:space="preserve">
+    <value>下載 &amp; 執行</value>
+  </data>
+  <data name="_wkendversion" xml:space="preserve">
+    <value> 版本?</value>
+  </data>
+  <data name="_wkinstallationdir" xml:space="preserve">
+    <value>Wololokingdoms 安裝目錄</value>
+  </data>
+  <data name="_wkinstallationdirend" xml:space="preserve">
+    <value>沒有找到!</value>
+  </data>
+  <data name="_wkisoutdated" xml:space="preserve">
+    <value>Wololokingdoms 版本太舊! 安裝新版本</value>
+  </data>
+  <data name="_wklatestver" xml:space="preserve">
+    <value>最新版本:</value>
+  </data>
+  <data name="_wklaunch" xml:space="preserve">
+    <value>啟動</value>
+  </data>
+  <data name="_wkmissing" xml:space="preserve">
+    <value>找不到 Wololokingdoms:</value>
+  </data>
+  <data name="_wkmsg1" xml:space="preserve">
+    <value>最新版本 WololoKingdoms 已安裝完成!</value>
+  </data>
+  <data name="_wkpage" xml:space="preserve">
+    <value>版本庫:</value>
+  </data>
+  <data name="_wkplayhd" xml:space="preserve">
+    <value>Voobly/離線 執行HD擴展包</value>
+  </data>
+  <data name="_wksize" xml:space="preserve">
+    <value>大小:</value>
+  </data>
+  <data name="_wkstatus" xml:space="preserve">
+    <value>狀態</value>
+  </data>
+  <data name="_yes" xml:space="preserve">
+    <value>是</value>
+  </data>
+  <data name="_advanced" xml:space="preserve">
+    <value>高级</value>
+  </data>
+  <data name="_advancedsettings" xml:space="preserve">
+    <value>高级设置</value>
+  </data>
+  <data name="_aoe2toolscustomization" xml:space="preserve">
+    <value>AoE2Tools定制</value>
+  </data>
+  <data name="_checknow" xml:space="preserve">
+    <value>立即检查</value>
+  </data>
+  <data name="_customize" xml:space="preserve">
+    <value>自定义</value>
+  </data>
+  <data name="_datamods" xml:space="preserve">
+    <value>数据MODS的</value>
+  </data>
+  <data name="_disableaoe2toolsalerts" xml:space="preserve">
+    <value>禁用AoE2Tools警报</value>
+  </data>
+  <data name="_export" xml:space="preserve">
+    <value>出口</value>
+  </data>
+  <data name="_fixnow" xml:space="preserve">
+    <value>立即修复</value>
+  </data>
+  <data name="_gamefileasso" xml:space="preserve">
+    <value>修复游戏文件关联（推荐）</value>
+  </data>
+  <data name="_gamepatches" xml:space="preserve">
+    <value>游戏补丁</value>
+  </data>
+  <data name="_gameperm" xml:space="preserve">
+    <value>修复游戏权限/问题</value>
+  </data>
+  <data name="_import" xml:space="preserve">
+    <value>进口</value>
+  </data>
+  <data name="_installedvooblymods" xml:space="preserve">
+    <value>已安装的视觉模块（个人品味）</value>
+  </data>
+  <data name="_modworkshop" xml:space="preserve">
+    <value>Mod Workshops</value>
+  </data>
+  <data name="_offlineinstall" xml:space="preserve">
+    <value>脱机安装</value>
+  </data>
+  <data name="_resetmods" xml:space="preserve">
+    <value>重置Mods</value>
+  </data>
+  <data name="_resetmodsmsg" xml:space="preserve">
+    <value>AoE2Tools自动创建要恢复的旧离线mod数据的备份。您可以从此处恢复旧的工作视觉模块：</value>
+  </data>
+  <data name="_restoreprev" xml:space="preserve">
+    <value>恢复以前的工作Visual Mods</value>
+  </data>
+  <data name="_usethistorevoke" xml:space="preserve">
+    <value>使用此功能可以撤消游戏安装中的管理员权限。</value>
+  </data>
+  <data name="_visualmods" xml:space="preserve">
+    <value>视觉MODS的</value>
+  </data>
+  <data name="_vooblymodstitle" xml:space="preserve">
+    <value>AoE2Tools [#Voobly MODS的管理器]</value>
+  </data>
+  <data name="_ai" xml:space="preserve">
+    <value>Ai</value>
+  </data>
+  <data name="_browse" xml:space="preserve">
+    <value>浏览</value>
+  </data>
+  <data name="_exit" xml:space="preserve">
+    <value>出口</value>
+  </data>
+  <data name="_gamemover" xml:space="preserve">
+    <value>游戏搬运工</value>
+  </data>
+  <data name="_hotkeys" xml:space="preserve">
+    <value>热键</value>
+  </data>
+  <data name="_installeddatamods" xml:space="preserve">
+    <value>已安装的数据模块（游戏室中的每个人都必须拥有！以便使用）</value>
+  </data>
+  <data name="_installedpatchesmods" xml:space="preserve">
+    <value>已安装的游戏补丁（更改/修复游戏错误 - 推荐最新补丁）</value>
+  </data>
+  <data name="_maps" xml:space="preserve">
+    <value>地图</value>
+  </data>
+  <data name="_offlinemods" xml:space="preserve">
+    <value>离线Mods</value>
+  </data>
+  <data name="_ontop" xml:space="preserve">
+    <value>在上面</value>
+  </data>
+  <data name="_options" xml:space="preserve">
+    <value>选项</value>
+  </data>
+  <data name="_replayspacker" xml:space="preserve">
+    <value>重播包装工</value>
+  </data>
+  <data name="_runversion" xml:space="preserve">
+    <value>运行版本</value>
+  </data>
+  <data name="_savegame" xml:space="preserve">
+    <value>保存游戏</value>
+  </data>
+  <data name="_scenario" xml:space="preserve">
+    <value>脚本</value>
+  </data>
+  <data name="_show" xml:space="preserve">
+    <value>显示</value>
+  </data>
+  <data name="_supports" xml:space="preserve">
+    <value>支持</value>
+  </data>
+  <data name="_tools" xml:space="preserve">
+    <value>工具</value>
+  </data>
+  <data name="_wkinstaller" xml:space="preserve">
+    <value>WK 安装程序</value>
+  </data>
+</root>

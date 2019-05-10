@@ -1,0 +1,654 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="_addstream" xml:space="preserve">
+    <value>Agregar transmisión</value>
+  </data>
+  <data name="_addstreamer" xml:space="preserve">
+    <value>Agregar streamer</value>
+  </data>
+  <data name="_AddToStartup" xml:space="preserve">
+    <value>Agregar a inicio</value>
+  </data>
+  <data name="_configtwitchalerts" xml:space="preserve">
+    <value>Configurar alertas de Twitch</value>
+  </data>
+  <data name="_customname" xml:space="preserve">
+    <value>Usuario</value>
+  </data>
+  <data name="_delete" xml:space="preserve">
+    <value>Borrar</value>
+  </data>
+  <data name="_disablelauncher" xml:space="preserve">
+    <value>Deshabilitar lanzador</value>
+  </data>
+  <data name="_disablesounds" xml:space="preserve">
+    <value>Deshabilitar sonidos</value>
+  </data>
+  <data name="_disabletwitchalerts" xml:space="preserve">
+    <value>Deshabilitar alertas de Twitch</value>
+  </data>
+  <data name="_edit" xml:space="preserve">
+    <value>Editar</value>
+  </data>
+  <data name="_langswitch" xml:space="preserve">
+    <value>Idiomas</value>
+  </data>
+  <data name="_livelist" xml:space="preserve">
+    <value>Lista en vivo</value>
+  </data>
+  <data name="_playsound" xml:space="preserve">
+    <value>Reproducir sonido</value>
+  </data>
+  <data name="_resetaoe2tools" xml:space="preserve">
+    <value>Reiniciar AoE2Tools</value>
+  </data>
+  <data name="_resetoptions" xml:space="preserve">
+    <value>Reiniciar</value>
+  </data>
+  <data name="_selectall" xml:space="preserve">
+    <value>Seleccionar todo</value>
+  </data>
+  <data name="_settings" xml:space="preserve">
+    <value>Configuraciones</value>
+  </data>
+  <data name="_streamlist" xml:space="preserve">
+    <value>Lista de transmisión</value>
+  </data>
+  <data name="_streamslist" xml:space="preserve">
+    <value>Lista de serpentinas</value>
+  </data>
+  <data name="_twitchalerts" xml:space="preserve">
+    <value>Alertas Twitch</value>
+  </data>
+  <data name="_twitchinterval" xml:space="preserve">
+    <value>Twitch Intervalo revisión</value>
+  </data>
+  <data name="_twitchoptions" xml:space="preserve">
+    <value>Opciones</value>
+  </data>
+  <data name="_yes" xml:space="preserve">
+    <value>Sí</value>
+  </data>
+  <data name="_aifolder" xml:space="preserve">
+    <value>AI</value>
+  </data>
+  <data name="_aoe2toolssettings" xml:space="preserve">
+    <value>AoE2Tools Ajustes</value>
+  </data>
+  <data name="_demo" xml:space="preserve">
+    <value>Demo?</value>
+  </data>
+  <data name="_fixit" xml:space="preserve">
+    <value>Arreglalo</value>
+  </data>
+  <data name="_manage" xml:space="preserve">
+    <value>Gestionar</value>
+  </data>
+  <data name="_mapfolder" xml:space="preserve">
+    <value>Mapas</value>
+  </data>
+  <data name="_open" xml:space="preserve">
+    <value>Abierto</value>
+  </data>
+  <data name="_recentreplay" xml:space="preserve">
+    <value>Replay reciente</value>
+  </data>
+  <data name="_topme" xml:space="preserve">
+    <value>Top</value>
+  </data>
+  <data name="_upmissing" xml:space="preserve">
+    <value>Userpatch desactualizado:</value>
+  </data>
+  <data name="_vooblymissing" xml:space="preserve">
+    <value>Voobly ausente:</value>
+  </data>
+  <data name="_wkmissing" xml:space="preserve">
+    <value>Wololokingdoms desactualizado:</value>
+  </data>
+  <data name="_gamesettingstab" xml:space="preserve">
+    <value>gamesettings_es.jpg</value>
+  </data>
+  <data name="_managementtab" xml:space="preserve">
+    <value>management_es.jpg</value>
+  </data>
+  <data name="_recordedtab" xml:space="preserve">
+    <value>Recorded_es.jpg</value>
+  </data>
+  <data name="_backuprestorehotkeys" xml:space="preserve">
+    <value>Copia de seguridad / Restauración Teclas</value>
+  </data>
+  <data name="_backuprestoreinfo" xml:space="preserve">
+    <value>Haga una copia de seguridad y restaure su perfil de teclas rápidas desde aquí</value>
+  </data>
+  <data name="_browsebtn" xml:space="preserve">
+    <value>Navegar</value>
+  </data>
+  <data name="_hdhotkeystotc" xml:space="preserve">
+    <value>AOE2 HD Teclas a AoC/FE/HD2.0</value>
+  </data>
+  <data name="_hotkeysinfo" xml:space="preserve">
+    <value>Las teclas rápidas de AoE2 HD (Steam) se deben convertir a "AoC / FE / HD2.0" antes de importarlas mediante el enlace de enlace.</value>
+  </data>
+  <data name="_importyourhotkeys" xml:space="preserve">
+    <value>Importe sus teclas rápidas</value>
+  </data>
+  <data name="_install" xml:space="preserve">
+    <value>Instalar</value>
+  </data>
+  <data name="_installotherhotkeys" xml:space="preserve">
+    <value>Instalar Otras Teclas Rápidas</value>
+  </data>
+  <data name="_selecthotkeyssettings" xml:space="preserve">
+    <value>Seleccionar Configuración Teclas</value>
+  </data>
+  <data name="_userpatchnotfound" xml:space="preserve">
+    <value>UserPatch no existe!</value>
+  </data>
+  <data name="_wkendversion" xml:space="preserve">
+    <value> Versión?</value>
+  </data>
+  <data name="_wkinstallationdir" xml:space="preserve">
+    <value>Directorio de instalación de Wololokingdoms</value>
+  </data>
+  <data name="_wkinstallationdirend" xml:space="preserve">
+    <value>no se encuentra!</value>
+  </data>
+  <data name="_wkisoutdated" xml:space="preserve">
+    <value>¡Wololokingdoms está desactualizado! Instalar Nuevo</value>
+  </data>
+  <data name="_age2_x1notfound" xml:space="preserve">
+    <value>no se encuentra! ¡Asegúrese de que el directorio de instalación de age of empires 2 contiene "age2_x1\age2_x1.exe"!</value>
+  </data>
+  <data name="_modgb" xml:space="preserve">
+    <value>Instalar Desconectado Mods                                        </value>
+  </data>
+  <data name="_modsinstall" xml:space="preserve">
+    <value>Instalar</value>
+  </data>
+  <data name="_modstitle" xml:space="preserve">
+    <value>AoE2Tools [#Desconectado Mods]</value>
+  </data>
+  <data name="_modsuninstall" xml:space="preserve">
+    <value>Desinstalar</value>
+  </data>
+  <data name="_wkautoinstaller" xml:space="preserve">
+    <value>Instalador automático WololoKingdoms - AoE2Tools</value>
+  </data>
+  <data name="_wkdesc" xml:space="preserve">
+    <value>Descripción:</value>
+  </data>
+  <data name="_wkdownrun" xml:space="preserve">
+    <value>Descargar y Ejecutar</value>
+  </data>
+  <data name="_wklatestver" xml:space="preserve">
+    <value>Ultima versión:</value>
+  </data>
+  <data name="_wklaunch" xml:space="preserve">
+    <value>Iniciar</value>
+  </data>
+  <data name="_wkmsg1" xml:space="preserve">
+    <value>¡Lo último en WololoKingdoms ya está instalado!</value>
+  </data>
+  <data name="_wkpage" xml:space="preserve">
+    <value>Página:</value>
+  </data>
+  <data name="_wkplayhd" xml:space="preserve">
+    <value>Reproducir Expansiones HD en Voobly/Sin conexión</value>
+  </data>
+  <data name="_wksize" xml:space="preserve">
+    <value>Tamaño:</value>
+  </data>
+  <data name="_wkstatus" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="_recentclose" xml:space="preserve">
+    <value>Cerrar</value>
+  </data>
+  <data name="_recentdelete" xml:space="preserve">
+    <value>Eliminar</value>
+  </data>
+  <data name="_recentrename" xml:space="preserve">
+    <value>Rebautizar</value>
+  </data>
+  <data name="_recentreplaymanage" xml:space="preserve">
+    <value>Administrar la repetición reciente</value>
+  </data>
+  <data name="_recentreplayname" xml:space="preserve">
+    <value>Nombre Replay</value>
+  </data>
+  <data name="_recentreplayteam1" xml:space="preserve">
+    <value>Equipo 1</value>
+  </data>
+  <data name="_recentreplayteam2" xml:space="preserve">
+    <value>Equipo 2</value>
+  </data>
+  <data name="_recenttitlebar" xml:space="preserve">
+    <value>AoE2Tools [#Repetición reciente]</value>
+  </data>
+  <data name="_recentversion" xml:space="preserve">
+    <value>Versión</value>
+  </data>
+  <data name="_recentwatch" xml:space="preserve">
+    <value>Observar</value>
+  </data>
+  <data name="_recgb" xml:space="preserve">
+    <value>Personaliza tu repetición</value>
+  </data>
+  <data name="_actions" xml:space="preserve">
+    <value>Acciones</value>
+  </data>
+  <data name="_agenotfound" xml:space="preserve">
+    <value>Age of Empires 2, archivos no encontrados! \n\n ¿Te gustaría utilizar HDTv AoC para compilar el juego de Age of Empires 2 HD en Steam?</value>
+  </data>
+  <data name="_backups" xml:space="preserve">
+    <value>Seguridad</value>
+  </data>
+  <data name="_clearall" xml:space="preserve">
+    <value>Limpiar todo</value>
+  </data>
+  <data name="_clearthis" xml:space="preserve">
+    <value>Borrar esto</value>
+  </data>
+  <data name="_dragandropreplays" xml:space="preserve">
+    <value>Reproducciones de arrastrar y soltar desde, computadoras / enlaces web</value>
+  </data>
+  <data name="_gamenotfound" xml:space="preserve">
+    <value>¡Juego no encontrado!</value>
+  </data>
+  <data name="_hotfixrequiem" xml:space="preserve">
+    <value>¡Se requiere revisión! Aplicarlo ahora?</value>
+  </data>
+  <data name="_manager" xml:space="preserve">
+    <value>Gestor</value>
+  </data>
+  <data name="_misconfig" xml:space="preserve">
+    <value>¡AoE2Tools está mal configurado o no se encuentra la edad de los imperios 2!</value>
+  </data>
+  <data name="_needrestart" xml:space="preserve">
+    <value>¡Éxito! ¡Necesitas reiniciar AoE2Tools ahora!</value>
+  </data>
+  <data name="_packall" xml:space="preserve">
+    <value>Archiva todo</value>
+  </data>
+  <data name="_quickstats" xml:space="preserve">
+    <value>Estadísticas</value>
+  </data>
+  <data name="_renamerec" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="_renameselected" xml:space="preserve">
+    <value>Renombrar Seleccionado</value>
+  </data>
+  <data name="_replaypackertitle" xml:space="preserve">
+    <value>AoE2Tools [#Partidas Archivo]</value>
+  </data>
+  <data name="_replays" xml:space="preserve">
+    <value>Partidas:</value>
+  </data>
+  <data name="_statsbackupdesc" xml:space="preserve">
+    <value>Haga una copia de seguridad de todo el juego como un archivo de archivo (zip).</value>
+  </data>
+  <data name="_statsbtmdesc" xml:space="preserve">
+    <value>El cambio de nombre de 1v1 o 2v2 es más preciso que el cambio de nombre de 3v3 y 4v4</value>
+  </data>
+  <data name="_statsbulkrename" xml:space="preserve">
+    <value>Renombrar juegos</value>
+  </data>
+  <data name="_statsbulkrenbtn" xml:space="preserve">
+    <value>Iniciar el cambio de nombre masivo</value>
+  </data>
+  <data name="_statsbulkrened" xml:space="preserve">
+    <value>Renombrado:</value>
+  </data>
+  <data name="_statsbulkrentitle" xml:space="preserve">
+    <value>Cambio de nombre a granel</value>
+  </data>
+  <data name="_statschoosefolder" xml:space="preserve">
+    <value>Elegir la carpeta</value>
+  </data>
+  <data name="_statsclean" xml:space="preserve">
+    <value>Limpiar</value>
+  </data>
+  <data name="_statscusbackup" xml:space="preserve">
+    <value>Respaldo personalizado</value>
+  </data>
+  <data name="_statsexportcusbackup" xml:space="preserve">
+    <value>Exportar copia de seguridad personalizada</value>
+  </data>
+  <data name="_statsexportfulbackup" xml:space="preserve">
+    <value>Exportar copia de seguridad completa</value>
+  </data>
+  <data name="_statsfullbackup" xml:space="preserve">
+    <value>Respaldo completo</value>
+  </data>
+  <data name="_statsimport" xml:space="preserve">
+    <value>Importar</value>
+  </data>
+  <data name="_statslive" xml:space="preserve">
+    <value>Simplemente administre Age Of Empires 2</value>
+  </data>
+  <data name="_statsrecaoc" xml:space="preserve">
+    <value>Juegos grabados (AoC):</value>
+  </data>
+  <data name="_statsrecsize" xml:space="preserve">
+    <value>Tamaño total:</value>
+  </data>
+  <data name="_statsrecwk" xml:space="preserve">
+    <value>Juegos grabados (WK):</value>
+  </data>
+  <data name="_statsresgames" xml:space="preserve">
+    <value>Limpiar juegos restaurados:</value>
+  </data>
+  <data name="_statsrestore" xml:space="preserve">
+    <value>Restaurar</value>
+  </data>
+  <data name="_statsrestorebackup" xml:space="preserve">
+    <value>Restaurar copia de seguridad</value>
+  </data>
+  <data name="_statsrestoremybackup" xml:space="preserve">
+    <value>Restaurar mi copia de seguridad</value>
+  </data>
+  <data name="_statsselectbulk" xml:space="preserve">
+    <value>Seleccione una carpeta para cambiar el nombre de los juegos grabados (1.5 RC, WK)</value>
+  </data>
+  <data name="_statsselectrestore" xml:space="preserve">
+    <value>Seleccione y restaure su copia de seguridad personalizada / completa (Archive Zip File)</value>
+  </data>
+  <data name="_statstitle" xml:space="preserve">
+    <value>Gestor - AoE2Tools</value>
+  </data>
+  <data name="_statstmpfiles" xml:space="preserve">
+    <value>Limpiar archivos temporales:</value>
+  </data>
+  <data name="_statstrack" xml:space="preserve">
+    <value>Administre / Respalde / Restaure los archivos de su juego y optimice el espacio en disco</value>
+  </data>
+  <data name="_totalsize" xml:space="preserve">
+    <value>Tamaño total</value>
+  </data>
+  <data name="_tryreset" xml:space="preserve">
+    <value>Intente restablecer AoE2Tools en Opciones y Escanear con el Iniciador para solucionar el problema.</value>
+  </data>
+  <data name="_twitchlivestreams" xml:space="preserve">
+    <value>En Directo Twitch Streams</value>
+  </data>
+  <data name="_twitchloading" xml:space="preserve">
+    <value>Cargando...</value>
+  </data>
+  <data name="_twitchrefresh" xml:space="preserve">
+    <value>Actualizar lista</value>
+  </data>
+  <data name="_twitchtitle" xml:space="preserve">
+    <value>En Directo Twitch Streams de Age of Empires 2</value>
+  </data>
+  <data name="_watchvlc" xml:space="preserve">
+    <value>Ver (VLC)</value>
+  </data>
+  <data name="_watchweb" xml:space="preserve">
+    <value>Ver (WEB)</value>
+  </data>
+  <data name="_requireadmin" xml:space="preserve">
+    <value>¡Esta ubicación del juego requiere privilegios de administrador! Haga clic en Aceptar para reiniciar AoE2Tools como administradorpara reiniciar AoE2Tools</value>
+  </data>
+  <data name="_exitaoe2tools" xml:space="preserve">
+    <value>¿Te gustaría salir de AoE2Tools?</value>
+  </data>
+  <data name="_maytake" xml:space="preserve">
+    <value>Puede tomar de 1 a 5 mins</value>
+  </data>
+  <data name="_plswait" xml:space="preserve">
+    <value>Por favor espera ...</value>
+  </data>
+  <data name="_start" xml:space="preserve">
+    <value>Iniciar</value>
+  </data>
+  <data name="_requirefixperm" xml:space="preserve">
+    <value>AoE2Tools desea solucionar problemas de permisos con la ruta de tu juego. Haga clic en Aceptar para reiniciar AoE2Tools como administrador</value>
+  </data>
+  <data name="_mustintallwk" xml:space="preserve">
+    <value>Debe instalar Wololokingdoms fuera de línea. Haga clic en Aceptar y mire la demostración de la imagen.</value>
+  </data>
+  <data name="_requirefixdialog" xml:space="preserve">
+    <value>¿Desea que AoE2Tools solucione problemas de permisos con su ruta de juego?</value>
+  </data>
+  <data name="advanced" xml:space="preserve">
+    <value>avanzado</value>
+  </data>
+  <data name="_advancedsettings" xml:space="preserve">
+    <value>Configuración avanzada</value>
+  </data>
+  <data name="_aoe2toolscustomization" xml:space="preserve">
+    <value>AoE2Tools Personalización</value>
+  </data>
+  <data name="_checknow" xml:space="preserve">
+    <value>Consultar ahora</value>
+  </data>
+  <data name="_customize" xml:space="preserve">
+    <value>Personalizar</value>
+  </data>
+  <data name="_datamods" xml:space="preserve">
+    <value>Datos Mods</value>
+  </data>
+  <data name="_disableaoe2toolsalerts" xml:space="preserve">
+    <value>Deshabilitar las alertas de AoE2Tools</value>
+  </data>
+  <data name="_export" xml:space="preserve">
+    <value>Exportación</value>
+  </data>
+  <data name="_fixnow" xml:space="preserve">
+    <value>Fijar ahora</value>
+  </data>
+  <data name="_gamefileasso" xml:space="preserve">
+    <value>Fix Game File Association (Recomendado)</value>
+  </data>
+  <data name="_gamepatches" xml:space="preserve">
+    <value>juego parches</value>
+  </data>
+  <data name="_gameperm" xml:space="preserve">
+    <value>arreglar permisos / problemas de juego</value>
+  </data>
+  <data name="_import" xml:space="preserve">
+    <value>Importar</value>
+  </data>
+  <data name="_installedvooblymods" xml:space="preserve">
+    <value>Mods visuales instalados (gusto personal)</value>
+  </data>
+  <data name="_modworkshop" xml:space="preserve">
+    <value>Talleres Mod</value>
+  </data>
+  <data name="_offlineinstall" xml:space="preserve">
+    <value>Instalación sin conexión</value>
+  </data>
+  <data name="_resetmods" xml:space="preserve">
+    <value>Reiniciar mods</value>
+  </data>
+  <data name="_resetmodsmsg" xml:space="preserve">
+    <value>AoE2Tools crea automáticamente una copia de seguridad de los datos de tu antigua modalidad de conexión sin conexión. Puedes restaurar tus antiguas modificaciones visuales en funcionamiento desde aquí:</value>
+  </data>
+  <data name="_restoreprev" xml:space="preserve">
+    <value>Restaura modos visuales de trabajo previos</value>
+  </data>
+  <data name="_usethistorevoke" xml:space="preserve">
+    <value>Use esta función para revocar el privilegio de administrador de la instalación de su juego.</value>
+  </data>
+  <data name="_visualmods" xml:space="preserve">
+    <value>Modificaciones visuales</value>
+  </data>
+  <data name="_vooblymodstitle" xml:space="preserve">
+    <value>AoE2Tools [#Voobly Mods Administrador]</value>
+  </data>
+  <data name="_ai" xml:space="preserve">
+    <value>Ai</value>
+  </data>
+  <data name="_browse" xml:space="preserve">
+    <value>Navegar</value>
+  </data>
+  <data name="_exit" xml:space="preserve">
+    <value>Salida</value>
+  </data>
+  <data name="_gamemover" xml:space="preserve">
+    <value>Motor de juego</value>
+  </data>
+  <data name="_hotkeys" xml:space="preserve">
+    <value>Teclas de acceso rápido</value>
+  </data>
+  <data name="_installeddatamods" xml:space="preserve">
+    <value>Modificaciones de datos instaladas (¡Todos los que estén en la sala de juegos deben tener! Para poder usarlos)</value>
+  </data>
+  <data name="_installedpatchesmods" xml:space="preserve">
+    <value>Parches de juego instalados (cambiar / corregir errores del juego: se recomienda el último parche)</value>
+  </data>
+  <data name="_maps" xml:space="preserve">
+    <value>Mapas</value>
+  </data>
+  <data name="_offlinemods" xml:space="preserve">
+    <value>Desconectado Mods</value>
+  </data>
+  <data name="_ontop" xml:space="preserve">
+    <value>Encima</value>
+  </data>
+  <data name="_options" xml:space="preserve">
+    <value>Opciones</value>
+  </data>
+  <data name="_replayspacker" xml:space="preserve">
+    <value>Archivador de Juegos</value>
+  </data>
+  <data name="_runversion" xml:space="preserve">
+    <value>Ejecutar versión</value>
+  </data>
+  <data name="_savegame" xml:space="preserve">
+    <value>Guardar partida</value>
+  </data>
+  <data name="_scenario" xml:space="preserve">
+    <value>Guión</value>
+  </data>
+  <data name="_show" xml:space="preserve">
+    <value>Espectáculo</value>
+  </data>
+  <data name="_supports" xml:space="preserve">
+    <value>Apoyo</value>
+  </data>
+  <data name="_tools" xml:space="preserve">
+    <value>Herramientas</value>
+  </data>
+  <data name="_wkinstaller" xml:space="preserve">
+    <value>Instalador de WK</value>
+  </data>
+</root>

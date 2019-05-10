@@ -17,6 +17,8 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using NATUPNPLib;
+using System.Net.Sockets;
 namespace WindowsFormsApplication3
 {
     public partial class Conv : KryptonForm
@@ -24,6 +26,7 @@ namespace WindowsFormsApplication3
         [System.Runtime.InteropServices.DllImport("shell32.dll")]
         static extern bool SHGetSpecialFolderPath(IntPtr hwndOwner, [System.Runtime.InteropServices.Out] StringBuilder lpszPath, int nFolder, bool fCreate);
         const int CSIDL_COMMON_DESKTOPDIRECTORY = 0x19;
+        public string CurrentDIR = "";
         public Conv()
         {
             InitializeComponent();
@@ -43,13 +46,54 @@ namespace WindowsFormsApplication3
         public string _soundstmp = System.IO.Path.GetTempPath() + @"\hdtotc-tmp\sounds\";
         public Process myProcess = new Process();
         public bool eventHandled;
-        System.Media.SoundPlayer player = new System.Media.SoundPlayer(Directory.GetCurrentDirectory() + "\\data\\snds\\m1.wav");
+        System.Media.SoundPlayer player = new System.Media.SoundPlayer(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\data\\snds\\m1.wav");
         private int filesExtracted;
         private int totalFiles;
+        public string Flag = "en";
+        
         private void Conv_Load(object sender, EventArgs e)
         {
             //SteamAssets();
-  
+            
+                try
+                {
+                    using (RegistryKey Skey = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\AoE2Tools", true))
+                    {
+                        if (Skey != null)
+                        {
+                            string Sroot = Skey.GetValue("SteamPath").ToString();
+                            var directory = new DirectoryInfo(Sroot + "\\Profiles");
+                            string Hotkeyz = Skey.GetValue("SetHotkeys").ToString();
+                            if (Hotkeyz == "Default (Recommended)" && Hotkeyz != null)
+                            {
+                                
+                                if (Directory.GetFiles(Sroot + "\\Profiles", "*.hki").Length != 0)
+                                {
+                                    var myFile = directory.GetFiles("*.hki")
+               .OrderByDescending(f => f.LastWriteTime)
+               .First();
+                                    
+                                }
+                                else
+                                {
+                                    KryptonMessageBox.Show("Your AoE2 HD Doesn't Have Any Hotkeys Yet! Before Starting The Conversion, Please Run HD Through Steam And Go To Options > Hotkeys Then Exit." + Environment.NewLine + "Ignore This Message If You Don't Care about Hotkeys Now Or Would Like To Set Them Up Later.");
+                                }
+          
+                            }
+                          
+                        }
+                    }
+                        
+                    
+                }
+                catch (SystemException)
+                {
+                   
+                }
+
+
+           
+           
 
 
         }
@@ -480,19 +524,21 @@ public bool vooblyend()
                     }
                 }
             }
-            catch (Exception ex)
+            catch (SystemException)
             {
-                KryptonMessageBox.Show("Error With Assets" + ex, "Alert!");
+                
             }
 
         }
         public void SteamDirs()
         {
+            try
+            {
             //Fetching AoE2HD Assets Directories
             using (RegistryKey Skey = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\AoE2Tools", true))
             {
-                if (Skey != null)
-                {
+                
+                    string Hotkeys = Skey.GetValue("SetHotkeys").ToString();
                     string Sroot = Skey.GetValue("SteamPath").ToString();
                     string resources = Sroot + @"\resources";
                     string _drs = Sroot + @"\resources\_common\drs";
@@ -520,12 +566,12 @@ public bool vooblyend()
                         }
                     }
 
+               
+            }
                 }
-                else
-                {
-                    KryptonMessageBox.Show("Registry Key is null!", "Error!");
+            catch(SystemException)
+            {
 
-                }
             }
         }
         //Conversion of Steam Assets
@@ -543,7 +589,7 @@ public bool vooblyend()
                 if (Skey != null)
                 {
                     string extractPath = Skey.GetValue("AoE2Path").ToString();
-                    string CabPath = Directory.GetCurrentDirectory() + @"\data\base.bina";
+                    string CabPath = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\data\base.bina";
                     DirectoryInfo di = Directory.CreateDirectory(extractPath);
                     //ZipFile zip = ZipFile.Read(CabPath);
                     //int lol = 1;
@@ -597,7 +643,7 @@ public bool vooblyend()
         {
             BeginInvoke((MethodInvoker)delegate
             {
-                player.PlayLooping();
+                //player.PlayLooping();
                 kryptonCheckButton1.Visible = true;
                 kryptonCheckButton1.Enabled = true;
                 monk.Enabled = true;
@@ -613,7 +659,9 @@ public bool vooblyend()
                 {
                     string Sroot = Skey.GetValue("SteamPath").ToString();
                     string Gpath = Skey.GetValue("AoE2Path").ToString();
-                    string Flag = Skey.GetValue("Flag").ToString();
+                    string regflag = Skey.GetValue("Flag").ToString();
+                    if (regflag != "nl" && regflag != "ru" && regflag != "br")
+                    Flag = Skey.GetValue("Flag").ToString();
                     string Hotkeys = Skey.GetValue("SetHotkeys").ToString();
                     string Shortwalls = Skey.GetValue("Short Walls").ToString();
                     string Smalltrees = Skey.GetValue("Small Trees").ToString();
@@ -626,13 +674,16 @@ public bool vooblyend()
                     string _drs = Sroot + @"\resources\_common\drs\";
                     string _interfac = Sroot + @"\resources\_common\drs\interface\";
                     string _sounds = Sroot + @"\resources\_common\drs\sounds\";
-                    string _curdir = Directory.GetCurrentDirectory();
+                    string _curdir = System.IO.Path.GetDirectoryName(Application.ExecutablePath);
+                    CurrentDIR = _curdir;
                     string MainSounds = Sroot + @"\resources\_common\sound\";
                     string _taunts = Sroot + @"\resources\" + Flag + @"\sound\taunt\";
                     string _history = Sroot + @"\resources\" + Flag + @"\strings\history\";
                     string _graphicstmp = System.IO.Path.GetTempPath() + "\\hdtotc-tmp\\graphics\\";
                     string _interfactmp = System.IO.Path.GetTempPath() + "\\hdtotc-tmp\\interface\\";
+                    string _interfacfix = _curdir + @"\data\patches\slps\interfacfix";
                     string _soundstmp = System.IO.Path.GetTempPath() + "\\hdtotc-tmp\\sounds\\";
+                    
                     
                     //progressBar2.Maximum = 101;
                     
@@ -659,6 +710,9 @@ public bool vooblyend()
                         CopyTotmp(_commondrs, _graphicstmp);
                         //progressBar2.Minimum = 30 / 101;
                         //Coping Copy Interface files to TMP
+                        if (Directory.Exists(_interfacfix))
+                            CopyTotmp(_interfacfix, _interfactmp);
+
                         CopyTotmp(_interfac, _interfactmp);
                         //progressBar2.Minimum = 50 / 101;
                         //Coping Copy Interface files to TMP
@@ -680,17 +734,7 @@ public bool vooblyend()
                         });
                        
                         
-                    //END
-
-                    //foreach (string dirPath in Directory.GetDirectories(_commondrs, "*",
-                    //    SearchOption.AllDirectories))
-                    //    Directory.CreateDirectory(dirPath.Replace(_commondrs, _graphicstmp));
-
-                    
-                    //foreach (string newPath in Directory.GetFiles(_commondrs, "*.*",
-                    //    SearchOption.AllDirectories))
-                    //    File.Copy(newPath, newPath.Replace(_commondrs, _graphicstmp), true);
-                    //END
+              
 
                     DirectoryInfo d = new DirectoryInfo(_graphicstmp);
 
@@ -714,27 +758,7 @@ public bool vooblyend()
                         }
 
                     }
-                    //File.Copy(@"E:\@downloads\aoe2\drsbld.exe", _commondrs + "drsbld.exe");
-                    //string drsbld = Path.Combine(_commondrs, "drsbld.exe");
-                    //System.Diagnostics.Process.Start("drsbld.exe", @"drsbld.exe /a graphics.drs graphics\*.slp");
-                    
 
-
-                    
-                    //Building Graphics
-//                    File.WriteAllText("graphics.bat", "\"" + _drs + "drsbuild.exe\"" + "/a \"" + _Gdata + "graphics.drs\" " + "\"" + _graphicstmp + "*.*\"");
-//                    var processInfo = new ProcessStartInfo("cmd.exe", "/c" + "graphics.bat");
-
-//processInfo.CreateNoWindow = true;
-
-//processInfo.UseShellExecute = false;
-
-
-//var process = Process.Start(processInfo);
-
-//process.Start();
-
-//process.WaitForExit();
                     System.Diagnostics.Process process = new System.Diagnostics.Process();
                     System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
                     startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
@@ -812,7 +836,7 @@ public bool vooblyend()
                     process2.Start();
                     process2.WaitForExit();
                     //Applying Fix
-                    string _interfix = Directory.GetCurrentDirectory() + @"\data\interfac\";
+                    string _interfix = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\data\interfac\";
                     System.Diagnostics.Process process3 = new System.Diagnostics.Process();
                     System.Diagnostics.ProcessStartInfo startInfo3 = new System.Diagnostics.ProcessStartInfo();
                     startInfo3.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
@@ -951,12 +975,59 @@ public bool vooblyend()
                             File.Move(file.FullName, file.FullName.Replace("-utf8", ""));
                         }
                     }
-                    //progressBar2.Minimum = 100;
 
-                    //Copy Hokeys
-                    if (Hotkeys != "Default (Recommended)" && Hotkeys != null)
+                    try
                     {
-                        File.Copy(_curdir + "\\data\\hki\\" + Hotkeys + "\\player1.hki", Gpath + "\\player1.hki", true);
+                        File.Delete(Gpath + "\\player.nfo");
+                        File.Delete(Gpath + "\\player.nfp");
+                        File.Delete(Gpath + "\\player.nfx");
+                    }
+                    catch (SystemException)
+                    {
+
+                    }
+                    //Copy Steam Hokeys
+
+                    if (Hotkeys == "Default (Recommended)" && Hotkeys != null)
+                    {
+                        try
+                        {
+        if(Directory.Exists(Sroot + "\\Profiles"))
+                        {
+                            var directory = new DirectoryInfo(Sroot + "\\Profiles");
+                            var myFile = directory.GetFiles("*.hki")
+                 .OrderByDescending(f => f.LastWriteTime)
+                 .First();
+                            if (myFile == null || myFile.Length == 0)
+                            File.Copy(myFile.FullName, Gpath + "\\player1.hki", true);
+                            
+                            else
+                            File.Copy(_curdir + @"data\hki\AoC2 Hotkeys\player1.hki", Gpath + "\\player1.hki", true);
+                        }
+                        }
+                        catch (SystemException)
+                        {
+                            
+                        }
+                
+
+                    }
+                    //Copy Custom Hokeys
+                    else 
+                    {
+                        if (Directory.Exists(Path.Combine(_curdir, @"data\hki")))
+                        {
+                            try
+                            {
+                                File.Copy(Path.Combine(_curdir, @"data\hki\" + Hotkeys + @"\player1.hki"), Gpath + "\\player1.hki", true);
+                            }
+                            catch(SystemException)
+                            {
+
+                            }
+                            
+                        }
+
                     }
                     BeginInvoke((MethodInvoker)delegate
                     {
@@ -967,7 +1038,7 @@ public bool vooblyend()
                     //Mods
                     if (Shortwalls == "yes")
                     {
-                        string _modsinstall = Directory.GetCurrentDirectory() + @"\data\mods\" + "Short Walls" + "\\i\\";
+                        string _modsinstall = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\data\mods\" + "Short Walls" + "\\i\\";
                         System.Diagnostics.Process process8 = new System.Diagnostics.Process();
                         System.Diagnostics.ProcessStartInfo startInfo8 = new System.Diagnostics.ProcessStartInfo();
                         startInfo8.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
@@ -981,7 +1052,7 @@ public bool vooblyend()
 
                     if (Smalltrees == "yes")
                     {
-                        string _modsinstall = Directory.GetCurrentDirectory() + @"\data\mods\" + "Small Trees" + "\\i\\";
+                        string _modsinstall = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\data\mods\" + "Small Trees" + "\\i\\";
                         System.Diagnostics.Process process9 = new System.Diagnostics.Process();
                         System.Diagnostics.ProcessStartInfo startInfo9 = new System.Diagnostics.ProcessStartInfo();
                         startInfo9.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
@@ -995,7 +1066,7 @@ public bool vooblyend()
 
                     if (Hugenumber == "yes")
                     {
-                        string _modsinstall = Directory.GetCurrentDirectory() + @"\data\mods\" + "Huge Number" + "\\i\\";
+                        string _modsinstall = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\data\mods\" + "Huge Number" + "\\i\\";
                         System.Diagnostics.Process process10 = new System.Diagnostics.Process();
                         System.Diagnostics.ProcessStartInfo startInfo10 = new System.Diagnostics.ProcessStartInfo();
                         startInfo10.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
@@ -1009,7 +1080,7 @@ public bool vooblyend()
 
                     if (Boldtext == "yes") //This grid mod not bold text lol
                     {
-                        string _modsinstall = Directory.GetCurrentDirectory() + @"\data\mods\" + "Light Grid" + "\\i\\";
+                        string _modsinstall = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\data\mods\" + "Light Grid" + "\\i\\";
                         System.Diagnostics.Process process11 = new System.Diagnostics.Process();
                         System.Diagnostics.ProcessStartInfo startInfo11 = new System.Diagnostics.ProcessStartInfo();
                         startInfo11.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
@@ -1023,7 +1094,7 @@ public bool vooblyend()
 
                     if (Blueberries == "yes")
                     {
-                        string _modsinstall = Directory.GetCurrentDirectory() + @"\data\mods\" + "Blue Berries" + "\\i\\";
+                        string _modsinstall = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\data\mods\" + "Blue Berries" + "\\i\\";
                         System.Diagnostics.Process process12 = new System.Diagnostics.Process();
                         System.Diagnostics.ProcessStartInfo startInfo12 = new System.Diagnostics.ProcessStartInfo();
                         startInfo12.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
@@ -1038,7 +1109,7 @@ public bool vooblyend()
 
                     if (Advancedidlepointer == "yes")
                     {
-                        string _modsinstall = Directory.GetCurrentDirectory() + @"\data\mods\" + "Advanced Idle Pointer" + "\\i\\";
+                        string _modsinstall = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\data\mods\" + "Advanced Idle Pointer" + "\\i\\";
                         System.Diagnostics.Process process13 = new System.Diagnostics.Process();
                         System.Diagnostics.ProcessStartInfo startInfo13 = new System.Diagnostics.ProcessStartInfo();
                         startInfo13.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
@@ -1060,7 +1131,15 @@ public bool vooblyend()
                     {
                         progressBar2.Value = progressBar2.Maximum;
                     });
-                    
+                    try
+                    {
+                        if(File.Exists(Path.Combine(_curdir, @"data\SetupAoC.exe")))
+                            File.Copy(Path.Combine(_curdir, @"data\SetupAoC.exe"), Path.Combine(Gpath, @"SetupAoC.exe"), true);
+                    }
+                    catch(SystemException)
+                    {
+
+                    }
                     backgroundWorker3.RunWorkerAsync();
                 }
             }
@@ -1133,13 +1212,13 @@ public bool vooblyend()
         //    }
         //}
 
-        public void ConfigurationFinal()
+        public async void ConfigurationFinal()
         {
   
             try {
                 BeginInvoke((MethodInvoker)delegate
                 {
-                        progressBar3.Maximum = 120;
+                        progressBar3.Maximum = 150;
                 });
                 
                 
@@ -1206,8 +1285,8 @@ public bool vooblyend()
                     string inString2 = inString22.Replace(" (x86)", "");
                     TextInfo cultInfo2 = new CultureInfo("en-US", false).TextInfo;
                     string output2 = cultInfo2.ToTitleCase(inString2);
-                    if (Conf_Getroot.Contains(output2) || Conf_Getroot.Contains(output2))
-                    {
+                    //if (Conf_Getroot.Contains(output2) || Conf_Getroot.Contains(output2))
+                    //{
                         Microsoft.Win32.RegistryKey rkey6;
                         rkey6 = Microsoft.Win32.Registry.LocalMachine.CreateSubKey(@"Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers");
                         rkey6.SetValue(Conf_Getroot + @"\age2_x1\age2_x1.exe", "~ RUNASADMIN HIGHDPIAWARE");
@@ -1217,7 +1296,7 @@ public bool vooblyend()
                         rkey7.SetValue(Conf_Getroot + @"\age2_x1\age2_x1.exe", "~ RUNASADMIN HIGHDPIAWARE");
                         rkey6.Close();
                         rkey7.Close();
-                    }
+                    //}
 
 
                     Microsoft.Win32.RegistryKey rkey8;
@@ -1229,6 +1308,7 @@ public bool vooblyend()
                     rkey8.SetValue("cursoringame", "false");
                     rkey8.SetValue("enabledxtoggle", "false");
                     rkey8.SetValue("disabledxhwaccel", "false");
+                    rkey8.SetValue("Keydown Object Hotkeys", "true");
                     rkey8.SetValue("launchtosingle", "true");
 
                     Microsoft.Win32.RegistryKey rkey9;
@@ -1237,6 +1317,7 @@ public bool vooblyend()
                     rkey9.SetValue("Disable Water Movement", "true");
                     rkey9.SetValue("Disable Custom Terrains", "false");
                     rkey9.SetValue("Disable Weather System", "true");
+                    rkey9.SetValue("Custom Normal Mouse", "false");
                     rkey9.SetValue("Spectator Only Effects", "false");
                     rkey9.SetValue("Lower Quality Environment", "false");
                     rkey9.SetValue("Precision Scrolling System", "false");
@@ -1255,7 +1336,7 @@ public bool vooblyend()
                     rkey10 = Microsoft.Win32.Registry.CurrentUser.CreateSubKey(@"Software\Voobly\Voobly\gameroom\64");
                     rkey10.SetValue("title", "New Game Title");
                     rkey10.SetValue("password", "");
-                    rkey10.SetValue("description", "");
+                    rkey10.SetValue("description", "Converted With Love By AoE2Tools");
                     rkey10.SetValue("adlink", "");
                     rkey10.SetValue("adimage", "");
                     rkey10.SetValue("players", 8, RegistryValueKind.DWord);
@@ -1277,6 +1358,79 @@ public bool vooblyend()
                     rkey10.SetValue("spectatorNoGameRoomChat", "false");
                     rkey10.SetValue("spectateServerAlwaysOn", "false");
 
+                    Microsoft.Win32.RegistryKey rkey11;
+                    rkey11 = Microsoft.Win32.Registry.CurrentUser.CreateSubKey(@"Software\Voobly\Voobly\gameroom\251");
+                    rkey11.SetValue("title", "New Game Title");
+                    rkey11.SetValue("password", "");
+                    rkey11.SetValue("description", "Converted With Love By AoE2Tools");
+                    rkey11.SetValue("adlink", "");
+                    rkey11.SetValue("adimage", "");
+                    rkey11.SetValue("players", 8, RegistryValueKind.DWord);
+                    rkey11.SetValue("teamonly", "false");
+                    rkey11.SetValue("anticheat", "true");
+                    rkey11.SetValue("rated", "true");
+                    rkey11.SetValue("ratedrange", "false");
+                    rkey11.SetValue("ratedmin", 0, RegistryValueKind.DWord);
+                    rkey11.SetValue("ratedmax", 9999, RegistryValueKind.DWord);
+                    rkey11.SetValue("nat", "true");
+                    rkey11.SetValue("gamemod", "");
+                    rkey11.SetValue("gamepatch", "v1.5 Beta R7");
+                    rkey11.SetValue("ladderid", 83, RegistryValueKind.DWord);
+                    rkey11.SetValue("players", 90, RegistryValueKind.DWord);
+                    rkey11.SetValue("hiddencivs", "false");
+                    rkey11.SetValue("spectateJoinAs", "false");
+                    rkey11.SetValue("spectateUsersCanToggle", "true");
+                    rkey11.SetValue("spectateLateJoin", "true");
+                    rkey11.SetValue("spectatorNoGameRoomChat", "false");
+                    rkey11.SetValue("spectateServerAlwaysOn", "false");
+
+
+                    Microsoft.Win32.RegistryKey rkey12;
+                    rkey12 = Microsoft.Win32.Registry.CurrentUser.CreateSubKey(@"Software\Voobly\Voobly\game\13\v1.5 Beta R7");
+                    rkey12.SetValue("Enable Water Animation", "false");
+                    rkey12.SetValue("Disable Water Movement", "true");
+                    rkey12.SetValue("Disable Custom Terrains", "false");
+                    rkey12.SetValue("Disable Weather System", "true");
+                    rkey12.SetValue("Custom Normal Mouse", "false");
+                    rkey12.SetValue("Spectator Only Effects", "false");
+                    rkey12.SetValue("Lower Quality Environment", "false");
+                    rkey12.SetValue("Precision Scrolling System", "false");
+                    rkey12.SetValue("Original Patrol Default", "false");
+                    rkey12.SetValue("Multiple Building Queue", "true");
+                    rkey12.SetValue("Keydown Object Hotkeys", "true");
+                    rkey12.SetValue("Disable Extended Hotkeys", "false");
+                    rkey12.SetValue("Shift Group Appending", "true");
+                    rkey12.SetValue("Touch Screen Control", "false");
+                    rkey12.SetValue("Numeric Age Display", "true");
+                    rkey12.SetValue("Delink System Volume", "false");
+                    rkey12.SetValue("Alternate Wine Chat", "false");
+                    rkey12.SetValue("Low Simulation Rate", "false");
+
+                    Microsoft.Win32.RegistryKey rkey13;
+                    rkey13 = Microsoft.Win32.Registry.CurrentUser.CreateSubKey(@"Software\Voobly\Voobly\gameroom\482");
+                    rkey13.SetValue("title", "New Game Title");
+                    rkey13.SetValue("password", "");
+                    rkey13.SetValue("description", "Converted With Love By AoE2Tools");
+                    rkey13.SetValue("adlink", "");
+                    rkey13.SetValue("adimage", "");
+                    rkey13.SetValue("players", 8, RegistryValueKind.DWord);
+                    rkey13.SetValue("teamonly", "false");
+                    rkey13.SetValue("anticheat", "true");
+                    rkey13.SetValue("rated", "true");
+                    rkey13.SetValue("ratedrange", "false");
+                    rkey13.SetValue("ratedmin", 0, RegistryValueKind.DWord);
+                    rkey13.SetValue("ratedmax", 9999, RegistryValueKind.DWord);
+                    rkey13.SetValue("nat", "true");
+                    rkey13.SetValue("gamemod", "");
+                    rkey13.SetValue("gamepatch", "v1.5 Beta R7");
+                    rkey13.SetValue("ladderid", 83, RegistryValueKind.DWord);
+                    rkey13.SetValue("players", 90, RegistryValueKind.DWord);
+                    rkey13.SetValue("hiddencivs", "false");
+                    rkey13.SetValue("spectateJoinAs", "false");
+                    rkey13.SetValue("spectateUsersCanToggle", "true");
+                    rkey13.SetValue("spectateLateJoin", "true");
+                    rkey13.SetValue("spectatorNoGameRoomChat", "false");
+                    rkey13.SetValue("spectateServerAlwaysOn", "false");
                     rkey.Close();
                     rkey2.Close();
                     rkey3.Close();
@@ -1286,11 +1440,58 @@ public bool vooblyend()
                     rkey8.Close();
                     rkey9.Close();
                     rkey10.Close();
+                    rkey11.Close();
+                    rkey12.Close();
+                    rkey13.Close();
+
+                    UPnPNATClass upnpnat = new NATUPNPLib.UPnPNATClass();
+                    IStaticPortMappingCollection mappings = upnpnat.StaticPortMappingCollection;
+                    try
+                    {
+                        mappings.Add(16000, "UDP", 16000, GetLocalIPAddress(), true, "Voobly-" + Environment.MachineName.ToString());
+                    }
+                    catch (SystemException)
+                    {
+
+                    }
                     BeginInvoke((MethodInvoker)delegate
                     {
                             progressBar3.Value = 50;
                     });
-                    
+
+                    try
+                    {
+                        string screenWidth = Screen.PrimaryScreen.Bounds.Width.ToString();
+                        string screenHeight = Screen.PrimaryScreen.Bounds.Height.ToString();
+                        Task<int> restask = ResolutionFix(Convert.ToInt32(screenWidth), Convert.ToInt32(screenHeight));
+                        int moderes = await restask;
+
+                        using (RegistryKey key = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Microsoft Games\Age of Empires II: The Conquerors Expansion\1.0", true))
+                        {
+                            key.SetValue("Advanced Buttons", 1, RegistryValueKind.DWord);
+                        }
+
+
+                    }
+                    catch(SystemException)
+                    {
+
+                    }
+
+                   
+                    DirectoryInfo di = new DirectoryInfo(CurrentDIR);
+                    FileInfo[] files = di.GetFiles("*.bat")
+                                         .Where(p => p.Extension == ".bat").ToArray();
+                    foreach (FileInfo file in files)
+                        try
+                        {
+                            file.Attributes = FileAttributes.Normal;
+                            File.Delete(file.FullName);
+                        }
+                    catch (SystemException)
+                    {
+
+                    }
                     //Create Shortcut
                     //Copy icon
                   
@@ -1303,12 +1504,12 @@ public bool vooblyend()
                             //Object o = key.GetValue("Language");
                             if (aoe2path != null)
                             {
-                                if (!File.Exists(aoe2path + @"\aoe2tools.ico") && File.Exists(Directory.GetCurrentDirectory() + @"\data\aoe2tools.ico"))
+                                if (!File.Exists(aoe2path + @"\aoe2tools.ico") && File.Exists(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\data\aoe2tools.ico"))
                                 {
-                                    File.Copy(Directory.GetCurrentDirectory() + @"\data\aoe2tools.ico", aoe2path + @"\aoe2tools.ico");
+                                    File.Copy(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\data\aoe2tools.ico", aoe2path + @"\aoe2tools.ico");
                                 }
 
-                                string shortfold = Directory.GetCurrentDirectory() + "\\data\\icon.ico";
+                                string shortfold = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\data\\icon.ico";
                                 System.IO.File.Copy(shortfold, aoe2path + @"\Age2_x1\icon.ico", true);
                                 //File Association
                                 Associate(aoe2path);
@@ -1320,7 +1521,6 @@ public bool vooblyend()
 
                                 StringBuilder allUserProfile = new StringBuilder(260);
                                 SHGetSpecialFolderPath(IntPtr.Zero, allUserProfile, CSIDL_COMMON_DESKTOPDIRECTORY, false);
-
                                 string settingsLink = Path.Combine(allUserProfile.ToString(), "Age of Empires II The Conquerors.lnk");
                                 //Create All Users Desktop Shortcut for Application Settings
                                 IWshRuntimeLibrary.WshShellClass shellClass = new IWshRuntimeLibrary.WshShellClass();
@@ -1376,19 +1576,20 @@ public bool vooblyend()
                                 if (File.Exists(System.IO.Path.GetTempPath() + @"\ver.bin"))
                                 File.Delete(System.IO.Path.GetTempPath() + @"\ver.bin");
 
-                                DirectoryInfo di = new DirectoryInfo(Directory.GetCurrentDirectory() + "\\");
-                                FileInfo[] files = di.GetFiles("*.bat")
+
+                                DirectoryInfo di5 = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory);
+                                FileInfo[] files5 = di5.GetFiles("*.bat")
                                                      .Where(p => p.Extension == ".bat").ToArray();
-                                foreach (FileInfo file in files)
+                                foreach (FileInfo file5 in files5)
                                     try
                                     {
-                                        file.Attributes = FileAttributes.Normal;
-                                        File.Delete(file.FullName);
+                                        //file.Attributes = FileAttributes.Normal;
+                                        File.Delete(file5.FullName);
                                     }
                                     catch { }
                                 BeginInvoke((MethodInvoker)delegate
                                 {
-                                        progressBar3.Value = 120;
+                                        progressBar3.Value = 150;
                                           pictureBox5.Image = Properties.Resources.Config_Step4_check;
                                           textBox1.Text = "1";
                                 });
@@ -1417,7 +1618,27 @@ public bool vooblyend()
                 //throw exd;
             }
         }
-
+        public async Task<int> ResolutionFix(int aoewidth, int aoeheight)
+        {
+            using (RegistryKey key = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Microsoft Games\Age of Empires II: The Conquerors Expansion\1.0", true))
+            {
+                key.SetValue("Screen Width", aoewidth, RegistryValueKind.DWord);
+                key.SetValue("Screen Height", aoeheight, RegistryValueKind.DWord);
+                return 1;
+            }
+        }
+        public static string GetLocalIPAddress()
+        {
+            var host = Dns.GetHostEntry(Dns.GetHostName());
+            foreach (var ip in host.AddressList)
+            {
+                if (ip.AddressFamily == AddressFamily.InterNetwork)
+                {
+                    return ip.ToString();
+                }
+            }
+            throw new Exception("No network adapters with an IPv4 address in the system!");
+        }
         private void backgroundWorker2_DoWork(object sender, DoWorkEventArgs e)
         {
             //Base Files
@@ -1457,23 +1678,16 @@ public bool vooblyend()
 
         public void CopyTotmp(string source, string destination)
         {
+            try
+            {
+
+            
             if(!Directory.Exists(destination))
             {
                 Directory.CreateDirectory(destination);
                 
             }
 
-//            using(FileStream fsOut = new FileStream(destination, FileMode.Create))
-//using(FileStream fsIn = new FileStream(source, FileMode.Open))
-//{ 
-//byte[] buffer = new byte[1048756]; //1MB
-//int readBytes;
-//while((readBytes = fsIn.Read(buffer,0,buffer.Length)) > 0)
-//{
-//    fsOut.Write(buffer, 0, readBytes);
-//    backgroundWorker2.ReportProgress((int)(fsIn.Position * 100 / fsIn.Length));
-//}
-//}
             string[] subDirs =
                      System.IO.Directory.GetDirectories(source, "*",
                      (System.IO.SearchOption.AllDirectories));
@@ -1537,6 +1751,12 @@ public bool vooblyend()
                     
                 }
             }
+                //catch
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
         }
 
         private void backgroundWorker2_ProgressChanged(object sender, ProgressChangedEventArgs e)
@@ -1547,7 +1767,7 @@ public bool vooblyend()
 
         private void kryptonButton2_Click(object sender, EventArgs e)
         {
-            
+  
             start.Enabled = false;
             //monk.Enabled = true;
             ModifyProgressBarColor.SetState(progressBar1, 1);
@@ -1560,7 +1780,7 @@ public bool vooblyend()
 
                 titlemonk.Text = "";
                 VooblyPic.Image = Properties.Resources.Voobly_Step1_check;
-                KryptonMessageBox.Show("Voobly Already Installed!");
+                //KryptonMessageBox.Show("Voobly Already Installed!");
             }
             else { titlemonk.Text = "New To Voobly?"; itsfree.Enabled = true; linkLabel1.Enabled = true; itsfree.Visible = true; linkLabel1.Visible = true; VooblyHTML(); }
 
@@ -1658,23 +1878,42 @@ public bool vooblyend()
   
                 ConfigurationFinal();
 
+                try
+                {
+                    if (Directory.Exists(System.IO.Path.GetTempPath() + "\\hdtotc-tmp"))
+                        Directory.Delete(System.IO.Path.GetTempPath() + "\\hdtotc-tmp", true);
+                }
+                catch (SystemException)
+                {
+
+                }
+
         }
 
         private void backgroundWorker3_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
-            progressBar3.Value += e.ProgressPercentage / 120;
+            progressBar3.Value += e.ProgressPercentage / 150;
         }
 
         private void backgroundWorker3_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             BeginInvoke((MethodInvoker)delegate
             {
-                progressBar3.Value = 120;
+                progressBar3.Value = 150;
                 titlemonk.Text = "Successfully Wololoed!";
                 titlemonk.ForeColor = Color.Blue;
                 monk.Enabled = false;
-                Process.Start(Directory.GetCurrentDirectory() + @"\AoE2Tools.exe");
-                this.Close();
+                try
+                {
+                    Process.Start(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\AoE2Tools.exe");
+                    Process.GetCurrentProcess().Kill();
+                }
+                catch(SystemException)
+                {
+                    Process.Start(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\AoE2Tools.exe");
+                    Process.GetCurrentProcess().Kill();
+                }
+                
 
             });
   
@@ -1765,17 +2004,7 @@ public bool vooblyend()
 
         private void Conv_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (textBox1.Text == "1")
-            {
-
-            }
-            else
-            {
-                if (CloseCancel() == false)
-                {
-                    e.Cancel = true;
-                };
-            }
+        
 
         }
         public static bool CloseCancel()
