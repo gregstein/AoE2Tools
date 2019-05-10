@@ -72,7 +72,7 @@ OR
 
 * Download From Github
 
-<a target="_blank" href="https://github.com/gregstein/AoE2Tools/releases"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Logo.png" width="200" height="104"></a>
+<a target="_blank" href="https://github.com/gregstein/AoE2Tools/releases"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Logo.png" width="200" height="60"></a>
 
 
 Download "AoE2Tools X.X.X.X.exe" e.g.
