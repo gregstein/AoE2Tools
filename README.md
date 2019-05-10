@@ -64,7 +64,16 @@ You can also watch 🎦 [How To Use AoE2Tools](https://www.youtube.com/watch?v=0
 
 ## Download
 
-* Software releases: https://github.com/gregstein/AoE2Tools/releases
+* Download From Softpedia
+
+<a target="_blank" href="https://games.softpedia.com/get/Tools/AoE2Tools.shtml"><img src="https://github.com/gregstein/AoE2Tools/blob/master/HDToAoC/Resources/softpedia_download_large_shadow.png"></a>
+
+OR
+
+* Download From Github
+
+<a target="_blank" href="https://github.com/gregstein/AoE2Tools/releases"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Logo.png" width="200" height="104"></a>
+
 
 Download "AoE2Tools X.X.X.X.exe" e.g.
 
