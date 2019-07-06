@@ -3,7 +3,7 @@
 [![Github All Releases](https://img.shields.io/github/downloads/gregstein/AoE2Tools/total.svg)](https://github.com/gregstein/AoE2Tools/releases)
 [![GitHub release](https://img.shields.io/github/release/gregstein/AoE2Tools/all.svg)](https://github.com/gregstein/AoE2Tools/releases)
 [![GitHub Release Date](https://img.shields.io/github/release-date-pre/gregstein/AoE2Tools.svg)](https://github.com/gregstein/AoE2Tools/releases)
-[![paypal](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://streamlabs.com/gregstein_)
+[![Support](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://streamlabs.com/gregstein_)
 [<img src="https://discordapp.com/api/guilds/452492146100928515/widget.png?style=shield">](https://discordapp.com/invite/jdCgCyx)
 [![GitHub stars](https://img.shields.io/github/stars/gregstein/AoE2Tools.svg)](https://github.com/gregstein/AoE2Tools/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/gregstein/AoE2Tools.svg)](https://github.com/gregstein/AoE2Tools/network)
@@ -53,6 +53,7 @@ You can also watch 🎦 [How To Use AoE2Tools](https://www.youtube.com/watch?v=0
 * Manager To view stats of your game and backup/restore your game files
 * Voobly Medkit to Fix a variety of issues with the game or Voobly.
 * An integrated Updater for AoE2Tools.
+* VPNSTEIN to bypass Fast Proxy issues even with a mobile internet.
 * And Much More...
 
 
@@ -122,7 +123,7 @@ Download "AoE2Tools X.X.X.X.exe" e.g.
 For a Live Demo 🎦 [How To Use AoE2Tools (By GregStein)](https://www.youtube.com/watch?v=0uCuQ_smLZ0)
 
 ## Donations
-* Press This Button to Donate [![paypal](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://streamlabs.com/gregstein_)
+* Press This Button to Donate [![💞Support](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://streamlabs.com/gregstein_)
 
 💞**Thanks You Very Much For Showing So Much Love For This Project**💞
 
