@@ -133,11 +133,13 @@ For a Live Demo 🎦 [How To Use AoE2Tools (By GregStein)](https://www.youtube.c
 2. Diseax $53
 3. Raughnbo $25
 4. Henkieaardpeer $15
-5. Anonymous $10
-6. MarrowHB $5
-7. buzz_twink $5
-8. Anonymous $5
+5. som3thing $12
+6. Anonymous $10
+7. MarrowHB $5
+8. buzz_twink $5
+9. Anonymous $5
 
+Thank you all for your amazing support to keep this project UpToDate.
 ## Contacts
 * [Discord Channel For Free Support/Assistance](https://discordapp.com/invite/jdCgCyx)
 * [Voobly Profile](https://www.voobly.com/profile/view/123615731)
