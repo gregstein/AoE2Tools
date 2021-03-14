@@ -2,7 +2,7 @@ gr='\033[0;32m'
 NC='\033[0m' # No Color
 echo ===================================================
 printf "${gr}Age of Empires 2 Auto Installer For: Ubuntu 20.04 / Linux Mint 20 \n"
-echo Setting up Wine Staging & Winetricks...
+echo Setting up Wine Staging And Winetricks...
 echo ===================================================
 
 wget -nc https://dl.winehq.org/wine-builds/winehq.key
@@ -12,7 +12,7 @@ sudo apt update
 
 echo ===================================================
 echo Installing Wine Staging
-echo & Winetricks
+echo And Winetricks
 echo ===================================================
 
 sudo apt install -y --install-recommends winehq-staging
@@ -39,7 +39,7 @@ WINEPREFIX="$HOME/win32" WINEARCH=win32 winetricks dsound
 WINEPREFIX="$HOME/win32" WINEARCH=win32 winetricks xact
 
 echo ===================================================
-echo Setting up AoE2Tools & Steam
+echo Setting up AoE2Tools And Steam
 echo ===================================================
 
 cd ~/Downloads
@@ -51,7 +51,7 @@ WINEPREFIX="$HOME/win32" WINEARCH=win32 wine AoE2Tools.exe
 
 echo ===================================================
 echo Installing Scroll Fix For AoE2
-echo & Creating a Shortcut In Your Desktop
+echo And Creating a Shortcut In Your Desktop
 echo ===================================================
 
 wget https://github.com/SFTtech/sftscrollbugfixer/releases/download/v1.4.0.0/age2_x1_fixed.tar.gz -o aoe2fix.tar.gz
