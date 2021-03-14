@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Age of Empires II Single Player
+Exec=env WINEPREFIX="/home/$USER/win32" /opt/wine-staging/bin/wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/$USER/win32/dosdevices/c:/users/Public/Desktop/Age of Empires II Single Player.lnk
+Type=Application
+StartupNotify=true
+Path=/home/$USER/win32/dosdevices/c:/users/$USER/Application Data/Microsoft Games/Age of Empires ii/Age2_x1
+StartupWMClass=age2_x1_fixed.exe
