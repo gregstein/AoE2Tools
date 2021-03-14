@@ -2,7 +2,7 @@ gr='\033[0;32m'
 NC='\033[0m' # No Color
 echo ===================================================
 printf "${gr}Age of Empires 2 Auto Installer For: Ubuntu 20.10 \n"
-echo Setting up Wine Staging & Winetricks...
+echo Setting up Wine Staging And Winetricks...
 echo ===================================================
 
 wget -O- -q https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_18.04/Release.key | sudo apt-key add -    
@@ -11,7 +11,7 @@ sudo apt update
 
 
 echo ===================================================
-echo Installing Wine Staging & Winetricks
+echo Installing Wine Staging And Winetricks
 echo ===================================================
 
 sudo apt install -y --install-recommends winehq-staging
@@ -38,18 +38,18 @@ WINEPREFIX="$HOME/win32" WINEARCH=win32 winetricks dsound
 WINEPREFIX="$HOME/win32" WINEARCH=win32 winetricks xact
 
 echo ===================================================
-echo Setting up AoE2Tools & Steam
+echo Setting up AoE2Tools And Steam
 echo ===================================================
 
 cd ~/Downloads
 wget https://steamcdn-a.akamaihd.net/client/installer/SteamSetup.exe
 WINEPREFIX="$HOME/win32" WINEARCH=win32 wine SteamSetup.exe
 sudo apt install -y jq
-file_get=$(wget -q -nv -O- https://api.github.com/repos/gregstein/AoE2Tools/releases/latest |  jq -r '.assets[] | select(.browser_download_url | contains(".exe")) | .browser_download_url') && wget --output-document=AoE2Tools.exe $file_get
+file_get=$(wget -q -nv -O- https://api.github.com/repos/gregstein/AoE2Tools/releases/latest |  jq -r '.assets[] | select(.browser_download_url | contains(".exe")) | .browser_download_url') &And wget --output-document=AoE2Tools.exe $file_get
 WINEPREFIX="$HOME/win32" WINEARCH=win32 wine AoE2Tools.exe
 
 echo ===================================================
-echo Installing Scroll Fix For AoE2 & Creating a Shortcut In Your Desktop
+echo Installing Scroll Fix For AoE2 And Creating a Shortcut In Your Desktop
 echo ===================================================
 
 wget https://github.com/SFTtech/sftscrollbugfixer/releases/download/v1.4.0.0/age2_x1_fixed.tar.gz -o aoe2fix.tar.gz
