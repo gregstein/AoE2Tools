@@ -1,4 +1,4 @@
-touch tmp_files
+mkdir tmp_files
 cd tmp files
 gr='\033[0;32m'
 NC='\033[0m' # No Color
