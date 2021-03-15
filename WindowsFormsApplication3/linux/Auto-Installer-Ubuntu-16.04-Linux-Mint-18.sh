@@ -45,12 +45,7 @@ echo ===================================================
 sudo wget https://steamcdn-a.akamaihd.net/client/installer/SteamSetup.exe &&
 WINEPREFIX="$HOME/win32" WINEARCH=win32 wine SteamSetup.exe
 sudo apt-get install -y jq && file_get=$(wget -q -nv -O- https://api.github.com/repos/gregstein/AoE2Tools/releases/latest |  jq -r '.assets[] | select(.browser_download_url | contains(".exe")) | .browser_download_url') && wget --output-document=AoE2Tools.exe $file_get && WINEPREFIX="$HOME/win32" WINEARCH=win32 wine AoE2Tools.exe &&
-echo "==================================================="
-echo "Installing Scroll Fix For AoE2 And Creating a Shortcut In Your Desktop"
-echo "==================================================="
-sudo wget https://github.com/SFTtech/sftscrollbugfixer/releases/download/v1.4.0.0/age2_x1_fixed.tar.gz -o aoe2fix.tar.gz &&
-tar -xf aoe2fix.tar.gz --strip-components 1 --directory /home/$USER/.wine/drive_c/users/$USER/Application Data/Microsoft Games/Age of Empires ii/Age2_x1/
-wget "https://raw.githubusercontent.com/gregstein/AoE2Tools/master/WindowsFormsApplication3/linux/Age of Empires II Single Player.sh" -o "/home/$USER/Desktop/Age of Empires II Single Player.sh" && chmod +x "Age of Empires II Single Player.sh"
+
 echo "==================================================="
 printf "${gr}:: Installation Successful! :: \n"
 printf "${gr}Age of Empires 2 Path: /home/$USER/.wine/drive_c/users/$USER/Application Data/Microsoft Games/Age of Empires ii\n"
