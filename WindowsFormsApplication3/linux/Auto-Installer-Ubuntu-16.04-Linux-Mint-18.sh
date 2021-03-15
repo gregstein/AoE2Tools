@@ -3,7 +3,7 @@ cd tmp_files
 gr='\033[0;32m'
 NC='\033[0m' # No Color
 echo ===================================================
-printf "${gr}Age of Empires 2 Auto Installer For: Ubuntu 20.10 \n"
+printf "${gr}Age of Empires 2 Auto Installer For: Ubuntu 16.04 - Mint 18 \n"
 echo Setting up Wine Staging And Winetricks...
 echo ===================================================
 
@@ -42,8 +42,6 @@ WINEPREFIX="$HOME/win32" WINEARCH=win32 winetricks steam
 echo ===================================================
 echo Setting up AoE2Tools And Steam
 echo ===================================================
-sudo wget https://steamcdn-a.akamaihd.net/client/installer/SteamSetup.exe &&
-WINEPREFIX="$HOME/win32" WINEARCH=win32 wine SteamSetup.exe
 sudo apt-get install -y jq && file_get=$(wget -q -nv -O- https://api.github.com/repos/gregstein/AoE2Tools/releases/latest |  jq -r '.assets[] | select(.browser_download_url | contains(".exe")) | .browser_download_url') && wget --output-document=AoE2Tools.exe $file_get && WINEPREFIX="$HOME/win32" WINEARCH=win32 wine AoE2Tools.exe &&
 
 echo "==================================================="
