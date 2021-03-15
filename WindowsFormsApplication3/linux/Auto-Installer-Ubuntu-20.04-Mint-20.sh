@@ -13,8 +13,8 @@ sudo apt update
 echo "==================================================="
 echo "Installing Wine Staging And Winetricks"
 echo "==================================================="
-sudo apt install --install-recommends winehq-staging
-sudo apt-get install winetricks
+sudo apt install -y --install-recommends winehq-staging
+sudo apt-get install -y winetricks
 echo "==================================================="
 echo "Booting 32bit Wine Enviroment"
 echo "==================================================="
