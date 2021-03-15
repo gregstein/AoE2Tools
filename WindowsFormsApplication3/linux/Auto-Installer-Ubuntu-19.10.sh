@@ -39,7 +39,7 @@ WINEPREFIX="$HOME/win32" WINEARCH=win32 winetricks d3dx10
 WINEPREFIX="$HOME/win32" WINEARCH=win32 winetricks dotnet461
 WINEPREFIX="$HOME/win32" WINEARCH=win32 winetricks dsound
 WINEPREFIX="$HOME/win32" WINEARCH=win32 winetricks xact
-
+WINEPREFIX="$HOME/win32" WINEARCH=win32 winetricks steam
 echo ===================================================
 echo Setting up AoE2Tools And Steam
 echo ===================================================
