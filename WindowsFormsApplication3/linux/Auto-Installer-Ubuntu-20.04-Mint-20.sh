@@ -1,6 +1,9 @@
-#!/usr/bin/bash
+touch tmp_files
+cd tmp files
+gr='\033[0;32m'
+NC='\033[0m' # No Color
 echo "==================================================="
-printf "Age of Empires 2 Auto Installer For: Ubuntu 20.04 / Linux Mint 20"
+printf "${gr}Age of Empires 2 Auto Installer For: Ubuntu 20.04 / Linux Mint 20"
 echo "Setting up Wine Staging And Winetricks..."
 echo "==================================================="
 wget -nc "https://dl.winehq.org/wine-builds/winehq.key"
@@ -31,7 +34,6 @@ WINEPREFIX="$HOME/win32" WINEARCH=win32 winetricks xact
 echo "==================================================="
 echo "Setting up AoE2Tools And Steam"
 echo "==================================================="
-cd /home/$USER/Downloads
 sudo wget https://steamcdn-a.akamaihd.net/client/installer/SteamSetup.exe
 WINEPREFIX="$HOME/win32" WINEARCH=win32 wine SteamSetup.exe
 sudo apt-get install jq

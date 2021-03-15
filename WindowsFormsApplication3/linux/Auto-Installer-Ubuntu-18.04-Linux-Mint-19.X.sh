@@ -1,3 +1,5 @@
+touch tmp_files
+cd tmp files
 gr='\033[0;32m'
 NC='\033[0m' # No Color
 echo ===================================================
@@ -41,7 +43,6 @@ echo ===================================================
 echo Setting up AoE2Tools And Steam
 echo ===================================================
 
-cd ~/Downloads
 wget https://steamcdn-a.akamaihd.net/client/installer/SteamSetup.exe
 WINEPREFIX="$HOME/win32" WINEARCH=win32 wine SteamSetup.exe
 sudo apt install -y jq
